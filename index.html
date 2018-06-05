@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="avaleht.css">
+<base target="_blank">
+</head>
+<body>
+
+<h2>Mängusõltuvuse eneseseire keskkond</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" class="btn" style="width:auto;">Logi sisse</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+      <label for="uname"><b>Kasutajanimi</b></label>
+      <input type="text" placeholder="Sisesta kasutajanimi" name="uname" required>
+
+      <label for="psw"><b>Salasõna</b></label>
+      <input type="password" placeholder="Sisesta salasõna" name="psw" required>
+        
+      <button type="submit">Logi sisse</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Jäta mind meelde
+      </label>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Tühista</button>
+      <span class="psw">Unustasid <a href="#">salasõna?</a></span>
+    </div>
+  </form>
+</div>
+<br>
+<button onclick="document.getElementById('id02').style.display='block'" class="btn" style="width:auto;">Registreeri</button>
+
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+      <h1>Registreeri</h1>
+      <p>Palun täida allolevad lahtrid, et end kasutajaks registreerida.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Kirjuta e-posti aadress" name="email" required>
+
+      <label for="psw"><b>Salasõna</b></label>
+      <input type="password" placeholder="Kirjuta salasõna" name="psw" required>
+
+      <label for="psw-repeat"><b>Korda salasõna</b></label>
+      <input type="password" placeholder="Korda salasõna" name="psw-repeat" required>
+     
+      <label>
+        <input type="checkbox" checked="checked" name="statistika" style="margin-bottom:15px">Olen teadlik, et minu poolt sisestatud andmeid kasutatakse üldistatud kujul statistika tegemiseks.
+      </label>
+      
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Tühista</button>
+        <button type="submit" class="signupbtn">Registreeri kasutajaks</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div id="page" class="main-grid">
+    <div id="item1" class="grid-item item1">
+      <p>Lühike info <b>hasartmängusõltuvuse</b> kohta
+        Hasartmängusõltuvus on sõltuvushäire, mille põhiliseks tunnuseks on võimetus vastu seista tungile mängida hasartmänge. 
+        Selle tagajärjel kogeb inimene probleeme sotsiaalses, tööalases ja/või materiaalses toimetulekus, suhetes ja kohustuste täitmises.
+        <hr> <a href="http://15410.ee/?t=test">Hasartmängusõltuvuse test</a>
+        <hr> <a href="http://15410.ee/avaleht.php?c=27&h=111&a=195">Loe lisaks </a></p>
+    </div>
+    <div id="item2" class="grid-item item2">
+    <p>Lühike info <b>digisõltuvuse</b> kohta
+        Terve vs ebaterve, ülemäärase, patoloogilise, sõltuvusliku jne. arvutikasutamise vaheline piir läheb sealt, kus inimene hakkab seoses arvutikasutamisega eemalduma suhetest, töö või muud olulised eluvaldkonnad kannatavad ja tegevus arvutis saab kõikehõlmavaks teiste tegevuste ees.
+        <hr> <a href="http://15410.ee/?t=test2">Digisõltuvuse test</a>
+        <hr> <a href="http://15410.ee/avaleht.php?c=27&h=127&a=111">Loe lisaks</a></p>
+    </div>
+  </div>
+
+
+</body>
+</html>
