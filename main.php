@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Main</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="mainpage.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
   <script src="main.js" charset="utf-8"></script>
 <body>
   
