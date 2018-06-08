@@ -2,7 +2,6 @@
 require("../../../../config.php");
 require("functions.php");
 $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", "Koolitöö", "Välimuse eest hoolitsemine", "Lemmiklooma eest hoolitsemine", "Midagi muud");
-$ID = $_SESSION['userid'];
 ?>
 
 <!DOCTYPE html>
