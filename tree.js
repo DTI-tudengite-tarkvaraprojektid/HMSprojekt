@@ -134,11 +134,11 @@ function button7() {
 
 function send1(){
 	var xhr=new XMLHttpRequest();
-	var aadress="send1.php?a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4;
+	var aadress="send1.php?a1="+$_SESSION['userid']+"&a2="+Answer1+"&a3="+Answer2+"&a4="+Answer3+"&a5="+Answer4;
 	xhr.open("GET", aadress, true);
 	xhr.send();
 	xhr.onreadystatechange=function(){
-		if(xhr.readyState==4){
+		if(xhr.readyState==5){
 			console.log(xhr.responseText);
 		}
 	}	

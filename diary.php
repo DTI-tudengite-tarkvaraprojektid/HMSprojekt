@@ -1,6 +1,7 @@
 <?php
-require("../../config.php");
-$reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", "Midagi muud");
+require("../../../../config.php");
+require("functions.php");
+$reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", "Koolitöö", "Välimuse eest hoolitsemine", "Lemmiklooma eest hoolitsemine", "Midagi muud");
 ?>
 
 <!DOCTYPE html>

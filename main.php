@@ -25,7 +25,7 @@
   <nav class="menu">
     <ul class="menu-list">
       <li class="menu-item"><a href="#home-view" class="menu-link home-view active-menu">Avaleht</a></li>
-      <li class="menu-item"><a href="#app-view" class="menu-link app-view">Päevik</a></li>
+      <li class="menu-item"><a href="diary.php" class="menu-link app-view">Päevik</a></li>
     </ul>
   </nav>
 
