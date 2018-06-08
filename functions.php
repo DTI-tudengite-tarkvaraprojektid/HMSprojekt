@@ -15,6 +15,7 @@ function test_input ($data){ //funktsiooni tegemine, esitatud andmete kontroll
 	
 	function signUp($signupUserName, $signupFirstName, $signupFamilyName, $signupType, $signupPassword){
 	//loome andmebaasiühenduse
+	echo "nimi on" .$signupUserName;
 		$database = "if17_HMS";
 		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
 		//valmistame ette käsu andmebaasiserverile
@@ -38,9 +39,9 @@ function test_input ($data){ //funktsiooni tegemine, esitatud andmete kontroll
 	function signIn($username, $password){
 			$notice = "";
 			$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
-			$stmt = $mysqli->prepare("SELECT username, firstname, lastname, type, password FROM userinfo WHERE username = ?");
+			$stmt = $mysqli->prepare("SELECT id, username, firstname, lastname, type, password FROM userinfo WHERE username = ?");
 			$stmt->bind_param("s",$username);
-			$stmt->bind_result($usernameFromDb, $firstnameFromDb, $lastnameFromDb, $typeFromDB, $passwordFromDb);
+			$stmt->bind_result($id, $usernameFromDb, $firstnameFromDb, $lastnameFromDb, $typeFromDB, $passwordFromDb);
 			$stmt->execute();
 			
 			//kui vähemalt 1 tulemus
@@ -49,7 +50,8 @@ function test_input ($data){ //funktsiooni tegemine, esitatud andmete kontroll
 				if($hash == $passwordFromDb){
 				$notice = "Sisse logitud";
 				
-				$_SESSION["username"] = $username;
+				$_SESSION["userid"] = $id;
+				$_SESSION["username"] = $usernameFromDb;
 				$_SESSION["firstname"] = $firstnameFromDb;
 				$_SESSION["lastname"] = $lastnameFromDb;
 				$_SESSION["usertype"] = $typeFromDb;
@@ -62,7 +64,7 @@ function test_input ($data){ //funktsiooni tegemine, esitatud andmete kontroll
 				$notice = "Vale salasõna";	
 				}	
 			} else {
-			$notice = "Sellise e-postiga kasutajat ei ole";	
+			$notice = "Sellise kasutajanimega kasutajat ei ole";	
 			}
 	
 		$stmt->close();

@@ -1,5 +1,14 @@
 <?php
-  //require("functions.php");
+  require ("functions.php");
+  if(!isset($_SESSION["userid"])){
+    header("Location: index.php");
+    exit();
+  }
+    //väljalogimine
+    if(isset($_GET["logout"])){
+      session_destroy(); //lõpetab sessiooni
+      header("Location: index.php");
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,6 +43,7 @@
         <h2>Mängusõltuvuse eneseseire keskkond</h2>
         <h1>Avaleht</h1>
         <p>Siin on sinu avaleht!</p>
+        <p> <a href="?logout=1">Logi välja</a> </p>
     </section>
   
   </main>

@@ -2,7 +2,7 @@
 	require("functions.php");
 	
 	//kui on juba sisse loginud
-	if(isset($_SESSION["username"])){
+	if(isset($_SESSION["userid"])){
 		header("location: main.php");
 		exit();
 	}
@@ -13,7 +13,7 @@
   $signupType = "";
 	$signupPassword = "";
 
-	
+	$userid = "";
 	$loginUserName = "";
 	$notice = "";
   
@@ -47,9 +47,10 @@
 		//kontrollime, kas kirjutati kasutajanimi
 		if (isset($_POST["signupUserName"])){
 			if (empty($_POST["signupUserName"])){
-				$signupFirstNameError ="NB! Väli on kohustuslik!";
+				$signupUserNameError ="NB! Väli on kohustuslik!";
 			} else {
-				$signupFirstName = test_input($_POST["signupUsertName"]);
+				$signupUserName = test_input($_POST["signupUserName"]);
+				echo "sisestatud nimi on" .$signupUserName;
 			}
 		}
 		//kontrollime, kas kirjutati eesnimi
@@ -73,9 +74,9 @@
     //kontrollime, kas kirjutati tyyp
     if (isset ($_POST["signupType"])){
       if (empty ($_POST["signupType"])){
-        $signupFamilyNameError ="NB! Väli on kohustuslik!";
+        $signupTypeError ="NB! Väli on kohustuslik!";
       } else {
-        $signupFamilyName = test_input($_POST["signupType"]);
+        $signupType = test_input($_POST["signupType"]);
       }
     }
 		
@@ -106,7 +107,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="avaleht.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 <base target="_blank">
 </head>
 <body>
@@ -119,18 +120,18 @@
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
   <form class="modal-content animate" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
     <div class="container">
-      <label for="username"><b>Kasutajanimi</b></label>
-      <input type="text" placeholder="Sisesta kasutajanimi" name="username" value="<?php echo $signupUserName; ?>" required>
+      <label for="loginUserName"><b>Kasutajanimi</b></label>
+      <input type="text" placeholder="Sisesta kasutajanimi" name="loginUserName" value="<?php echo $loginUserName; ?>" required>
 
-      <label for="psw"><b>Salasõna</b></label>
-      <input type="password" placeholder="Sisesta salasõna" name="psw" required>
+      <label for="loginPassword"><b>Salasõna</b></label>
+      <input type="password" placeholder="Sisesta salasõna" name="loginPassword" required>
         
       <button type="submit" name="loginButton">Logi sisse</button> <span><?php echo $notice; ?></span>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Jäta mind meelde
       </label>
     </div>
-    <div class="container" style="background-color:#f1f1f1">
+    <div class="container" >
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Tühista</button>
       <span class="psw">Unustasid <a href="#">salasõna?</a></span>
     </div>
@@ -146,13 +147,8 @@
       <h1>Registreeri</h1>
       <p>Palun täida allolevad lahtrid, et end kasutajaks registreerida.</p>
       <hr>
-      <label for="username"><b>Kasutajanimi</b></label>
-      <input type="text" placeholder="Kirjuta kasutajanimi" name="username" value="<?php echo $signupUserName; ?>" required>
-
-      <label for="type"><b>Sõltuvuse tüüp</b></label>
-      <input type="radio" name="type" value="1" <?php if ($signupType == '1') {echo 'checked';} ?>><label>Hasartmängusõltuvus</label>
-      <input type="radio" name="type" value="2" <?php if ($signupType == '2') {echo 'checked';} ?>><label>Arvutisõltuvus</label>
-      <br><span><?php echo $signupTypeError; ?></span><br>
+      <label for="signupUserName"><b>Kasutajanimi</b></label>
+      <input type="text" placeholder="Kirjuta kasutajanimi" name="signupUserName" value="<?php echo $signupUserName; ?>" required>
 
       <label for="signupFirstName"><b>Eesnimi</b></label>
 		  <input name="signupFirstName" placeholder="Kirjuta oma eesnimi" type="text" value="<?php echo $signupFirstName; ?>">
@@ -169,12 +165,15 @@
       <input type="password" placeholder="Korda salasõna" name="psw-repeat" required>
       <span><?php echo $signupPasswordError; ?></span>
       
+			<label for="signupType"><b>Sõltuvuse tüüp</b></label><br><br>
+      <input type="radio" name="signupType" value="1" <?php if ($signupType == '1') {echo 'checked';} ?>><label>Hasartmängusõltuvus</label>
+      <input type="radio" name="signupType" value="2" <?php if ($signupType == '2') {echo 'checked';} ?>><label>Arvutisõltuvus</label>
+      <br><span><?php echo $signupTypeError; ?></span><br>
       
-      
-
-        <input type="checkbox" checked="checked" name="statistika" style="margin-bottom:15px">Olen teadlik, et minu poolt sisestatud andmeid kasutatakse üldistatud kujul statistika tegemiseks.
+			<br><hr><br>
+        <input type="checkbox" checked="checked" name="statistika" class="statistics">Olen teadlik, et minu poolt sisestatud andmeid kasutatakse üldistatud kujul statistika tegemiseks.
       </label>
-      
+      <br><br><hr>
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Tühista</button>
         <button type="submit" class="signupbtn" name="signupButton">Registreeri kasutajaks</button>
