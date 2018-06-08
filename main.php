@@ -44,6 +44,9 @@
         <h1>Avaleht</h1>
         <p>Siin on sinu avaleht!</p>
         <p> <a href="?logout=1">Logi välja</a> </p>
+        <canvas id="myChart" width="400" height="200" style="border:1px solid #000000;"></canvas>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script src="main.js" charset="utf-8"></script>
     </section>
   
   </main>
