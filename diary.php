@@ -11,9 +11,10 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 	<meta http-equiv="X-UA_Compatible" content="ie=edge">
 	<title>Küsimuste puu</title>
 	<script src="tree.js"></script>
-	<link rel="stylesheet" type="text/css" href="disain.css">
-	
+	<link rel="stylesheet" type="text/css" href="disain.css">	
 </head>
+
+
 	
 <body>
 
@@ -43,7 +44,6 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 		<p id="option15"> Täiesti </p>
 		
 		<button id="button1" type="button" onclick="button1()">Fikseeri vastus</button>
-		
 	</div>
 	
 	<div id="start">
@@ -110,11 +110,12 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 		<input type="radio" id="answer42" name="answer4" value="1">
 			
 		<p id="option42"> Ei </p>
-			
 		<button id="button4" type="button" onclick="button4()">Fikseeri vastus</button>
 	</div>
 	
 	<p id="end1"> Sa olid täna väga tubli, jätka samas vaimus!!! </p>
+	
+	<input id="send1" type="button" value="Saada andmed" onclick="send1()" />
 
 	<div id="section5">
 		<p id="question5"> 5. Kui palju aega (tunde ja minuteid) ma seda tegevust sooritades veetsin? </p>
@@ -178,6 +179,8 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 	</div>
 	
 	<p id="end2"> Sa andsid küll täna oma nõrkusele järele, aga püüa vähemalt homme tublim olla!!! </p>
+	
+	<input id="send2" type="button" value="Saada andmed" onclick="send2()" />
 
 	</div>
 	
