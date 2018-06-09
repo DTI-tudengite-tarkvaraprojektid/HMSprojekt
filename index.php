@@ -108,13 +108,14 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="style.css">
-<base target="_blank">
+<!--<base target="_blank">-->
+<title>HMS</title>
 </head>
 <body>
 
 <h2>Mängusõltuvuse eneseseire keskkond</h2>
 
-<button onclick="document.getElementById('id01').style.display='block'" class="btn" style="width:auto;">Logi sisse</button>
+<button onclick="document.getElementById('id01').style.display='block'" class="btn" >Logi sisse</button>
 
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -130,15 +131,14 @@
       <label>
         <input type="checkbox" checked="checked" name="remember"> Jäta mind meelde
       </label>
-    </div>
-    <div class="container" >
+    
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Tühista</button>
-      <span class="psw">Unustasid <a href="#">salasõna?</a></span>
+      
     </div>
   </form>
 </div>
-<br>
-<button onclick="document.getElementById('id02').style.display='block'" class="btn" style="width:auto;">Registreeri</button>
+
+<button onclick="document.getElementById('id02').style.display='block'" class="btn">Registreeri</button>
 
 <div id="id02" class="modal">
   <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -149,29 +149,27 @@
       <hr>
       <label for="signupUserName"><b>Kasutajanimi</b></label>
       <input type="text" placeholder="Kirjuta kasutajanimi" name="signupUserName" value="<?php echo $signupUserName; ?>" required>
+			<span><?php echo $signupUserNameError; ?></span>
 
       <label for="signupFirstName"><b>Eesnimi</b></label>
-		  <input name="signupFirstName" placeholder="Kirjuta oma eesnimi" type="text" value="<?php echo $signupFirstName; ?>">
+		  <input name="signupFirstName" placeholder="Kirjuta oma eesnimi" type="text" value="<?php echo $signupFirstName; ?>" required>
 		  <span><?php echo $signupFirstNameError; ?></span>
 		  <br>
 		  <label for="signupFamilyName"><b>Perekonnanimi</b></label>
-		  <input name="signupFamilyName" placeholder="Kirjuta oma perekonnanimi" type="text" value="<?php echo $signupFamilyName; ?>">
+		  <input name="signupFamilyName" placeholder="Kirjuta oma perekonnanimi" type="text" value="<?php echo $signupFamilyName; ?>" required>
 		  <span><?php echo $signupFamilyNameError; ?></span>
 		  <br>
       <label for="signupPassword"><b>Salasõna</b></label>
-      <input type="password" placeholder="Kirjuta salasõna" name="signupPassword" value="<?php echo $signupPassword; ?>"required>
-
-      <label for="psw-repeat"><b>Korda salasõna</b></label>
-      <input type="password" placeholder="Korda salasõna" name="psw-repeat" required>
+      <input type="password" placeholder="Kirjuta salasõna" name="signupPassword" minlength="8" value="<?php echo $signupPassword; ?>"required>
       <span><?php echo $signupPasswordError; ?></span>
       
 			<label for="signupType"><b>Sõltuvuse tüüp</b></label><br><br>
-      <input type="radio" name="signupType" value="1" <?php if ($signupType == '1') {echo 'checked';} ?>><label>Hasartmängusõltuvus</label>
+      <input type="radio" name="signupType" value="1" <?php if ($signupType == '1') {echo 'checked';} ?> required><label>Hasartmängusõltuvus</label>
       <input type="radio" name="signupType" value="2" <?php if ($signupType == '2') {echo 'checked';} ?>><label>Arvutisõltuvus</label>
       <br><span><?php echo $signupTypeError; ?></span><br>
       
 			<br><hr><br>
-        <input type="checkbox" checked="checked" name="statistika" class="statistics">Olen teadlik, et minu poolt sisestatud andmeid kasutatakse üldistatud kujul statistika tegemiseks.
+        <input type="checkbox" name="statistika" class="statistics" required>Olen teadlik, et minu poolt sisestatud andmeid kasutatakse üldistatud kujul statistika tegemiseks.
       </label>
       <br><br><hr>
       <div class="clearfix">

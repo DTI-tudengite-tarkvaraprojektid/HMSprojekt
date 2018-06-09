@@ -2,7 +2,10 @@
 require("../../../../config.php");
 $database = "if17_HMS";
 //alustame sessiooni
+$lifetime=6;
 session_start();
+setcookie(session_name(),session_id(),time()+$lifetime);
+	
 
 
 //sisestuse kontrollimise funktsioon
@@ -28,6 +31,8 @@ function test_input ($data){ //funktsiooni tegemine, esitatud andmete kontroll
 		//$stmt->execute();
 		if ($stmt->execute()){
 			echo "\n Õnnestus!";
+			$notice = signIn($signupUserName, $_POST["signupPassword"]);
+			exit ();
 		} else {
 			echo "\n Tekkis viga : " .$stmt->error;
 		}
