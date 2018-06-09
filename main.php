@@ -25,7 +25,8 @@
   <nav class="menu">
     <ul class="menu-list">
       <li class="menu-item"><a href="#home-view" class="menu-link home-view active-menu">Avaleht</a></li>
-      <li class="menu-item"><a href="diary.php" class="menu-link app-view">Päevik</a></li>
+      <li class="menu-item"><a href="#app-view" class="menu-link app-view">Päevik</a></li>
+      <li class="menu-item"><a href="?logout=1" class="menu-link">Logi välja</a></li>
     </ul>
   </nav>
 
@@ -34,7 +35,8 @@
     <!-- App page -->
     <section id="app-view">
         <h1>Päevik</h1>
-        <p>Siin on sinu päevik</p>
+        <p>Siin on sinu päeviku sissekanded</p>
+        <a href="diary.php" class="menu-link">Päevikut täitma</a>
         
     </section>
 
@@ -42,8 +44,8 @@
     <section id="home-view">
         <h2>Mängusõltuvuse eneseseire keskkond</h2>
         <h1>Avaleht</h1>
-        <p>Siin on sinu avaleht!</p>
-        <p> <a href="?logout=1">Logi välja</a> </p>
+        <p>Siin näed statistikat oma sissekannete kohta</p>
+         
         <canvas id="myChart" width="400" height="200" style="border:1px solid #000000;"></canvas>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
         <script src="main.js" charset="utf-8"></script>
