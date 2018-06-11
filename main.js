@@ -10,13 +10,22 @@ const MainApp = function () {
   this.init()
 }
 
+
+
 MainApp.routes = {
   'home-view': {
     'render': function () {
+      console.log('home')
     }
   },
   'app-view': {
     'render': function () {
+      console.log('paevik')
+    }
+  },
+  'user-view': {
+    'render': function () {
+      console.log('user')
     }
   }
 }

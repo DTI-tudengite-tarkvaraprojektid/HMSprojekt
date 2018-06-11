@@ -9,6 +9,12 @@
       session_destroy(); //lõpetab sessiooni
       header("Location: index.php");
     }
+    
+  if (isset($_POST["deleteAccount"])){
+    deleteAccount($_SESSION["userid"]);
+  }
+    
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,7 +34,10 @@
     <ul class="menu-list">
       <li class="menu-item"><a href="#home-view" class="menu-link home-view active-menu">Avaleht</a></li>
       <li class="menu-item"><a href="#app-view" class="menu-link app-view">Päevik</a></li>
+      
+      <li class="menu-item"><a href="#user-view" class="menu-link user-view">Tere tulemast, <?php echo $_SESSION["username"]?></a></li>
       <li class="menu-item"><a href="?logout=1" class="menu-link">Logi välja</a></li>
+      
     </ul>
   </nav>
 
@@ -49,6 +58,13 @@
         <p>Siin näed statistikat oma sissekannete kohta</p>
     </section>
   
+    <!-- Home -->
+    <section id="user-view">
+        <h2>Mängusõltuvuse eneseseire keskkond</h2>
+        <h1>Info sinu kohta</h1>
+        <form method="POST">
+        <button id="deleteAccount" name="deleteAccount">Kustuta minu konto</button></form>
+    </section>
   </main>
 
 </body>

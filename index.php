@@ -119,7 +119,7 @@
 <nav class="menu">
 	<ul class="menu-list">
 		<li class="menu-item menu-link active-menu" onclick="document.getElementById('id01').style.display='block'">Logi sisse</li>
-		<li class="menu-item menu-link" onclick="document.getElementById('id02').style.display='block'">Registreeri</li>
+		<li class="menu-item menu-link" onclick="document.getElementById('id02').style.display='block'">Registreeri</li><span><?php echo $notice; ?></span>
 	</ul>
 </nav>
 
