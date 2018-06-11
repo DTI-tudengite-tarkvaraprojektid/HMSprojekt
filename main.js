@@ -52,7 +52,7 @@ MainApp.prototype = {
 
 }//main
 
-var ctx = document.getElementById('myChart');
+/*var ctx = document.getElementById('myChart');
 
 var chart = new Chart(ctx, {
   // The type of chart we want to create
@@ -71,7 +71,7 @@ var chart = new Chart(ctx, {
 
   // Configuration options go here
   options: {}
-});
+});*/
 
 
 window.onload = function () {

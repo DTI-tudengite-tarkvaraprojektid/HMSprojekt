@@ -18,6 +18,8 @@
   <title>Main</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <script src="main.js" charset="utf-8"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script> -->
   
 <body>
   
@@ -45,10 +47,6 @@
         <h2>Mängusõltuvuse eneseseire keskkond</h2>
         <h1>Avaleht</h1>
         <p>Siin näed statistikat oma sissekannete kohta</p>
-         
-        <canvas id="myChart" width="400" height="200" style="border:1px solid #000000;"></canvas>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-        <script src="main.js" charset="utf-8"></script>
     </section>
   
   </main>
