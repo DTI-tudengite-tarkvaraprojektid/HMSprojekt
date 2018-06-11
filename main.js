@@ -61,26 +61,18 @@ MainApp.prototype = {
 
 }//main
 
-/*var ctx = document.getElementById('myChart');
-
-var chart = new Chart(ctx, {
-  // The type of chart we want to create
-  type: 'line',
-
-  // The data for our dataset
-  data: {
-      labels: ["January", "February", "March", "April", "May", "June", "July"],
-      datasets: [{
-          label: "My First dataset",
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderColor: 'rgb(255, 99, 132)',
-          data: [0, 10, 5, 2, 20, 30, 45],
-      }]
-  },
-
-  // Configuration options go here
-  options: {}
-});*/
+new Chartist.Line('.ct-chart', {
+  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+  series: [
+    //[2, 3, 2, 4, 5, 3],
+    [0, 2.5, 3, 2, 3, 1],
+    //[1, 2, 3, 4, 1, 5],
+    [1, ,2, 3, 4, 5, 2],
+  ]
+}, {
+  width: 600,
+  height: 300
+});//chartist.js
 
 
 window.onload = function () {
