@@ -1,9 +1,12 @@
 <?php
-	session_start();
+	//session_start();
 	require("../../../../config.php");
 	$mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
-	$stmt = $mysqli->prepare("UPDATE diary SET answer2=".$_REQUEST["a2"]." WHERE answer1=0;");
+	$stmt = $mysqli->prepare("SELECT COUNT(id) FROM userinfo;");
+	$stmt->bind_result($usersCount);
 	$stmt->execute();
+	$stmt->fetch();
 	$stmt->close();
 	$mysqli->close();
+	echo $usersCount;
 ?>

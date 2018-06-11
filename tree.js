@@ -137,40 +137,40 @@ function send1(){
 	var xhr=new XMLHttpRequest();
 	var aadress="send1.php?a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4;
 	xhr.open("GET", aadress, true);
-	xhr.send();
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){
 			console.log(xhr.responseText);
 		}
-	}	
+	}
+	xhr.send();
 }
 
 function send2(){
 	var xhr=new XMLHttpRequest();
 	var aadress="send2.php?a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4+"&a5="+Answer5+"&a61="+Answer61+"&a62="+Answer62+"&a63="+Answer63+"&a7="+Answer7;
 	xhr.open("GET", aadress, true);
-	xhr.send();
 	xhr.onreadystatechange=function(){
-		if(xhr.readyState==9){
+		if(xhr.readyState==4){
 			console.log(xhr.responseText);
 		}
 	}	
+	xhr.send();
 }
 
 function fixed(){
-	otsitav=document.getElementById("otsitav").value;
-	muudetav=document.getElementById("muudetav").value;
+	otsitav=document.getElementById("otsitav").selectedIndex;
+	muudetav=document.getElementById("muudetav").selectedIndex;
 }
 
 function test(){
 	var xhr=new XMLHttpRequest();
 	var aadress="test.php?a1="+otsitav+"&a2="+muudetav;
 	xhr.open("GET", aadress, true);
-	xhr.send();
 	xhr.onreadystatechange=function(){
-		if(xhr.readyState==2){
+		if(xhr.readyState==4){
 			console.log(xhr.responseText);
 		}
 	}	
+	xhr.send();
 }
 

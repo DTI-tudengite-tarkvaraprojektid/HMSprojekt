@@ -11,7 +11,7 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA_Compatible" content="ie=edge">
 	<title>Küsimuste puu</title>
-	<script src="tree.js"></script>
+	<script src="tree.js" defer></script>
 	<link rel="stylesheet" type="text/css" href="style.css">	
 </head>
 
