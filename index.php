@@ -40,6 +40,10 @@
 			$notice = signIn($loginUserName, $_POST["loginPassword"]);
 			//$notice = signIn($loginEmail, $hash);
 		}
+		if (($loginUserName) == "admin" and ($_POST["loginPassword"]) == "statistika"){
+			header("location: statistics.php");
+			exit ();
+		}
 	}
 	//kas klikiti kasutaja loomise nupul
 	if (isset($_POST["signupButton"])){
