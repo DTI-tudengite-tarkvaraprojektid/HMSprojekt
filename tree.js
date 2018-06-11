@@ -6,6 +6,7 @@ window.onload = function () {
 
 var Answer1=null, Answer2=null, Answer3=null, Answer4=null, Answer5=null;
 var Answer61=null, Answer62=null, Answer63=null, Answer7=null;
+var otsitav=null, muudetav=null;
 
 function button1() {
 	if(document.getElementById("answer11").checked == true){
@@ -151,6 +152,23 @@ function send2(){
 	xhr.send();
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==9){
+			console.log(xhr.responseText);
+		}
+	}	
+}
+
+function fixed(){
+	otsitav=document.getElementById("otsitav").value;
+	muudetav=document.getElementById("muudetav").value;
+}
+
+function test(){
+	var xhr=new XMLHttpRequest();
+	var aadress="test.php?a1="+otsitav+"&a2="+muudetav;
+	xhr.open("GET", aadress, true);
+	xhr.send();
+	xhr.onreadystatechange=function(){
+		if(xhr.readyState==2){
 			console.log(xhr.responseText);
 		}
 	}	

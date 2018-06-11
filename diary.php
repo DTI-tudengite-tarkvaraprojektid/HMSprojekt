@@ -116,7 +116,7 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 	
 	<h3 id="end1"> Sa olid täna väga tubli, jätka samas vaimus!!! </h3>
 	
-	<input id="send1" type="button" value="Saada andmed" onclick="send1()" />
+	<button id="send1" type="button" value="" onclick="send1()">Saada andmed</button>
 
 	<div id="section5" class="section">
 		<h3 id="question5"> 5. Kui palju aega (tunde ja minuteid) ma seda tegevust sooritades veetsin? </h3>
@@ -186,6 +186,26 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 	</div>
 	
 </div>
+
+Otsitav
+<select id='otsitav'>
+	<option value="0">0</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+</select>
+
+Muudetav
+<select id='muudetav'>
+	<option value="0">0</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+</select>
+
+<button id="fixed" type="button" value="" onclick="fixed()">Fikseeri</button>
+
+<button id="test" type="button" value="" onclick="test()">Testi nupp</button>
 
 </body>
 
