@@ -25,7 +25,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
   <script src="main.js" charset="utf-8"></script>
-  
+  <!--
   <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
   <link href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -63,7 +63,7 @@
       return date;
     }
   } );
-  </script>
+  </script>-->
 
 <body>
   
@@ -95,8 +95,8 @@
         <h2>Mängusõltuvuse eneseseire keskkond</h2>
         <h1>Avaleht</h1>
         <p>Siin näed statistikat oma sissekannete kohta</p>
-         <form>
-          <!--<label for="dateStart">Vali vahemik:</label>
+         <!--<form>
+          <label for="dateStart">Vali vahemik:</label>
           <input type="text" id="dateStart" name="dateStart">
           <label for="dateEnd"></label>
           <input type="text" id="dateEnd" name="dateEnd">
