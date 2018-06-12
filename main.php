@@ -109,7 +109,7 @@
         <h2>Mängusõltuvuse eneseseire keskkond</h2>
         <h1>Info sinu kohta</h1>
         <form method="POST">
-        <button id="deleteAccount" name="deleteAccount">Kustuta minu konto</button></form>
+        <button id="deleteAccount" class="cancelbtn" name="deleteAccount">Kustuta minu konto</button></form>
     </section>
   </main>
 

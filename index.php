@@ -8,8 +8,7 @@
 	}
 
   $signupUserName = "";
-	$signupFirstName = "";
-  $signupFamilyName = "";
+	$signupEmail = "";
   $signupType = "";
 	$signupPassword = "";
 
@@ -18,8 +17,7 @@
 	$notice = "";
   
   $signupUserNameError = "";
-	$signupFirstNameError = "";
-  $signupFamilyNameError = "";
+	$signupEmailError = "";
   $signupTypeError = "";
 	$signupPasswordError = "";
 	
@@ -57,21 +55,16 @@
 				echo "sisestatud nimi on" .$signupUserName;
 			}
 		}
-		//kontrollime, kas kirjutati eesnimi
-		if (isset($_POST["signupFirstName"])){
-			if (empty($_POST["signupFirstName"])){
-				$signupFirstNameError ="NB! Väli on kohustuslik!";
+		//kontrollime, kas kirjutati kasutajanimeks email
+		if (isset ($_POST["signupEmail"])){
+			if (empty ($_POST["signupEmail"])){
+				$signupEmailError ="NB! Väli on kohustuslik!";
 			} else {
-				$signupFirstName = test_input($_POST["signupFirstName"]);
-			}
-		}
-		
-		//kontrollime, kas kirjutati perekonnanimi
-		if (isset ($_POST["signupFamilyName"])){
-			if (empty ($_POST["signupFamilyName"])){
-				$signupFamilyNameError ="NB! Väli on kohustuslik!";
-			} else {
-				$signupFamilyName = test_input($_POST["signupFamilyName"]);
+				$signupEmail = test_input($_POST["signupEmail"]);
+				
+				$signupEmail = filter_var($signupEmail, FILTER_SANITIZE_EMAIL);
+				$signupEmail = filter_var($signupEmail, FILTER_VALIDATE_EMAIL);
+				
 			}
 		}
 		
@@ -100,7 +93,7 @@
 			echo ("Hakkan salvestama");
 			$signupPassword = hash("sha512", $_POST["signupPassword"]);
 			//echo $signupPassword;
-			signUp($signupUserName, $signupFirstName, $signupFamilyName, $signupType, $signupPassword);
+			signUp($signupUserName, $signupEmail, $signupType, $signupPassword);
 		}
 	} //kas vajutati loo kasutaja nuppu
 	
@@ -119,7 +112,8 @@
 <nav class="menu">
 	<ul class="menu-list">
 		<li class="menu-item menu-link active-menu" onclick="document.getElementById('id01').style.display='block'">Logi sisse</li>
-		<li class="menu-item menu-link" onclick="document.getElementById('id02').style.display='block'">Registreeri</li><span><?php echo $notice; ?></span>
+		<li class="menu-item menu-link" onclick="document.getElementById('id02').style.display='block'">Registreeri</li>
+		<span style="color:red; text-align:center"><?php echo $notice; ?></span>
 	</ul>
 </nav>
 
@@ -133,11 +127,9 @@
       <label for="loginPassword"><b>Salasõna</b></label>
       <input type="password" placeholder="Sisesta salasõna" name="loginPassword" required>
         
-      <button type="submit" name="loginButton">Logi sisse</button> <span><?php echo $notice; ?></span>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Jäta mind meelde
-      </label>
-    
+      <button type="submit" name="loginButton">Logi sisse</button> 
+      
+			
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Tühista</button>
       
     </div>
@@ -156,13 +148,9 @@
       <input type="text" placeholder="Kirjuta kasutajanimi" name="signupUserName" value="<?php echo $signupUserName; ?>" required>
 			<span><?php echo $signupUserNameError; ?></span>
 
-      <label for="signupFirstName"><b>Eesnimi</b></label>
-		  <input name="signupFirstName" placeholder="Kirjuta oma eesnimi" type="text" value="<?php echo $signupFirstName; ?>" required>
-		  <span><?php echo $signupFirstNameError; ?></span>
-		  
-		  <label for="signupFamilyName"><b>Perekonnanimi</b></label>
-		  <input name="signupFamilyName" placeholder="Kirjuta oma perekonnanimi" type="text" value="<?php echo $signupFamilyName; ?>" required>
-		  <span><?php echo $signupFamilyNameError; ?></span>
+      <label for="signupEmail"><b>E-mail</b></label>
+		  <input name="signupEmail" placeholder="Kirjuta oma e-maili aadress" type="email" value="<?php echo $signupEmail; ?>" required>
+		  <span><?php echo $signupEmailError; ?></span>
 		  
       <label for="signupPassword"><b>Salasõna</b></label>
       <input type="password" placeholder="Kirjuta salasõna" name="signupPassword" minlength="8" value="<?php echo $signupPassword; ?>"required>

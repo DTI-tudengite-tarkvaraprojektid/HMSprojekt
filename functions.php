@@ -16,17 +16,17 @@ function test_input ($data){ //funktsiooni tegemine, esitatud andmete kontroll
 			return $data;
 	}
 	
-	function signUp($signupUserName, $signupFirstName, $signupFamilyName, $signupType, $signupPassword){
+	function signUp($signupUserName, $signupEmail, $signupType, $signupPassword){
 	//loome andmebaasiühenduse
 		$database = "if17_HMS";
 		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
 		//valmistame ette käsu andmebaasiserverile
-		$stmt = $mysqli->prepare("INSERT INTO userinfo (username, firstname, lastname, type, password) VALUES (?, ?, ?, ?, ?)");
+		$stmt = $mysqli->prepare("INSERT INTO userinfo (username, email, type, password) VALUES (?, ?, ?, ?)");
 		echo $mysqli->error;
 		//s - string
 		//i - integer
 		//d - decimal
-		$stmt->bind_param("sssis", $signupUserName, $signupFirstName, $signupFamilyName, $signupType, $signupPassword);
+		$stmt->bind_param("ssis", $signupUserName, $signupEmail, $signupType, $signupPassword);
 		//$stmt->execute();
 		if ($stmt->execute()){
 			$notice = signIn($signupUserName, $_POST["signupPassword"]);
@@ -42,9 +42,9 @@ function test_input ($data){ //funktsiooni tegemine, esitatud andmete kontroll
 	function signIn($username, $password){
 			$notice = "";
 			$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
-			$stmt = $mysqli->prepare("SELECT id, username, firstname, lastname, type, password, status FROM userinfo WHERE username = ?");
+			$stmt = $mysqli->prepare("SELECT id, username, email, type, password, status FROM userinfo WHERE username = ?");
 			$stmt->bind_param("s",$username);
-			$stmt->bind_result($id, $usernameFromDb, $firstnameFromDb, $lastnameFromDb, $typeFromDB, $passwordFromDb, $statusFromDB);
+			$stmt->bind_result($id, $usernameFromDb, $emailFromDb, $typeFromDB, $passwordFromDb, $statusFromDB);
 			$stmt->execute();
 			
 			//kui vähemalt 1 tulemus
@@ -55,8 +55,6 @@ function test_input ($data){ //funktsiooni tegemine, esitatud andmete kontroll
 					
 					$_SESSION["userid"] = $id;
 					$_SESSION["username"] = $usernameFromDb;
-					$_SESSION["firstname"] = $firstnameFromDb;
-					$_SESSION["lastname"] = $lastnameFromDb;
 					$_SESSION["usertype"] = $typeFromDb;
 					
 					//lähen pealehele
