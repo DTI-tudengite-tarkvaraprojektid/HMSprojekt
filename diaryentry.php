@@ -4,9 +4,9 @@
 	$mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	$id = $_REQUEST["a1"];
 	$date = $_REQUEST["a2"];
-	$stmt = $mysqli->prepare("SELECT id, date, answer1, answer2, answer3, answer4, answer5, answer61, answer62, answer63, answer7".
+	$stmt = $mysqli->prepare("SELECT id, date, answer1, answer2, answer3, answer4, answer5, answer61, answer62, answer7".
 	" FROM diary WHERE id=".$id." AND SUBSTRING(date,1,10)='".$date."';");
-	$stmt->bind_result($id, $date, $answer1, $answer2, $answer3, $answer4, $answer5, $answer61, $answer62, $answer63, $answer7);
+	$stmt->bind_result($id, $date, $answer1, $answer2, $answer3, $answer4, $answer5, $answer61, $answer62, $answer7);
 	$stmt->execute();
 	$stmt->fetch();
 	$stmt->close();
@@ -87,9 +87,9 @@
 			Kui jah, siis millised muud tegevused seetõttu kannatasid?<br>";
 		if($answer61==0){
 			if($answer62!='Midagi muud'){
-				echo "Jah, kannatas tegevus: ".$answer62.".<br><br>";
+				echo "Jah, kannatas tegevus: ".$answer61.".<br><br>";
 			}else{
-				echo "Jah, kannatas tegevus: ".$answer63.".<br><br>";
+				echo "Jah, kannatas tegevus: ".$answer62.".<br><br>";
 			}
 		}
 		if($answer61==1){

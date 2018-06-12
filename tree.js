@@ -1,10 +1,10 @@
-document.getElementById("button1").addEventListener("click", button1);
-
 window.onload = function () {
 	document.getElementById("start").style.visibility = "hidden";
 	document.getElementById("send1").style.visibility = "hidden";
 	document.getElementById("send2").style.visibility = "hidden";
 }
+
+document.getElementById("button1").addEventListener("click", button1);
 
 var Answer1=null, Answer2=null, Answer3=null, Answer4=null, Answer5=null;
 var Answer61=null, Answer62=null, Answer63=null, Answer7=null;
@@ -83,14 +83,14 @@ function button3() {
 }
 
 function button4() {
-	document.getElementById("button5").addEventListener("click", button5);
-	document.getElementById("send1").addEventListener("click", send1);
     if(document.getElementById("answer41").checked == true){
+		document.getElementById("button5").addEventListener("click", button5);
         document.getElementById("section5").style.visibility = "visible";
 		document.getElementById("end1").style.visibility = "hidden";
 		Answer4 = "0";
     }
     if(document.getElementById("answer42").checked == true){
+		document.getElementById("send1").addEventListener("click", send1);
         document.getElementById("end1").style.visibility = "visible"; 
 		document.getElementById("send1").style.visibility = "visible";
 		Answer4 = "1";
@@ -107,32 +107,20 @@ function button5() {
 
 function button61() {
 	document.getElementById("button62").addEventListener("click", button62);
-    if(document.getElementById("answer61").checked == true){
+    if(document.getElementById("reasons").value == "Midagi muud"){
         document.getElementById("section62").style.visibility = "visible";
-		Answer61 = "0";
-    }
-    if(document.getElementById("answer62").checked == true){
+		Answer61 = document.getElementById("reasons").value;
+    }else{
         document.getElementById("section7").style.visibility = "visible";
-		Answer61 = "1";
+		Answer61 = document.getElementById("reasons").value;
     }
 }
 
 function button62() {
-	document.getElementById("button63").addEventListener("click", button63);
-    if(document.getElementById("reasons").value == "Midagi muud"){
-        document.getElementById("section63").style.visibility = "visible";
-		Answer62 = document.getElementById("reasons").value;
-    }else{
-        document.getElementById("section7").style.visibility = "visible";
-		Answer62 = document.getElementById("reasons").value;
-    }
-}
-
-function button63() {
 	document.getElementById("button7").addEventListener("click", button7);
     if(document.getElementById("newreason").value != ""){
         document.getElementById("section7").style.visibility = "visible";
-		Answer63 = document.getElementById("newreason").value;
+		Answer62 = document.getElementById("newreason").value;
     }
 }
 
@@ -160,7 +148,7 @@ function send1(){
 
 function send2(){
 	var xhr=new XMLHttpRequest();
-	var aadress="send2.php?a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4+"&a5="+Answer5+"&a61="+Answer61+"&a62="+Answer62+"&a63="+Answer63+"&a7="+Answer7;
+	var aadress="send2.php?a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4+"&a5="+Answer5+"&a61="+Answer61+"&a62="+Answer62+"&a7="+Answer7;
 	xhr.open("GET", aadress, true);
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){

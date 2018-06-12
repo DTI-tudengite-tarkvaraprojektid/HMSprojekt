@@ -1,7 +1,7 @@
 <?php
 require("../../../../config.php");
 require("functions.php");
-$reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", "Koolitöö", "Välimuse eest hoolitsemine", "Lemmiklooma eest hoolitsemine", "Midagi muud");
+$reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suhted sõpradega", "Koolitöö", "Välimuse eest hoolitsemine", "Lemmiklooma eest hoolitsemine", "Midagi muud");
 ?>
 
 <!DOCTYPE html>
@@ -138,20 +138,6 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 		<h3 id="question6"> 6. Kas mul jäi selle tegevuse tõttu muud tegevused sooritamata või ma ei jõudnud neid õigeaegselt valmis? 
 			Kui jah, siis millised muud tegevused seetõttu kannatasid? </h3>
 
-		<input type="radio" id="answer61" name="answer6"  value="0">
-		
-		<p id="option61"> Jah </p>
-		
-		<input type="radio" id="answer62" name="answer6" value="1">
-		
-		<p id="option62"> Ei </p>
-		
-		<button id="button61" type="button">Fikseeri vastus</button>
-	</div>
-		
-	<div id="section62" class="section">
-		<h3 id="what"> Millised tegevused kannatasid? </h3>
-		
 		<?php 
 			echo "<select id='reasons'>";
 			for ($i = 0; $i < count($reasons); $i++) {
@@ -160,15 +146,15 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 			echo "</select>";
 		?>
 			
-		<button id="button62" type="button">Fikseeri vastus</button>
+		<button id="button61" type="button">Fikseeri vastus</button>
 	</div>
 
-	<div id="section63" class="section">
+	<div id="section62" class="section">
 		<h3 id="whatnew"> Milline muu tegevus selle tõttu kannatas? </h3>
 		
 		<input id="newreason" type="text" value="" size="43px">
 		
-		<button id="button63" type="button">Fikseeri vastus</button>
+		<button id="button62" type="button">Fikseeri vastus</button>
 	</div>
 
 	<div id="section7" class="section">
