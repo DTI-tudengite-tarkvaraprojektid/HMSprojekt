@@ -1,3 +1,10 @@
+document.getElementById("diaryEntry").addEventListener("click", diaryEntry);
+//document.getElementById("sendId").removeEventListener("click", funktsioon);
+//document.getElementById("sendId").addEventListener("click", funktsioon);
+//document.getElementById("idchoice").addEventListener("change", diaryEntry);
+//document.getElementById("idchoice").addEventListener("input", funktsioon);
+
+
 var id = null, date =null;
 
 function entrys() {
@@ -26,15 +33,9 @@ function usersCount() {
 	xhr.send();
 }
 
-function sendId() {
-	id = document.getElementById("idchoice").value;
-}
-
-function sendDate() {
-	date = document.getElementById("date").value;
-}
-
 function diaryEntry() {
+	id = document.getElementById("idchoice").value;
+	date = document.getElementById("date").value;
 	var xhr=new XMLHttpRequest();
 	var aadress="diaryentry.php?a1="+id+"&a2="+date;
 	xhr.open("GET", aadress, true);	
