@@ -44,7 +44,7 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 
 		<p id="option15"> Täiesti </p>
 		
-		<button id="button1" type="button" onclick="button1()">Fikseeri vastus</button>
+		<button id="button1" type="button">Fikseeri vastus</button>
 	</div>
 	
 	<div id="start">
@@ -72,7 +72,7 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 
 		<p id="option25"> Väga kõrge </p>
 
-		<button id="button2" type="button" onclick="button2()">Fikseeri vastus</button> 
+		<button id="button2" type="button">Fikseeri vastus</button> 
 	</div>
 
 	<div id="section3" class="section">
@@ -98,7 +98,7 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 		
 		<p id="option35"> Täiesti </p>
 		
-		<button id="button3" type="button" onclick="button3()">Fikseeri vastus</button>
+		<button id="button3" type="button">Fikseeri vastus</button>
 	</div>
 
 	<div id="section4" class="section">
@@ -111,12 +111,12 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 		<input type="radio" id="answer42" name="answer4" value="1">
 			
 		<p id="option42"> Ei </p>
-		<button id="button4" type="button" onclick="button4()">Fikseeri vastus</button>
+		<button id="button4" type="button">Fikseeri vastus</button>
 	</div>
 	
 	<h3 id="end1"> Sa olid täna väga tubli, jätka samas vaimus!!! </h3>
 	
-	<button id="send1" type="button" value="" onclick="send1()">Saada andmed</button>
+	<button id="send1" type="button" value="">Saada andmed</button>
 
 	<div id="section5" class="section">
 		<h3 id="question5"> 5. Kui palju aega (tunde ja minuteid) ma seda tegevust sooritades veetsin? </h3>
@@ -131,7 +131,7 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 		
 		<p  id="answer5end"> minutit. </p>
 		
-		<button id="button5" type="button" onclick="button5()">Fikseeri vastus</button>
+		<button id="button5" type="button">Fikseeri vastus</button>
 	</div>
 	
 	<div id="section61" class="section">
@@ -146,7 +146,7 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 		
 		<p id="option62"> Ei </p>
 		
-		<button id="button6" type="button" onclick="button61()">Fikseeri vastus</button>
+		<button id="button61" type="button">Fikseeri vastus</button>
 	</div>
 		
 	<div id="section62" class="section">
@@ -160,7 +160,7 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 			echo "</select>";
 		?>
 			
-		<button id="button8" type="button" onclick="button62()">Fikseeri vastus</button>
+		<button id="button62" type="button">Fikseeri vastus</button>
 	</div>
 
 	<div id="section63" class="section">
@@ -168,7 +168,7 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 		
 		<input id="newreason" type="text" value="" size="43px">
 		
-		<button id="button9" type="button" onclick="button63()">Fikseeri vastus</button>
+		<button id="button63" type="button">Fikseeri vastus</button>
 	</div>
 
 	<div id="section7" class="section">
@@ -176,36 +176,16 @@ $reasons = array("Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 
 		<textarea id="answer7" type="text" rows="4" cols="50" value=""></textarea>
 		
-		<button id="button7" type="button" onclick="button7()">Fikseeri vastus</button>
+		<button id="button7" type="button">Fikseeri vastus</button>
 	</div>
 	
 	<h3 id="end2"> Sa andsid küll täna oma nõrkusele järele, aga püüa vähemalt homme tublim olla!!! </h3>
 	
-	<button id="send2" type="button" value="" onclick="send2()">Saada andmed</button>
+	<button id="send2" type="button" value="">Saada andmed</button>
 
 	</div>
 	
 </div>
-
-Otsitav
-<select id='otsitav'>
-	<option value="0">0</option>
-	<option value="1">1</option>
-	<option value="2">2</option>
-	<option value="3">3</option>
-</select>
-
-Muudetav
-<select id='muudetav'>
-	<option value="0">0</option>
-	<option value="1">1</option>
-	<option value="2">2</option>
-	<option value="3">3</option>
-</select>
-
-<button id="fixed" type="button" value="" onclick="fixed()">Fikseeri</button>
-
-<button id="test" type="button" value="" onclick="test()">Testi nupp</button>
 
 </body>
 

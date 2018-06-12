@@ -27,26 +27,33 @@ require("../../../../config.php");
 
 Vali id:
 
-<select id='idchoice'>
+<select id="idchoice">
 	<option value="20">20</option>
 	<option value="21">21</option>
 	<option value="22">22</option>
 </select>
 
-<button id="sendId" type="button" onclick="sendId()">Fikseeri ID</button><br>
-
 Vali kuupäev:
 
-<select id='date'>
+<select id="date">
 	<option value="2018-06-10">2018-06-10</option>
 	<option value="2018-06-11">2018-06-11</option>
+	<option value="2018-06-12">2018-06-12</option>
 </select>
-
-<button id="sendDate" type="button" onclick="sendDate()">Fikseeri ID</button><br>
 
 <p id="diaryAnswers"></p>
 
-<button id="diaryEntry" type="button" onclick="diaryEntry()">Uuenda</button>
+<button id="diaryEntry" type="button">Uuenda</button>
+
+<p> Keskmise arvutamine: </p>
+
+Vali küsimus:
+
+<select id="answerNr">
+	<option value="0">1. Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?</option>
+	<option value="1">2. Kui tugevalt hindan meelistegevust sooritada täna?</option>
+	<option value="2">3. Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista?</option>
+</select>
 
 </body>
 </html>
