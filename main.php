@@ -60,12 +60,10 @@
       } catch( error ) {
         date = null;
       }
- 
       return date;
     }
   } );
   </script>
-};
 
 <body>
   
@@ -97,12 +95,12 @@
         <h2>Mängusõltuvuse eneseseire keskkond</h2>
         <h1>Avaleht</h1>
         <p>Siin näed statistikat oma sissekannete kohta</p>
-        <form>
-          <label for="dateStart">Vali vahemik:</label>
+         <form>
+          <!--<label for="dateStart">Vali vahemik:</label>
           <input type="text" id="dateStart" name="dateStart">
           <label for="dateEnd"></label>
           <input type="text" id="dateEnd" name="dateEnd">
-        </form>
+        </form>-->
         <div class="ct-chart ct-golden-section" id="chart"></div>
     </section>
   

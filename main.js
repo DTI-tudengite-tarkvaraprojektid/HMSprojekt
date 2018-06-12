@@ -1,3 +1,4 @@
+
 const MainApp = function () {
   if (MainApp.instance) {
     return MainApp.instance
@@ -61,7 +62,7 @@ MainApp.prototype = {
 
 }//main
 
-new Chartist.Line('.ct-chart', {
+/*new Chartist.Line('.ct-chart', {
   labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
   series: [
     //[2, 3, 2, 4, 5, 3],
@@ -72,7 +73,7 @@ new Chartist.Line('.ct-chart', {
 }, {
   width: 600,
   height: 300
-});//chartist.js
+});//chartist.js*/
 
 
 window.onload = function () {
