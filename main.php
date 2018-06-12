@@ -13,7 +13,11 @@
   if (isset($_POST["deleteAccount"])){
     deleteAccount($_SESSION["userid"]);
   }
-    
+
+  if (isset($_POST["sendEmail"])){
+    Email(($_SESSION["username"]));
+
+  }  
     
 ?>
 <!DOCTYPE html>
@@ -87,6 +91,7 @@
         <h1>Päevik</h1>
         <p>Siin on sinu päeviku sissekanded</p>
         <a href="diary.php" class="menu-link">Päevikut täitma</a>
+        <h4 onclick="window.print();"> Print </h4>
         
     </section>
 
@@ -110,6 +115,8 @@
         <h1>Info sinu kohta</h1>
         <form method="POST">
         <button id="deleteAccount" class="cancelbtn" name="deleteAccount">Kustuta minu konto</button></form>
+        <form method="POST"><button id="sendEmail" class="cancelbtn" name="sendEmail">Saada email</button></form>
+        <p id="myInfo"><?php readInfo()?></p>
     </section>
   </main>
 

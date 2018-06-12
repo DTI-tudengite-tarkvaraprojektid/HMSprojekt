@@ -2,7 +2,6 @@
 require("../../../../config.php");
 $database = "if17_HMS";
 //alustame sessiooni
-
 session_start();
 
 	
@@ -86,6 +85,63 @@ function deleteAccount($userid){
 	$mysqli->close();
 	
 }
+
+function Email($username){
+	// Multiple recipients
+$to = 'julimai@tlu.ee'; // note the comma
+
+// Subject
+$subject = 'Testmail';
+
+// Message
+$message = '
+<html>
+<head>
+  <title>Katse email arendatavalt lehelt</title>
+</head>
+<body>
+  <p>$username</p>
+  <p>Siin saab kuvada HTMLina igast asju</p>
+  <table>
+    <tr>
+      <th>Isegi</th><th>mingi</th><th>tabeli</th><th>kujul</th>
+    </tr>
+    <tr>
+      <td>tabelisse</td><td>saab</td><td>asju</td><td>panna</td>
+    </tr>
+    <tr>
+      <td>kohe</td><td>mitu</td><td>mitu</td><td>rida</td>
+    </tr>
+  </table>
+</body>
+</html>
+';
+
+// To send HTML mail, the Content-type header must be set
+$headers[] = 'MIME-Version: 1.0';
+$headers[] = 'Content-type: text/html; charset=iso-8859-1';
+
+
+
+// Mail it
+mail($to, $subject, $message, implode("\r\n", $headers));
+
+}
+
+//read all info funktsioon
+function readInfo(){
+	$info="";
+	$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
 	
+	$stmt=$mysqli->prepare("SELECT username, email, type FROM userinfo WHERE id = ?"); 
+	$stmt->bind_param("i", $_SESSION["userid"]);
 	
+	$stmt->bind_result($username, $email, $type);
+	$stmt->execute();
+	$stmt->fetch();	
+	$stmt->close();
+	$mysqli->close();
+	echo $username;
+}
+
 ?>
