@@ -87,16 +87,35 @@
 				}
 			}
 		}
+		
 				
 			//Kirjutan uue kasutaja andmebaasi
 		if(empty($signupUserNameError) and empty($signupFirstNameError) and empty($signupFamilyNameError) and empty($signupTypeError) and empty($signupPasswordError)) {
 			echo ("Hakkan salvestama");
 			$signupPassword = hash("sha512", $_POST["signupPassword"]);
+			$signupEmail = hash("sha512", $_POST["signupEmail"]);
 			//echo $signupPassword;
 			signUp($signupUserName, $signupEmail, $signupType, $signupPassword);
 		}
 	} //kas vajutati loo kasutaja nuppu
 	
+	if(isset($_POST["recoveryButton"])){
+		//kas on kasutajanimi sisestatud
+		if (isset ($_POST["loginUserName"])){
+			if (empty ($_POST["loginUserName"])){
+				$loginUserNameError ="NB! Ilma selleta ei saa sisse logida!";
+			} else {
+				$loginUserName = $_POST["loginUserName"];
+			}
+		}
+		if (!empty($loginUserName) and !empty ($_POST["loginEmail"])){
+			//echo "Alustan sisselogimist";
+			$hash = hash("sha512", $_POST["loginEmail"]);
+			$notice = recoverAccount($loginUserName, $hash);
+			//$notice = signIn($loginEmail, $hash);
+		}
+		
+	}
 	
 ?>
 
@@ -113,7 +132,8 @@
 	<ul class="menu-list">
 		<li class="menu-item menu-link active-menu" onclick="document.getElementById('id01').style.display='block'">Logi sisse</li>
 		<li class="menu-item menu-link" onclick="document.getElementById('id02').style.display='block'">Registreeri</li>
-		<span style="color:red; text-align:center"><?php echo $notice; ?></span>
+		<li class="menu-item menu-link" onclick="document.getElementById('id03').style.display='block'">Taasta konto</li>
+		<span style="color:red; font-size:1vw;"><?php echo $notice; ?></span>
 	</ul>
 </nav>
 
@@ -142,7 +162,7 @@
   <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
   <form class="modal-content animate"  method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
     <div class="container">
-      <h2>Palun täida allolevad lahtrid, et end kasutajaks registreerida.</h2>
+      <h3>Palun täida allolevad lahtrid, et end kasutajaks registreerida.</h3>
       <hr>
       <label for="signupUserName"><b>Kasutajanimi</b></label>
       <input type="text" placeholder="Kirjuta kasutajanimi" name="signupUserName" value="<?php echo $signupUserName; ?>" required>
@@ -169,6 +189,26 @@
         <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Tühista</button>
         <button type="submit" class="signupbtn" name="signupButton">Registreeri kasutajaks</button>
       </div>
+    </div>
+  </form>
+</div>
+
+<div id="id03" class="modal">
+  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content animate" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
+    <div class="container">
+		<h3>Konto taastamiseks sisesta oma kasutajanimi ja registreerimisel sisestatud e-maili aadress.</h3>
+      <label for="loginUserName"><b>Kasutajanimi</b></label>
+      <input type="text" placeholder="Sisesta kasutajanimi" name="loginUserName" value="<?php echo $loginUserName; ?>" required>
+
+      <label for="loginEmail"><b>Email</b></label>
+      <input type="email" placeholder="Sisesta oma e-maili aadress" name="loginEmail" required>
+        
+      <button type="submit" name="recoveryButton">Taasta konto</button> 
+      
+			
+      <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Tühista</button>
+      
     </div>
   </form>
 </div>

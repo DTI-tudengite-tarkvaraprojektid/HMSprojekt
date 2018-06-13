@@ -116,7 +116,9 @@
         <form method="POST">
         <button id="deleteAccount" class="cancelbtn" name="deleteAccount">Kustuta minu konto</button></form>
         <form method="POST"><button id="sendEmail" class="cancelbtn" name="sendEmail">Saada email</button></form>
-        <p id="myInfo"><?php readInfo()?></p>
+        
+        <p>Viimased päeviku sissekanded:</p>
+        <p id="myInfo"><?php readInfo($_SESSION["userid"])?></p>
     </section>
   </main>
 

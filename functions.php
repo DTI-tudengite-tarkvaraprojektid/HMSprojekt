@@ -72,18 +72,33 @@ function test_input ($data){ //funktsiooni tegemine, esitatud andmete kontroll
 		return $notice;
 	}
 
+function recoverAccount($username, $email){
+	$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
+	$stmt = $mysqli->prepare("UPDATE userinfo SET status= NULL WHERE email= '$email'");
+	if ($stmt->execute()){
+		header("location: index.php");
+		$notice = "Teretulemast tagasi! Saad nüüd uuesti sisse logida";
+	} else {
+		$notice= " Tekkis viga : " .$stmt->error;
+	}
+	$stmt->close();
+	$mysqli->close();
+	return $notice;
+	}
+
 function deleteAccount($userid){
 	$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
 	$stmt = $mysqli->prepare("UPDATE userinfo SET status= 1 WHERE id= $userid");
 	if ($stmt->execute()){
-		echo "\n Õnnestus!";
-		header("location: index.php");
+		session_destroy();
+		header("Location: index.php");
+		$notice = "Sinu konto on nüüd kustutatud!";
 	} else {
 		echo "\n Tekkis viga : " .$stmt->error;
 	}
 	$stmt->close();
 	$mysqli->close();
-	
+	return $notice;
 }
 
 function Email($username){
@@ -129,19 +144,24 @@ mail($to, $subject, $message, implode("\r\n", $headers));
 }
 
 //read all info funktsioon
-function readInfo(){
-	$info="";
+function readInfo($userid){
+	
 	$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
 	
-	$stmt=$mysqli->prepare("SELECT username, email, type FROM userinfo WHERE id = ?"); 
-	$stmt->bind_param("i", $_SESSION["userid"]);
+	$stmt=$mysqli->prepare("SELECT date FROM diary WHERE id = $userid"); 
 	
-	$stmt->bind_result($username, $email, $type);
+	
+	$stmt->bind_result($date);
 	$stmt->execute();
-	$stmt->fetch();	
+	//$stmt->fetch();
+	while ($stmt->fetch()){
+		echo $date."<br>";
+	}
+		
 	$stmt->close();
 	$mysqli->close();
-	echo $username;
+	
+	
 }
 
 ?>
