@@ -62,18 +62,6 @@ MainApp.prototype = {
 
 }//main
 
-/*new Chartist.Line('.ct-chart', {
-  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-  series: [
-    //[2, 3, 2, 4, 5, 3],
-    [0, 2.5, 3, 2, 3, 1],
-    //[1, 2, 3, 4, 1, 5],
-    [1, ,2, 3, 4, 5, 2],
-  ]
-}, {
-  width: 600,
-  height: 300
-});//chartist.js*/
 
 function diaryEntry() {
 	var xhr=new XMLHttpRequest();
