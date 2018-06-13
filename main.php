@@ -16,8 +16,9 @@
 
   if (isset($_POST["sendEmail"])){
     Email(($_SESSION["username"]));
-
-  }  
+  } 
+  
+  
     
 ?>
 <!DOCTYPE html>
@@ -29,7 +30,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
   <script src="main.js" defer></script>
-  
+  <script src="statistics.js" defer></script>
   
 
 <body>
@@ -67,7 +68,7 @@
         
     </section>
   
-    <!-- Home -->
+    <!-- User -->
     <section id="user-view">
         <h2>Mängusõltuvuse eneseseire keskkond</h2>
         <h1>Info sinu kohta</h1>
@@ -76,8 +77,15 @@
         <form method="POST"><button id="sendEmail" class="cancelbtn" name="sendEmail">Saada email</button></form>
         
         <p>Viimased päeviku sissekanded:</p>
-        <p id="myInfo"><?php readInfo($_SESSION["userid"])?></p>
-        <p id="diaryAnswers"></p>
+        
+        
+        
+          <div id="datesToSelect"><?php readInfo($_SESSION["userid"])?></div>
+          <div>
+            <button type="submit" id="diaryPost" name="diaryPost" onclick="diaryEntry()">Vali</button>
+          </div>
+        
+      <p id="diaryAnswers"></p>
     </section>
   </main>
 

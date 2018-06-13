@@ -1,11 +1,17 @@
 <?php
 	session_start();
 	require("../../../../config.php");
+
+	$dates = $_REQUEST["dates"];
+
+	for($i = 0; $i < count($dates); $i++){
+
+	}
+
 	$mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	$id = $_SESSION["userid"];
-	$date = $_POST[""];
-	$stmt = $mysqli->prepare("SELECT id, date, answer1, answer2, answer3, answer4, answer5, answer6, answer7".
-	" FROM diary WHERE id=".$id." AND SUBSTRING(date,1,10)='".$date."';");
+	$stmt = $mysqli->prepare("SELECT id, date, answer1, answer2, answer3, answer4, answer5, answer6, answer7 FROM diary WHERE id=".$id." AND date=?;");
+	$stmt->bind_param("s", $date);
 	$stmt->bind_result($id, $date, $answer1, $answer2, $answer3, $answer4, $answer5, $answer6, $answer7);
 	$stmt->execute();
 	$stmt->fetch();
@@ -90,4 +96,5 @@
 		echo "7. Kirjelda oma mõtteid ja tundeid ning nende muutumist päeva jooksul.<br>";
 		echo $answer7;
 	}
+	
 ?>

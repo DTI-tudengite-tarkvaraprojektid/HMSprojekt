@@ -58,23 +58,14 @@ MainApp.prototype = {
     // http://stackoverflow.com/questions/195951/change-an-elements-class-with-javascript
     document.querySelector('.active-menu').className = document.querySelector('.active-menu').className.replace('active-menu', '')
     document.querySelector('.' + this.currentRoute).className += ' active-menu'
-  }
+  },
+
+  
 
 }//main
 
 
-function diaryEntry() {
-	var xhr=new XMLHttpRequest();
-	var aadress="diaryentry.php";
-	xhr.open("GET", aadress, true);	
-	xhr.onreadystatechange=function(){
-		if(xhr.readyState==4){
-			console.log(xhr.responseText);
-			document.getElementById("diaryAnswers").innerHTML = this.responseText;
-		}
-	}
-	xhr.send();
-}
+
 
 window.onload = function () {
   const app = new MainApp()

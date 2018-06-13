@@ -23,6 +23,27 @@ function entrys() {
 	xhr.send();
 }
 
+function diaryEntry() {
+	let allInputs = document.getElementById("datesToSelect").getElementsByTagName("input");
+	console.log(allInputs.length);
+	let selectedDates = [];
+	for(let i = 0; i < allInputs.length; i ++){
+		if(allInputs[i].checked){
+			selectedDates.push(allInputs[i].value);
+		}
+	}
+	var xhr=new XMLHttpRequest();
+    var aadress="diaryentry.php?dates="+selectedDates;
+    xhr.open("GET", aadress, true);	
+    xhr.onreadystatechange=function(){
+      if(xhr.readyState==4){
+        console.log(xhr.responseText);
+        document.getElementById("diaryAnswers").innerHTML = this.responseText;
+      }
+    }
+	xhr.send(); 
+  }
+
 function usersCount() {
 	var xhr=new XMLHttpRequest();
 	var aadress="userscount.php";
