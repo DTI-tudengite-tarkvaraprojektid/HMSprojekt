@@ -84,8 +84,8 @@
           <div>
             <button type="submit" id="diaryPost" name="diaryPost" onclick="diaryEntry()">Vali</button>
           </div>
-        
-      <p id="diaryAnswers"></p>
+        <p id="diaryAnswers"></p>
+     
     </section>
   </main>
 

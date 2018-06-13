@@ -25,13 +25,14 @@ function entrys() {
 
 function diaryEntry() {
 	let allInputs = document.getElementById("datesToSelect").getElementsByTagName("input");
-	console.log(allInputs.length);
+	
 	let selectedDates = [];
 	for(let i = 0; i < allInputs.length; i ++){
 		if(allInputs[i].checked){
 			selectedDates.push(allInputs[i].value);
 		}
 	}
+	//console.log(selectedDates);
 	var xhr=new XMLHttpRequest();
     var aadress="diaryentry.php?dates="+selectedDates;
     xhr.open("GET", aadress, true);	
