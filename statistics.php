@@ -17,11 +17,11 @@ require("../../../../config.php");
 <p> Sissekannete arv lehel: </p>
 <p id="entrys"></p>
 
-<button id="entrys1" type="button" onclick="entrys()">Uuenda</button>
+<button id="entrys1" type="button">Uuenda</button>
 
 <p> Kasutajate arv lehel: </p>
 <p id="usersCount"></p>
-<button id="usersCount1" type="button" onclick="usersCount()">Uuenda</button>
+<button id="usersCount1" type="button">Uuenda</button>
 
 <p> Päeviku sissekanne: </p>
 
@@ -31,21 +31,21 @@ Vali id:
 	<option value="20">20</option>
 	<option value="21">21</option>
 	<option value="22">22</option>
+	<option value="33">33</option>
 </select>
 
 Vali kuupäev:
 
 <select id="date">
-	<option value="2018-06-10">2018-06-10</option>
-	<option value="2018-06-11">2018-06-11</option>
 	<option value="2018-06-12">2018-06-12</option>
+	<option value="2018-06-13">2018-06-13</option>
 </select>
 
 <p id="diaryAnswers"></p>
 
 <button id="diaryEntry" type="button">Uuenda</button>
 
-<p> Keskmise arvutamine: </p>
+<p> Suuruste (keskmine, miinimum ja maksimum) arvutamine: </p>
 
 Vali küsimus:
 
@@ -53,6 +53,15 @@ Vali küsimus:
 	<option value="0">1. Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?</option>
 	<option value="1">2. Kui tugevalt hindan meelistegevust sooritada täna?</option>
 	<option value="2">3. Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista?</option>
+</select><br>
+
+Vali id:
+
+<select id="idchoice2">
+	<option value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+	<option value="33">33</option>
 </select>
 
 </body>

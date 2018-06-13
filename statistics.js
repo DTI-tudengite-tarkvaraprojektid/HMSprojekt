@@ -1,9 +1,4 @@
 document.getElementById("diaryEntry").addEventListener("click", diaryEntry);
-//document.getElementById("sendId").removeEventListener("click", funktsioon);
-//document.getElementById("sendId").addEventListener("click", funktsioon);
-//document.getElementById("idchoice").addEventListener("change", diaryEntry);
-//document.getElementById("idchoice").addEventListener("input", funktsioon);
-
 
 var id = null, date =null;
 

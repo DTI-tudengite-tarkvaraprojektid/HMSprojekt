@@ -8,7 +8,6 @@ document.getElementById("button1").addEventListener("click", button1);
 
 var Answer1=null, Answer2=null, Answer3=null, Answer4=null, Answer5=null;
 var Answer61=null, Answer62=null, Answer63=null, Answer7=null;
-var otsitav=null, muudetav=null;
 
 function button1() {
 	document.getElementById("button2").addEventListener("click", button2);
@@ -106,29 +105,29 @@ function button5() {
 }
 
 function button61() {
-	document.getElementById("button62").addEventListener("click", button62);
     if(document.getElementById("reasons").value == "Midagi muud"){
+		document.getElementById("button62").addEventListener("click", button62);
         document.getElementById("section62").style.visibility = "visible";
-		Answer61 = document.getElementById("reasons").value;
     }else{
+		document.getElementById("button7").addEventListener("click", button7);
         document.getElementById("section7").style.visibility = "visible";
-		Answer61 = document.getElementById("reasons").value;
-    }
+		Answer6 = document.getElementById("reasons").value;
+	}
 }
 
 function button62() {
 	document.getElementById("button7").addEventListener("click", button7);
     if(document.getElementById("newreason").value != ""){
         document.getElementById("section7").style.visibility = "visible";
-		Answer62 = document.getElementById("newreason").value;
+		Answer6 = document.getElementById("newreason").value;
     }
 }
 
 function button7() {
-	document.getElementById("send2").addEventListener("click", send2);
     if(document.getElementById("answer7").value != ""){
         document.getElementById("end2").style.visibility = "visible";
 		document.getElementById("send2").style.visibility = "visible";
+		document.getElementById("send2").addEventListener("click", send2);
 		Answer7 = document.getElementById("answer7").value;
     }
 }
@@ -148,13 +147,13 @@ function send1(){
 
 function send2(){
 	var xhr=new XMLHttpRequest();
-	var aadress="send2.php?a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4+"&a5="+Answer5+"&a61="+Answer61+"&a62="+Answer62+"&a7="+Answer7;
+	var aadress="send2.php?a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4+"&a5="+Answer5+"&a6="+Answer6+"&a7="+Answer7;
 	xhr.open("GET", aadress, true);
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){
 			console.log(xhr.responseText);
 		}
-	}	
+	}
 	xhr.send();
 	window.location.href='main.php';
 }
