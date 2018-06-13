@@ -24,27 +24,26 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 	<div id="section1" class="section">
 		<h3 id="question1"> 1. Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all? </h3>
 
-		<input type="radio" id="answer11" name="answer1" value="0">
+		<input type="radio" id="answer11" name="answer1" value="0" onclick="button1()">
 
 		<p id="option11"> Üldse mitte </p>
 
-		<input type="radio" id="answer12" name="answer1" value="1">
+		<input type="radio" id="answer12" name="answer1" value="1" onclick="button1()">
 
 		<p id="option12"> Vähe </p>
 
-		<input type="radio" id="answer13" name="answer1" value="2">
+		<input type="radio" id="answer13" name="answer1" value="2" onclick="button1()">
 
 		<p id="option13"> Keskmiselt </p>
 
-		<input type="radio" id="answer14" name="answer1" value="3"> 
+		<input type="radio" id="answer14" name="answer1" value="3" onclick="button1()"> 
 
 		<p id="option14"> Palju </p>
 
-		<input type="radio" id="answer15" name="answer1" value="4">
+		<input type="radio" id="answer15" name="answer1" value="4" onclick="button1()">
 
 		<p id="option15"> Täiesti </p>
 		
-		<button id="button1" type="button">Fikseeri vastus</button>
 	</div>
 	
 	<div id="start">
@@ -52,66 +51,63 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 	<div id="section2" class="section">
 		<h3 id="question2"> 2. Kui tugevalt hindan meelistegevust sooritada täna? </h3>
 
-		<input type="radio" id="answer21" name="answer2" value="0">
+		<input type="radio" id="answer21" name="answer2" value="0" onclick="button2()">
 
 		<p id="option21"> Olematu </p>
 
-		<input type="radio" id="answer22" name="answer2" value="1">
+		<input type="radio" id="answer22" name="answer2" value="1" onclick="button2()">
 
 		<p id="option22"> Nõrk </p>
 
-		<input type="radio" id="answer23" name="answer2" value="2">
+		<input type="radio" id="answer23" name="answer2" value="2" onclick="button2()">
 
 		<p id="option23"> Tavaline </p>
 
-		<input type="radio" id="answer24" name="answer2" value="3"> 
+		<input type="radio" id="answer24" name="answer2" value="3" onclick="button2()"> 
 
 		<p id="option24"> Kõrge </p>
 
-		<input type="radio" id="answer25" name="answer2" value="4">
+		<input type="radio" id="answer25" name="answer2" value="4" onclick="button2()">
 
 		<p id="option25"> Väga kõrge </p>
 
-		<button id="button2" type="button">Fikseeri vastus</button> 
 	</div>
 
 	<div id="section3" class="section">
 		<h3 id="question3"> 3. Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista? </h3>
 			
-		<input type="radio" id="answer31" name="answer3" value="0">
+		<input type="radio" id="answer31" name="answer3" value="0" onclick="button3()">
 		
 		<p id="option31"> Üldse mitte </p>
 		
-		<input type="radio" id="answer32" name="answer3" value="1">
+		<input type="radio" id="answer32" name="answer3" value="1" onclick="button3()">
 		
 		<p id="option32"> Vähe </p>
 		
-		<input type="radio" id="answer33" name="answer3" value="2">
+		<input type="radio" id="answer33" name="answer3" value="2" onclick="button3()">
 		
 		<p id="option33"> Keskmiselt </p>
 		
-		<input type="radio" id="answer34" name="answer3" value="3"> 
+		<input type="radio" id="answer34" name="answer3" value="3" onclick="button3()"> 
 		
 		<p id="option34"> Palju </p>
 		
-		<input type="radio" id="answer35" name="answer3" value="4">
+		<input type="radio" id="answer35" name="answer3" value="4" onclick="button3()">
 		
 		<p id="option35"> Täiesti </p>
 		
-		<button id="button3" type="button">Fikseeri vastus</button>
 	</div>
 
 	<div id="section4" class="section">
 		<h3 id="question4"> 4. Kas ma täna sooritasin oma meelistegevust? </h3>
 			
-		<input type="radio" id="answer41" name="answer4"  value="0">
+		<input type="radio" id="answer41" name="answer4"  value="0" onclick="button4()">
 			
 		<p id="option41"> Jah </p>
 			
-		<input type="radio" id="answer42" name="answer4" value="1">
+		<input type="radio" id="answer42" name="answer4" value="1" onclick="button4()">
 			
 		<p id="option42"> Ei </p>
-		<button id="button4" type="button">Fikseeri vastus</button>
 	</div>
 	
 	<h3 id="end1"> Sa olid täna väga tubli, jätka samas vaimus!!! </h3>
@@ -131,7 +127,7 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 		
 		<p  id="answer5end"> minutit. </p>
 		
-		<button id="button5" type="button">Fikseeri vastus</button>
+		<button class="fixButtons" id="button5" type="button" onclick="button5()">Fikseeri aeg</button>
 	</div>
 	
 	<div id="section61" class="section">
@@ -146,7 +142,7 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 			echo "</select>";
 		?>
 			
-		<button id="button61" type="button">Fikseeri vastus</button>
+		<button class="fixButtons" id="button61" type="button">Fikseeri vastus</button>
 	</div>
 
 	<div id="section62" class="section">
@@ -154,7 +150,7 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 		
 		<input id="newreason" type="text" value="" size="43px">
 		
-		<button id="button62" type="button">Fikseeri vastus</button>
+		<button class="fixButtons" id="button62" type="button">Fikseeri vastus</button>
 	</div>
 
 	<div id="section7" class="section">
@@ -162,7 +158,7 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 
 		<textarea id="answer7" type="text" rows="4" cols="50" value=""></textarea>
 		
-		<button id="button7" type="button">Fikseeri vastus</button>
+		<button class="fixButtons" id="button7" type="button">Fikseeri vastus</button>
 	</div>
 	
 	<h3 id="end2"> Sa andsid küll täna oma nõrkusele järele, aga püüa vähemalt homme tublim olla!!! </h3>
