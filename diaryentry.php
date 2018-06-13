@@ -2,8 +2,8 @@
 	session_start();
 	require("../../../../config.php");
 	$mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
-	$id = $_REQUEST["a1"];
-	$date = $_REQUEST["a2"];
+	$id = $_SESSION["userid"];
+	$date = $_POST[""];
 	$stmt = $mysqli->prepare("SELECT id, date, answer1, answer2, answer3, answer4, answer5, answer6, answer7".
 	" FROM diary WHERE id=".$id." AND SUBSTRING(date,1,10)='".$date."';");
 	$stmt->bind_result($id, $date, $answer1, $answer2, $answer3, $answer4, $answer5, $answer6, $answer7);

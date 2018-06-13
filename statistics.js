@@ -36,21 +36,6 @@ function usersCount() {
 	xhr.send();
 }
 
-function diaryEntry() {
-	id = document.getElementById("idchoice").value;
-	date = document.getElementById("date").value;
-	var xhr=new XMLHttpRequest();
-	var aadress="diaryentry.php?a1="+id+"&a2="+date;
-	xhr.open("GET", aadress, true);	
-	xhr.onreadystatechange=function(){
-		if(xhr.readyState==4){
-			console.log(xhr.responseText);
-			document.getElementById("diaryAnswers").innerHTML = this.responseText;
-		}
-	}
-	xhr.send();
-}
-
 function sendAverage() {
 	id = document.getElementById("idchoice2").value;
 	answerNr1 = document.getElementById("answerNr1").value;

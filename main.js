@@ -75,6 +75,18 @@ MainApp.prototype = {
   height: 300
 });//chartist.js*/
 
+function diaryEntry() {
+	var xhr=new XMLHttpRequest();
+	var aadress="diaryentry.php";
+	xhr.open("GET", aadress, true);	
+	xhr.onreadystatechange=function(){
+		if(xhr.readyState==4){
+			console.log(xhr.responseText);
+			document.getElementById("diaryAnswers").innerHTML = this.responseText;
+		}
+	}
+	xhr.send();
+}
 
 window.onload = function () {
   const app = new MainApp()

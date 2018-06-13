@@ -2,9 +2,18 @@ window.onload = function () {
 	document.getElementById("start").style.visibility = "hidden";
 	document.getElementById("send1").style.visibility = "hidden";
 	document.getElementById("send2").style.visibility = "hidden";
+	
+	document.getElementsByName("answer1").onclick = function(){ 
+	var radioButtons = document.getElementsByName("answer1"); 
+    for (var i = 0; i < radioButtons.length; i++) { 
+        if (radioButtons[i].checked) { 
+			var thevalue  =  radioButtons[i].value; 
+		}
+		console.log(thevalue);
+}
 }
 
-document.getElementById("button1").addEventListener("click", button1);
+//document.getElementById("button1").addEventListener("click", button1);
 
 var Answer1=null, Answer2=null, Answer3=null, Answer4=null, Answer5=null;
 var Answer61=null, Answer62=null, Answer63=null, Answer7=null;
