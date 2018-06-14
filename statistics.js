@@ -1,14 +1,15 @@
 function starter(){
-  document.getElementById("diaryEntry").addEventListener("click", diaryEntry);
   document.getElementById("entrys1").addEventListener("click", entrys);
   document.getElementById("usersCount1").addEventListener("click", usersCount);
   document.getElementById("sendAverage").addEventListener("click", sendAverage);
   document.getElementById("sendMinimum").addEventListener("click", sendMinimum);
   document.getElementById("sendMaximum").addEventListener("click", sendMaximum);
+  document.getElementById("sendFrequencys").addEventListener("click", sendFrequencys);
 }
 
 var id = null, date = null, idchoice2 = null, answerNr1 = null;
 var idchoice3 = null, answerNr2 = null, idchoice4 = null, answerNr3 = null;
+var idchoice5 = null, answerNr4 = null;
 
 function entrys() {
 	var xhr=new XMLHttpRequest();
@@ -98,6 +99,21 @@ function sendMaximum() {
 		if(xhr.readyState==4){
 			console.log(xhr.responseText);
 			document.getElementById("maximum").innerHTML = this.responseText;
+		}
+	}
+	xhr.send();
+}
+
+function sendFrequencys() {
+	id = document.getElementById("idchoice5").value;
+	answerNr4 = document.getElementById("answerNr4").value;
+	var xhr=new XMLHttpRequest();
+	var aadress="frequencys.php?a1="+id+"&a2="+answerNr4;
+	xhr.open("GET", aadress, true);	
+	xhr.onreadystatechange=function(){
+		if(xhr.readyState==4){
+			console.log(xhr.responseText);
+			document.getElementById("frequencys").innerHTML = this.responseText;
 		}
 	}
 	xhr.send();

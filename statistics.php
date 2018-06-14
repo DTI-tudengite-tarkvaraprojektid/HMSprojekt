@@ -22,28 +22,6 @@ require("../../../../config.php");
 <p id="usersCount"></p>
 <button id="usersCount1" type="button">Uuenda</button>
 
-<p> Päeviku sissekanne: </p>
-
-Vali id:
-
-<select id="idchoice">
-	<option value="20">20</option>
-	<option value="21">21</option>
-	<option value="22">22</option>
-	<option value="33">33</option>
-</select>
-
-Vali kuupäev:
-
-<select id="date">
-	<option value="2018-06-12">2018-06-12</option>
-	<option value="2018-06-13">2018-06-13</option>
-</select>
-
-<p id="diaryAnswers"></p>
-
-<button id="diaryEntry" type="button">Uuenda</button>
-
 <p> Keskmise arvutamine: </p>
 
 Vali küsimus:
@@ -112,6 +90,28 @@ Vali id:
 <p id="maximum"></p>
 
 <button id="sendMaximum" type="button">Uuenda</button>
+
+<p> Protsentuaalse jaotuse leidmine: </p>
+
+Vali küsimus:
+
+<select id="answerNr4">
+	<option value="0">4. Kas ma täna sooritasin oma meelistegevust?</option>
+	<option value="1">6. Millised tegevused kannatasid?</option>
+</select><br>
+
+Vali id:
+
+<select id="idchoice5">
+	<option value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+	<option value="33">33</option>
+</select><br><br>
+
+<p id="frequencys"></p>
+
+<button id="sendFrequencys" type="button">Uuenda</button>
 
 </body>
 </html>
