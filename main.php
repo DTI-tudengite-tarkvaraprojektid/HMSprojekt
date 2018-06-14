@@ -16,9 +16,7 @@
 
   if (isset($_POST["sendEmail"])){
     Email(($_SESSION["username"]));
-  } 
-  
-  
+  }
     
 ?>
 <!DOCTYPE html>
@@ -67,6 +65,7 @@
         <h1>Kõik päeviku sissekanded</h1>
         <button><a href="diary.php" >Päevikut täitma</a></button>
        
+		<p><?php answer1Data()?></p>
     </section>
 
     
