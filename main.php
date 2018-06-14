@@ -48,55 +48,48 @@
   </nav>
 
   <main role="main">
-  
-  <!-- Home -->
-  <section id="home-view">
-      <h2>Mängusõltuvuse eneseseire keskkond</h2>
-      <h3>Minu areng graafiliselt</h3>
-      <div class="chartContainer" style="position: relative; height:30vh; width:40vw">
-        <canvas id="myChart"></canvas>
-      </div>
-  </section>
-
 
     <!-- App page -->
     <section id="app-view">
-        <h2>Mängusõltuvuse eneseseire keskkond</h2>
-        <h1>Kõik päeviku sissekanded</h1>
-        <button><a href="diary.php" >Päevikut täitma</a></button>
-       
+        <h1>Päevik</h1>
+        <p>Siin on sinu päeviku sissekanded</p>
+        <a href="diary.php" class="menu-link">Päevikut täitma</a>
+        
 		<p><?php answer1Data()?></p>
     </section>
 
-    
+    <!-- Home -->
+    <section id="home-view">
+        <h2>Mängusõltuvuse eneseseire keskkond</h2>
+        <h1>Avaleht</h1>
+        <p>Siin näed statistikat oma sissekannete kohta</p>
+        <div class="chartContainer" style="width:45%;">
+          <canvas id="myChart"></canvas>
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <div class="chartContainer2" style="width:45%;">
+          <canvas id="myChart2"></canvas>
+        </div>
+    </section>
   
     <!-- User -->
     <section id="user-view">
         <h2>Mängusõltuvuse eneseseire keskkond</h2>
-        <h3>Info sinu kohta</h3>
-
-        <button id="confirmation" class="cancelbtn" name="deleteAccount" onclick="document.getElementById('id04').style.display='block'">Kustuta minu konto</button>
-        <div id="id04" class="modal">
-          <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
-          <form class="modal-content animate" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
-            <div class="container">
-            <h3>Oled kindel, et tahad oma konto selles keskkonnas kustutada?</h3>
-            <p>Kui kunagi on vaja kontot taastada, siis jäta selleks meelde oma kasutajanimi ja registreerimisel sisestatud e-maili aadress.</p>
-            <button id="deleteAccount"  name="deleteAccount">Olen kindel, kustuta konto!</button>
-            <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Tühista</button>  
-            </div>
-          </form>
-        </div>
-        <!--<form method="POST"><button id="sendEmail" class="cancelbtn" name="sendEmail">Saada email</button></form>-->
+        <h1>Info sinu kohta</h1>
+        <form method="POST">
+        <button id="deleteAccount" class="cancelbtn" name="deleteAccount">Kustuta minu konto</button></form>
+        <form method="POST"><button id="sendEmail" class="cancelbtn" name="sendEmail">Saada email</button></form>
         
-        <h1>Saada nõustajale kokkuvõte:</h1>
+        <p>Viimased päeviku sissekanded:</p>
+        
+        
         
           <div id="datesToSelect"><?php readInfo($_SESSION["userid"])?></div>
           <div>
             <button type="submit" id="diaryPost" name="diaryPost" onclick="diaryEntry()">Vali</button>
           </div>
-        <div id="printPDF"><p id="diaryAnswers" class="diaryAnswers"></p></div>
-     <button onclick="printDiv('printPDF');"> Print </button>
+        <p id="diaryAnswers"></p>
+     <button onclick="window.print();"> Print </button>
     </section>
   </main>
 
