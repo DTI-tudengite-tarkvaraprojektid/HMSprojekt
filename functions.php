@@ -165,16 +165,16 @@ function readInfo($userid){
 }
 
 function answer1Data(){
-	$dates = array();
-	$values = array();
+	$dates1 = array();
+	$values1 = array();
 	$id = $_SESSION["userid"];
 	
 	$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
 	$result = $mysqli->query("SELECT date, answer1 FROM diary WHERE id=".$id.";");
 	
 	while($row = $result->fetch_assoc()) {
-		array_push($dates, $row["date"]);
-		array_push($values, $row["answer1"]);
+		array_push($dates1, $row["date"]);
+		array_push($values1, $row["answer1"]);
 	}
 
 	$mysqli->close();
