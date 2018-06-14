@@ -162,7 +162,22 @@ function readInfo($userid){
 	$stmt->close();
 	$mysqli->close();
 	
-	
 }
+
+function answer1Data(){
+	$dates = array();
+	$values = array();
+	$id = $_SESSION["userid"];
+	
+	$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
+	$result = $mysqli->query("SELECT date, answer1 FROM diary WHERE id=".$id.";");
+	
+	while($row = $result->fetch_assoc()) {
+		array_push($dates, $row["date"]);
+		array_push($values, $row["answer1"]);
+	}
+
+	$mysqli->close();
+}	
 
 ?>
