@@ -48,6 +48,20 @@ function diaryEntry() {
 	xhr.send(); 
   }
 
+ 
+function printDiv(eleid){
+    var PW = window.open('', '_blank', 'Print content');
+ 
+    PW.document.write('<link rel="stylesheet" type="text/css" href="style.css"/>');
+ 
+    PW.document.write(document.getElementById(eleid).innerHTML);
+    PW.document.close();
+    PW.focus();
+    PW.print();
+    PW.close();
+}
+
+
 function usersCount() {
 	var xhr=new XMLHttpRequest();
 	var aadress="userscount.php";
