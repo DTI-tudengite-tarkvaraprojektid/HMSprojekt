@@ -64,11 +64,40 @@ MainApp.prototype = {
 
 }//main
 
-
-
+ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+  // The type of chart we want to create
+  type: 'line',
+  // The data for our dataset
+  data: {
+    labels: [],
+    datasets: [{
+      label: "Keskmine",
+      borderColor: 'rgb(25, 99, 132)',
+      data: [5, 4, 5, 6],
+      "fill": false,
+      }]
+  },
+// Configuration options go here
+  options: {
+    animation: {
+      duration: 0,
+      },
+    hover: {
+      animationDuration: 0,
+      },
+    responsiveAnimationDuration: 0,
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero:true
+        }
+      }]
+    }
+  }
+});
 
 window.onload = function () {
   const app = new MainApp()
   window.app = app
 }
-

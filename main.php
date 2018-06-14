@@ -28,7 +28,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Main</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css">
   <script src="main.js" defer></script>
   <script src="statistics.js" defer></script>
   
@@ -64,8 +65,9 @@
         <h2>Mängusõltuvuse eneseseire keskkond</h2>
         <h1>Avaleht</h1>
         <p>Siin näed statistikat oma sissekannete kohta</p>
-        
-        
+        <div class="chartContainer" style="position: relative; height:30vh; width:40vw">
+          <canvas id="myChart"></canvas>
+        </div>
     </section>
   
     <!-- User -->
