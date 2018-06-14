@@ -70,11 +70,11 @@ var chart = new Chart(ctx, {
   type: 'line',
   // The data for our dataset
   data: {
-    labels: [],
+    labels: ["10.06.2018", "11.06.2018", "12.06.2018", "13.06.2018", "14.06.2018",],
     datasets: [{
       label: "Keskmine",
       borderColor: 'rgb(25, 99, 132)',
-      data: [5, 4, 5, 6],
+      data: [1, 2, 5, 3, 4],
       "fill": false,
       }]
   },
