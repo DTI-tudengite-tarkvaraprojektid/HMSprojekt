@@ -164,20 +164,115 @@ function readInfo($userid){
 	
 }
 
+/*
 function answer1Data(){
-	$dates1 = array();
-	$values1 = array();
+	
+	
+}	
+
+function answer2Data(){
+	$dates2 = array();
+	$values2 = array();
 	$id = $_SESSION["userid"];
 	
 	$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
-	$result = $mysqli->query("SELECT date, answer1 FROM diary WHERE id=".$id.";");
+	$result = $mysqli->query("SELECT date, answer2 FROM diary WHERE id=".$id.";");
 	
 	while($row = $result->fetch_assoc()) {
-		array_push($dates1, $row["date"]);
-		array_push($values1, $row["answer1"]);
+		array_push($dates2, $row["date"]);
+		array_push($values2, $row["answer2"]);
 	}
 
 	$mysqli->close();
 }	
+
+function answer3Data(){
+	$dates3 = array();
+	$values3 = array();
+	$id = $_SESSION["userid"];
+	
+	$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
+	$result = $mysqli->query("SELECT date, answer3 FROM diary WHERE id=".$id.";");
+	
+	while($row = $result->fetch_assoc()) {
+		array_push($dates3, $row["date"]);
+		array_push($values3, $row["answer3"]);
+	}
+
+	$mysqli->close();
+}	
+
+function answer4Data(){
+	$dates4 = array();
+	$values4 = array();
+	$id = $_SESSION["userid"];
+	
+	$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
+	$result = $mysqli->query("SELECT date, answer4 FROM diary WHERE id=".$id.";");
+	
+	while($row = $result->fetch_assoc()) {
+		array_push($dates4, $row["date"]);
+		array_push($values4, $row["answer4"]);
+	}
+
+	$mysqli->close();
+}	
+
+function answer5Data(){
+	$dates5 = array();
+	$values5 = array();
+	$id = $_SESSION["userid"];
+	
+	$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
+	$result = $mysqli->query("SELECT date, answer5 FROM diary WHERE id=".$id.";");
+	
+	while($row = $result->fetch_assoc()) {
+		array_push($dates5, $row["date"]);
+		if($row["answer5"]!=NULL){
+			array_push($values5, $row["answer5"]);
+		}else{
+			array_push($values5, 0);
+		}
+	}
+	
+	for($i=0; $i<sizeof($dates5); $i++){
+		echo $dates5[$i]."<br>";
+	}
+	
+	for($i=0; $i<sizeof($values5); $i++){
+		echo $values5[$i]."<br>";
+	}
+
+	$mysqli->close();
+}	
+
+function answer6Data(){
+	$dates6 = array();
+	$values6 = array();
+	$id = $_SESSION["userid"];
+	
+	$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
+	$result = $mysqli->query("SELECT date, answer6 FROM diary WHERE id=".$id.";");
+	
+	while($row = $result->fetch_assoc()) {
+		array_push($dates6, $row["date"]);
+		if($row["answer6"]!=NULL){
+			array_push($values6, $row["answer6"]);
+		}else{
+			array_push($values5, "Ei mänginud");
+		}
+	}
+	
+	for($i=0; $i<sizeof($dates5); $i++){
+		echo $dates5[$i]."<br>";
+	}
+	
+	for($i=0; $i<sizeof($values5); $i++){
+		echo $values5[$i]."<br>";
+	}
+
+	$mysqli->close();
+}	
+*/
 
 ?>

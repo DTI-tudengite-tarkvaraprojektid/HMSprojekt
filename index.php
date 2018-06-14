@@ -215,7 +215,7 @@
 
 
 <div id="page" class="main-grid">
-	<h2>Mängusõltuvuse eneseseire keskkond<br><hr></h2>
+	<h2>Mängusõltuvuse eneseseire keskkond</h2>
     <div id="item1" class="grid-item item1">
 		<h2>Hasartmängusõltuvus</h2>
       <p>Lühike info <b>hasartmängusõltuvuse</b> kohta
