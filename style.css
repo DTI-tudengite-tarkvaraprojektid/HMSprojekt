@@ -264,18 +264,22 @@ span.psw {
 .section input{
     float: left;
 }
-
-table.diaryTable {
-    font-family: Arial, Helvetica, sans-serif;
-    border: 6px solid #5E6894;
-    background-color: #D8E9EE;
-    width: 100%;
-    text-align: left;
-  }
   table.diaryTable td, table.diaryTable th {
     border: 1px solid #4D5394;
     padding: 4px 2px;
   }
+table.diaryTable {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 6px solid #5E6894;
+    border-top-width: 6px;
+    /*border-collapse: collapse;*/
+    border-spacing: 0px;
+    background-color: #D8E9EE;
+    width: 100%;
+    text-align: left;
+    margin-bottom:20px;
+  }
+
   table.diaryTable tbody td {
     font-size: 13px;
   }
@@ -287,7 +291,7 @@ table.diaryTable {
     background: -moz-linear-gradient(top, #71a6c6 0%, #5594ba 66%, #4288B3 100%);
     background: -webkit-linear-gradient(top, #71a6c6 0%, #5594ba 66%, #4288B3 100%);
     background: linear-gradient(to bottom, #71a6c6 0%, #5594ba 66%, #4288B3 100%);
-    border-bottom: 0px solid #444444;
+   /* border-bottom: 0px solid #444444;*/
   }
   table.diaryTable thead th {
     font-size: 19px;

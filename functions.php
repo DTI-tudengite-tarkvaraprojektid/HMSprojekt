@@ -156,7 +156,7 @@ function readInfo($userid){
 	//$stmt->fetch();
 	while ($stmt->fetch()){
 		echo '<input type="checkbox" name="myInfo" value="'.$date.'">'.$date.'<br>';
-		echo $date."<br>";
+		
 	}
 		
 	$stmt->close();

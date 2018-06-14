@@ -30,6 +30,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
   <script src="main.js" defer></script>
+  <script src="statistics.js" defer></script>
   
 
 <body>
@@ -54,7 +55,7 @@
         <h1>Päevik</h1>
         <p>Siin on sinu päeviku sissekanded</p>
         <a href="diary.php" class="menu-link">Päevikut täitma</a>
-        <h4 onclick="window.print();"> Print </h4>
+        
         
     </section>
 
@@ -84,7 +85,7 @@
             <button type="submit" id="diaryPost" name="diaryPost" onclick="diaryEntry()">Vali</button>
           </div>
         <p id="diaryAnswers"></p>
-     
+     <button onclick="window.print();"> Print </button>
     </section>
   </main>
 

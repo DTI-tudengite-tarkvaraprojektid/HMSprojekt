@@ -35,7 +35,9 @@ function diaryEntry() {
 	}
 	//console.log(selectedDates);
 	var xhr=new XMLHttpRequest();
-    var aadress="diaryentry.php?dates="+selectedDates;
+	//var aadress="diaryentry.php?dates="+selectedDates.join(",");
+	var aadress="diaryentry.php?dates="+selectedDates;
+	console.log(aadress)
     xhr.open("GET", aadress, true);	
     xhr.onreadystatechange=function(){
       if(xhr.readyState==4){

@@ -4,17 +4,21 @@
 
 	$mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	$id = $_SESSION["userid"];
-	$dates = $_REQUEST["dates"];
-	$stmt = $mysqli->prepare("SELECT id, date, answer1, answer2, answer3, answer4, answer5, answer6, answer7 FROM diary WHERE id=".$id." AND date=?;");
+	$dates = explode(",", $_REQUEST["dates"]);
+	//print_r($dates);
+	$stmt = $mysqli->prepare("SELECT id, date, answer1, answer2, answer3, answer4, answer5, answer6, answer7 FROM diary WHERE id=".$id.
+	  " AND date=?;");
+	$html = "";
 	
 	for($i = 0; $i < count($dates); $i++){
 		$date = $dates[$i];
-		//echo $date;
-		$table="";
-		$stmt->bind_param("s", $dates);
+		//echo "neid on " .count($dates);
+		//echo $date ."on teine  \n  ";
+		$table = '<table class="diaryTable" ><tr>';
+		$stmt->bind_param("s", $date);
 		$stmt->bind_result($id, $date, $answer1, $answer2, $answer3, $answer4, $answer5, $answer6, $answer7);
 		$stmt->execute();
-		$table ="<table class='diaryTable'><tr>" .$dates. "</tr><tr><th>Küsimus</th><th>Vastus</th></tr>"; 
+		$table .= $date. "</tr><tr><th>Küsimus</th><th>Vastus</th></tr>"; 
 		while ($stmt->fetch()){
 
 			$table .= "<tr><td>1. Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?</td><td>";
@@ -97,10 +101,11 @@
 				$table .= $answer7;
 			}
 		}
-		$table .="</table>";	
-		$stmt->close();
-		$mysqli->close();
-		echo $table;
+		$table .="</table>";
+		$html .= $table;
+		
 	}
-	
+	$stmt->close();
+	$mysqli->close();
+echo $html;
 ?>
