@@ -76,8 +76,7 @@ function recoverAccount($username, $email){
 	$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
 	$stmt = $mysqli->prepare("UPDATE userinfo SET status= NULL WHERE email= '$email'");
 	if ($stmt->execute()){
-		header("location: index.php");
-		$notice = "Teretulemast tagasi! Saad nüüd uuesti sisse logida";
+		$notice = "Tere tulemast tagasi! Saad nüüd uuesti sisse logida";
 	} else {
 		$notice= " Tekkis viga : " .$stmt->error;
 	}
@@ -91,7 +90,7 @@ function deleteAccount($userid){
 	$stmt = $mysqli->prepare("UPDATE userinfo SET status= 1 WHERE id= $userid");
 	if ($stmt->execute()){
 		session_destroy();
-		header("Location: index.php");
+		//header("Location: index.php");
 		$notice = "Sinu konto on nüüd kustutatud!";
 	} else {
 		echo "\n Tekkis viga : " .$stmt->error;
