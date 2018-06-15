@@ -19,30 +19,6 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 	
 <body>
 
-<?php
-/*
-	for ($i = 0; $i < count($reasons); $i++) {
-		if($i<count($reasons)-1){
-			echo "<div>";
-			echo "<input type='checkbox' id='".$reasons[$i]."' name='interest' value='".$reasons[$i]."'>";
-			echo "<label for='".$reasons[$i]."'>".$reasons[$i]."</label>";
-			echo "</div>";
-		}else{
-			echo "<div>";
-			echo "<input type='checkbox' id='".$reasons[$i]."' name='interest' value='".$reasons[$i]."'>";
-			echo "<label for='".$reasons[$i]."'>".$reasons[$i]."</label>";
-			echo "<input style='width: 10%' type='text' id='otherValue' name='other'>";
-			echo "</div>";
-		}
-	}
-	echo "<div>";
-	echo "<button type='submit'>Fikseeri vastus</button>";
-	echo "</div>";
-	
-	echo "<br><br>";
-*/
-?>
-
 <div id="sections" class="sections">
 
 	<div id="section1" class="section">
@@ -121,21 +97,26 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 		<h5 id="question6"> 6. Kas mul jäi selle tegevuse tõttu muud tegevused sooritamata või ma ei jõudnud neid õigeaegselt valmis? 
 			Kui jah, siis millised muud tegevused seetõttu kannatasid? </h5>
 
-		<?php 
-			echo "<select id='reasons'>";
+		<?php
+
 			for ($i = 0; $i < count($reasons); $i++) {
-				echo '<option value="' .$reasons[$i] .'">'.$reasons[$i] ."</option>";
+				if($i<count($reasons)-1){
+					echo "<div>";
+					echo "<input type='checkbox' id='reasons' name='interest' value='".$reasons[$i]."'>";
+					echo "<label for='".$reasons[$i]."'>".$reasons[$i]."</label>";
+					echo "</div>";
+				}else{
+					echo "<div>";
+					echo "<input type='checkbox' id='reasons' name='interest' value='".$reasons[$i]."'>";
+					echo "<label for='".$reasons[$i]."'>".$reasons[$i]."</label>";
+					echo "<input style='width: 10%' type='text' id='otherValue' name='other'>";
+					echo "</div>";
+				}
 			}
-			echo "</select>";
+
 		?>
 			
 		<button class="fixButtons" id="button61" type="button">Fikseeri vastus</button>
-	</div>
-
-	<div style="display: inline" id="section62" class="section">
-		<label> Milline muu tegevus selle tõttu kannatas? </label><input id="newreason" class="newreason" type="text" value="">
-		
-		<button class="fixButtons" id="button62" type="button">Fikseeri vastus</button>
 	</div>
 
 	<div id="section7" class="section">
