@@ -17,7 +17,7 @@
   if (isset($_POST["sendEmail"])){
     Email(($_SESSION["username"]));
   }
-    
+  $notice="";  
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,12 +40,26 @@
       <li class="menu-item"><a href="#home-view" class="menu-link home-view active-menu">Avaleht</a></li>
       <li class="menu-item"><a href="#app-view" class="menu-link app-view">Päevik</a></li>
       
-      <li class="menu-item"><a href="#user-view" class="menu-link user-view">Tere tulemast, <?php echo $_SESSION["username"]?></a></li>
-      <li class="menu-item"><a href="?logout=1" class="menu-link">Logi välja</a></li>
+      <li class="menu-item menu-text">Tere tulemast, <?php echo $_SESSION["username"]?></li><span><?php echo $notice?></span>
+      <li class="menu-item menu-log"><a href="?logout=1" class="menu-link">Logi välja</a></li>
+      
+      <li id="confirmation" class="menu-item menu-log menu-link" name="deleteAccount" onclick="document.getElementById('id04').style.display='block'">Kustuta minu konto</li>
       
       
     </ul>
   </nav>
+  
+        <div id="id04" class="modal">
+          <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <form class="modal-content animate" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
+            <div class="container">
+            <h3>Oled kindel, et tahad oma konto selles keskkonnas kustutada?</h3>
+            <p>Kui kunagi on vaja kontot taastada, siis jäta selleks meelde oma kasutajanimi ja registreerimisel sisestatud e-maili aadress.</p>
+            <button id="deleteAccount"  name="deleteAccount">Olen kindel, kustuta konto!</button>
+            <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Tühista</button>  
+            </div>
+          </form>
+        </div>
 
   <main role="main">
 
@@ -70,29 +84,7 @@
         <h1>Päevik</h1>
         <p>Siin on sinu päeviku sissekanded</p>
         <button><a href="diary.php" >Päevikut täitma</a></button>
-        
-    </section>
-
-    <!-- User -->
-    <section id="user-view">
-        <h2>Mängusõltuvuse eneseseire keskkond</h2>
-        <h3>Info sinu kohta</h3>
-
-        <button id="confirmation" class="cancelbtn" name="deleteAccount" onclick="document.getElementById('id04').style.display='block'">Kustuta minu konto</button>
-        <div id="id04" class="modal">
-          <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
-          <form class="modal-content animate" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
-            <div class="container">
-            <h3>Oled kindel, et tahad oma konto selles keskkonnas kustutada?</h3>
-            <p>Kui kunagi on vaja kontot taastada, siis jäta selleks meelde oma kasutajanimi ja registreerimisel sisestatud e-maili aadress.</p>
-            <button id="deleteAccount"  name="deleteAccount">Olen kindel, kustuta konto!</button>
-            <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Tühista</button>  
-            </div>
-          </form>
-        </div>
-        <!--<form method="POST"><button id="sendEmail" class="cancelbtn" name="sendEmail">Saada email</button></form>-->
-        
-        <h1>Saada nõustajale kokkuvõte:</h1>
+        <h1>Vaata kõiki sisestusi:</h1>
         
           <div id="datesToSelect"><?php readInfo($_SESSION["userid"])?></div>
           <div>
@@ -100,6 +92,12 @@
           </div>
         <div id="printPDF"><p id="diaryAnswers" class="diaryAnswers"></p></div>
      <button onclick="printDiv('printPDF');"> Print </button>
+    </section>
+
+   
+        <!--<form method="POST"><button id="sendEmail" class="cancelbtn" name="sendEmail">Saada email</button></form>-->
+        
+        
     </section>
   </main>
 

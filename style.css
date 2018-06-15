@@ -50,21 +50,23 @@ right: 0;
 }
 
 .menu-list {
+    
 position: relative;
-display: flex;
--webkit-flex-wrap: wrap;
-flex-wrap: wrap;
+list-style-type: none;
 margin: 0;
 padding: 0;
 list-style: none;
 }
 
 .menu-item {
-display: block;
-margin: 0 0 10px 0;
+float:left;
+margin: 0 10px 10px 0;
 }
 
+    
+
 .menu-link {
+float: left;
 color: #09044d;
 font-size: 18px;
 font-weight: bold;
@@ -82,6 +84,7 @@ text-decoration: none;
 border: 2px solid rgba(0, 0, 0, 0);
 }
 
+
 .menu-link:hover,
 .menu-link:focus {
 outline: none;
@@ -94,7 +97,21 @@ color: rgb(30, 30, 71);
 .menu-link.active-menu {
 border: 2px solid rgb(30, 30, 71);
 }
-
+.menu-text {
+    color: #09044d;
+    margin: auto;
+    width: 50%;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 10px;
+    }
+.menu-log {
+    color: #09044d;
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+    
+    }
 h2 {
 text-align: center;
 font-size:40px;
@@ -150,10 +167,6 @@ input[type=text], input[type=password], input[type=email] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-}
-
-input.newreason{
-	width: 10%;
 }
 
 /* Set a style for all buttons */
@@ -265,10 +278,9 @@ span.psw {
        width: 100%;
     }
 }
-/*
 .section input{
     float: left;
-}*/
+}
   table.diaryTable td, table.diaryTable th {
     border: 1px solid #4D5394;
     padding: 4px 2px;
