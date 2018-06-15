@@ -4,9 +4,6 @@ $database = "if17_HMS";
 //alustame sessiooni
 session_start();
 
-	
-
-
 //sisestuse kontrollimise funktsioon
 function test_input ($data){ //funktsiooni tegemine, esitatud andmete kontroll
 			$data = trim($data); //eemaldab liigsed tühikud, TAB reavahetused jne.
@@ -20,12 +17,12 @@ function test_input ($data){ //funktsiooni tegemine, esitatud andmete kontroll
 		$database = "if17_HMS";
 		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
 		//valmistame ette käsu andmebaasiserverile
-		$stmt = $mysqli->prepare("INSERT INTO userinfo (username, email, type, password) VALUES (?, ?, ?, ?)");
+		$stmt = $mysqli->prepare("INSERT INTO userinfo (username, email, password) VALUES (?, ?, ?)");
 		echo $mysqli->error;
 		//s - string
 		//i - integer
 		//d - decimal
-		$stmt->bind_param("ssis", $signupUserName, $signupEmail, $signupType, $signupPassword);
+		$stmt->bind_param("sss", $signupUserName, $signupEmail, $signupPassword);
 		//$stmt->execute();
 		if ($stmt->execute()){
 			$notice = signIn($signupUserName, $_POST["signupPassword"]);
@@ -130,8 +127,6 @@ $message = '
 // To send HTML mail, the Content-type header must be set
 $headers[] = 'MIME-Version: 1.0';
 $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-
-
 
 // Mail it
 mail($to, $subject, $message, implode("\r\n", $headers));

@@ -189,6 +189,12 @@ button:hover {
     opacity: 0.8;
 }
 
+.printBtn{
+    visibility:hidden; 
+    margin-bottom:0px;
+    position: relative;
+}
+
 /* Extra styles for the cancel button */
 .cancelbtn {
     float: right;
@@ -279,8 +285,7 @@ span.psw {
        width: 100%;
     }
 }
-
-  table.diaryTable td, table.diaryTable th {
+table.diaryTable td, table.diaryTable th {
     border: 1px solid #4D5394;
     padding: 4px 2px;
   }
@@ -288,9 +293,10 @@ table.diaryTable {
     font-family: Arial, Helvetica, sans-serif;
     border: 6px solid #5E6894;
     border-top-width: 6px;
+    /*border-collapse: collapse;*/
     border-spacing: 0px;
     background-color: #D8E9EE;
-    width: 50%;
+    width: 100%;
     text-align: left;
     margin-bottom:20px;
   }
@@ -319,5 +325,60 @@ table.diaryTable {
   table.diaryTable thead th:first-child {
     border-left: none;
   }
+/*  
+table.diaryTableQ {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 4px solid #5E6894;
+    border-right: 2px solid #5E6894;
+    border-spacing: 0px;
+    background-color: rgb(222, 233, 236);
+    width: 15%;
+    text-align: left;
+    margin-bottom:20px;
+  }
+  table.diaryTableQ th, table.diaryTableQ td {
+    border: 1px solid #4D5394;
+    padding: 4px 2px;
+  }
+   
+  table.diaryTableQ thead th {
+    font-size: 19px;
+    font-weight: bold;
+    color: #FEFEFE;
+  }
+
+  table.diaryTableQ tbody td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  table.diaryTableA {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 4px solid #5E6894;
+    border-left: 2px solid #5E6894;
+    border-right: 2px solid #5E6894;
+    border-spacing: 0px;
+    background-color: rgb(234, 236, 222);
+    width: 10%;
+    text-align: center;
+    margin-bottom:20px;
+  }
+  table.diaryTableA th, table.diaryTableA td {
+    border: 1px solid #4D5394;
+    padding: 4px 2px;
+  }
+   
+  table.diaryTableA thead th {
+    font-size: 19px;
+    font-weight: bold;
+    color: #FEFEFE;
+  }
+
+  table.diaryTableA tbody td {
+    font-size: 13px;
+    padding: 10px;
+  }*/
+ 
+  
 
   

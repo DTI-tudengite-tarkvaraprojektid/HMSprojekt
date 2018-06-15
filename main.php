@@ -97,9 +97,9 @@
             <button type="submit" id="diaryPost" name="diaryPost" onclick="diaryEntry(1)" >Kuva valik</button>
           </div>
           <div style="float:left;" id="printPDF"><p id="diaryAnswers1" class="diaryAnswers"></p></div>
-          <button id="printBtn" onclick="printDiv('printPDF');" style="visibility:hidden;"> Koosta PDF </button>
+          
         </div>
-        
+
         <div style="float:right; text-align: center;">
           <p>Siin on sinu <b style="color: blue;">hasartmängu sõltuvuse</b> jälgimise päeviku sissekanded</p>
           <button><a href="diary.php?type=2" >Uus sissekanne</a></button>
@@ -109,8 +109,9 @@
             <button type="submit" id="diaryPost" name="diaryPost" onclick="diaryEntry(2)" >Kuva valik</button>
           </div>
           <div style="float:right;" id="printPDF"><p id="diaryAnswers2" class="diaryAnswers"></p></div>
-          <button id="printBtn" onclick="printDiv('printPDF');" style="visibility:hidden;"> Koosta PDF </button>
+          
         </div>
+        <div><button id="printBtn" class="printBtn" onclick="printDiv('printPDF');" > Koosta PDF </button></div>
     </section>
 
    
