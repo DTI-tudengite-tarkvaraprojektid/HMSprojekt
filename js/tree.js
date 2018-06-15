@@ -91,13 +91,25 @@ function button3() {
 
 function button4() {
     if(document.getElementById("answer41").checked == true){
+		document.getElementById("end1").style.visibility = "hidden"; 
+		document.getElementById("send1").style.visibility = "hidden";
         document.getElementById("section5").style.visibility = "visible";
-		document.getElementById("end1").style.visibility = "hidden";
+		document.getElementById("button5").style.visibility = "visible";
+		document.getElementById("button61").style.visibility = "hidden";
 		Answer4 = "0";
     }
     if(document.getElementById("answer42").checked == true){
         document.getElementById("end1").style.visibility = "visible"; 
 		document.getElementById("send1").style.visibility = "visible";
+		document.getElementById("section5").style.visibility = "hidden";
+		document.getElementById("button5").style.visibility = "hidden";
+		document.getElementById("section61").style.visibility = "hidden";
+		document.getElementById("section62").style.visibility = "hidden";
+		document.getElementById("button61").style.visibility = "hidden";
+		document.getElementById("section7").style.visibility = "hidden";
+		document.getElementById("button7").style.visibility = "hidden";
+		document.getElementById("end2").style.visibility = "hidden";
+		document.getElementById("send2").style.visibility = "hidden";
 		document.getElementById("send1").addEventListener("click", send1);
 		Answer4 = "1";
     }
@@ -109,17 +121,23 @@ function button5() {
 		document.getElementById("button61").addEventListener("click", button61);
         document.getElementById("section61").style.visibility = "visible";
 		document.getElementById("button5").style.visibility = "visible";
+		document.getElementById("button61").style.visibility = "visible";
 		Answer5 = document.getElementById("hours").value*60 + parseInt(document.getElementById("minutes").value);
     }
 }
 
 function button61() {
+	document.getElementById("button7").style.visibility = "visible";
+	document.getElementById("button7").style.visibility = "visible";
     if(document.getElementById("reasons").value == "Midagi muud"){
         document.getElementById("section62").style.visibility = "visible";
+		document.getElementById("button7").style.visibility = "hidden";
+		document.getElementById("section7").style.visibility = "hidden";
 		document.getElementById("button62").addEventListener("click", button62);
     }else if(document.getElementById("reasons").value != "Midagi muud"){
 		document.getElementById("button7").addEventListener("click", button7);
         document.getElementById("section7").style.visibility = "visible";
+		document.getElementById("section62").style.visibility = "hidden";
 		Answer6 = document.getElementById("reasons").value;
 	}
 }
@@ -128,6 +146,7 @@ function button62() {
     if(document.getElementById("newreason").value != ""){
 		document.getElementById("button7").addEventListener("click", button7);
         document.getElementById("section7").style.visibility = "visible";
+		document.getElementById("button7").style.visibility = "visible";
 		Answer6 = document.getElementById("newreason").value;
     }
 }

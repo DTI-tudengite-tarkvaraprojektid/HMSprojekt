@@ -20,7 +20,7 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 <body>
 
 <?php
-
+/*
 	for ($i = 0; $i < count($reasons); $i++) {
 		if($i<count($reasons)-1){
 			echo "<div>";
@@ -40,7 +40,7 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 	echo "</div>";
 	
 	echo "<br><br>";
-
+*/
 ?>
 
 <div id="sections" class="sections">
