@@ -2,6 +2,8 @@
 	session_start();
 	require("../../../../../config.php");
 
+	
+
 	$mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	$id = $_SESSION["userid"];
 	$dates = explode(",", $_REQUEST["dates"]);
