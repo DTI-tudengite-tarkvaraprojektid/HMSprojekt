@@ -70,6 +70,12 @@
         <h2>Mängusõltuvuse eneseseire keskkond</h2>
         <h1>Avaleht</h1>
         <p>Siin näed statistikat oma sissekannete kohta</p>
+        <ul>
+          <li>
+            <button id="arrayHere">test</button>
+            <button id="addData">should add</button>
+          </li>
+        </ul>
         <div class="chartContainer" style="width:45%;">
           <canvas id="myChart"></canvas>
         </div>

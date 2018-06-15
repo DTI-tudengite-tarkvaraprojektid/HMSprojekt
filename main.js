@@ -1,8 +1,8 @@
-var ctx;
-var test1 = [2, 1, 4, 0, 3, 1, 2];
-var nameMonth = ["10.06.2018", "11.06.2018", "12.06.2018", "13.06.2018", "14.06.2018", ];
-var test2 = [3, 3, 1, 2, 3, 0, 1];
-var nameMonth2 = ["7.06.2018", "8.06.2018", "9.06.2018", "10.06.2018", "11.06.2018", ];
+let ctx;
+let chartLabels = [];
+let chartData = [];
+var test1 = [3, 3, 1, 2, 3, 0, 1];
+var testMonth2 = ["7.06.2018", "8.06.2018", "9.06.2018", "10.06.2018", "11.06.2018", ];
 
 const MainApp = function () {
   if (MainApp.instance) {
@@ -22,6 +22,12 @@ MainApp.routes = {
   'home-view': {
     'render': function () {
       console.log('home')
+      document 
+      .querySelector('#arrayHere') 
+      .addEventListener('click', arrayHere)
+      document 
+      .querySelector('#arrayHere') 
+      .addEventListener('click', arrayHere) 
     }
   },
   'app-view': {
@@ -72,11 +78,11 @@ var chart = new Chart(ctx, {
   type: 'line',
   // The data for our dataset
   data: {
-    labels: nameMonth,
+    labels: chartLabels,
     datasets: [{
       label: "Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?",
       borderColor: 'rgb(25, 99, 132)',
-      data: test2,
+      data: chartData,
       "fill": false,
       }]
   },
@@ -121,7 +127,7 @@ var chart = new Chart(ctx, {
   type: 'line',
   // The data for our dataset
   data: {
-    labels: nameMonth2,
+    labels: testMonth2,
     datasets: [{
       label: "Kui tugevalt hindan meelistegevust sooritada?",
       borderColor: 'rgb(255,140,0)',
@@ -163,6 +169,29 @@ var chart = new Chart(ctx, {
     }
   }
 });
+
+
+function arrayHere() {
+  let xmlhttp = new XMLHttpRequest();
+  var aadress="answer1.php?q=answer1&v=date";
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          let myObj = JSON.parse(this.responseText)
+          let chartLabels = []
+          let chartData = []
+          for (i=0; i<myObj.length; i++){
+            chartLabels.push(myObj[i][0])
+            chartData.push(myObj[i][1])
+          }
+          console.log(chartData)
+          console.log(chartLabels)
+          //console.log(JSON.parse(xmlhttp.responseText))
+      }
+  };
+  xmlhttp.open("GET", aadress, true);
+  xmlhttp.send()
+  chart.update();
+}
 
 window.onload = function () {
   const app = new MainApp()
