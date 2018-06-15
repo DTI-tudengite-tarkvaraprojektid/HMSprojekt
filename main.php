@@ -1,5 +1,5 @@
 <?php
-  require ("functions.php");
+  require ("functions/functions.php");
   if(!isset($_SESSION["userid"])){
     header("Location: index.php");
     exit();
@@ -27,9 +27,9 @@
   <title>Main</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-  <script src="main.js" defer></script>
-  <script src="statistics.js" defer></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/statistics.js" defer></script>
   
 
 <body>

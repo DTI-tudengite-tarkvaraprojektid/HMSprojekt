@@ -1,5 +1,5 @@
 <?php
-	require("functions.php");
+	require("functions/functions.php");
 	
 	if(isset($_SESSION["userid"])){
 		header("location: main.php");
@@ -104,7 +104,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script>
 		var check = function() {
 		if (document.getElementById('signupPassword').value ==
@@ -125,7 +125,7 @@
 		<li class="menu-item menu-link active-menu" onclick="document.getElementById('id01').style.display='block'">Logi sisse</li>
 		<li class="menu-item menu-link" onclick="document.getElementById('id02').style.display='block'">Registreeri</li>
 		<li class="menu-item menu-link" onclick="document.getElementById('id03').style.display='block'">Taasta konto</li>
-		<span style="color:red; font-size:1vw;"><?php echo $notice; ?></span>
+		<span style="color:red; font-size:20px; padding-top:20px;"><?php echo $notice; ?></span>
 	</ul>
 </nav>
 

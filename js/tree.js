@@ -143,7 +143,7 @@ function button7() {
 
 function send1(){
 	var xhr=new XMLHttpRequest();
-	var aadress="send1.php?a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4;
+	var aadress="../functions/send1.php?a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4;
 	xhr.open("GET", aadress, true);
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){
@@ -156,7 +156,7 @@ function send1(){
 
 function send2(){
 	var xhr=new XMLHttpRequest();
-	var aadress="send2.php?a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4+"&a5="+Answer5+"&a6="+Answer6+"&a7="+Answer7;
+	var aadress="../functions/send2.php?a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4+"&a5="+Answer5+"&a6="+Answer6+"&a7="+Answer7;
 	xhr.open("GET", aadress, true);
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){

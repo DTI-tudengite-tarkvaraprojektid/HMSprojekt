@@ -173,7 +173,7 @@ var chart = new Chart(ctx, {
 
 function arrayHere() {
   let xmlhttp = new XMLHttpRequest();
-  var aadress="answer1.php?q=answer1&v=date";
+  var aadress="../functions/answer1.php?q=answer1&v=date";
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
           let myObj = JSON.parse(this.responseText)

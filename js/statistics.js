@@ -13,7 +13,7 @@ var idchoice5 = null, answerNr4 = null;
 
 function entrys() {
 	var xhr=new XMLHttpRequest();
-	var aadress="entrys.php";
+	var aadress="../functions/entrys.php";
 	xhr.open("GET", aadress, true);	
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){
@@ -36,7 +36,7 @@ function diaryEntry() {
 	//console.log(selectedDates);
 	var xhr=new XMLHttpRequest();
 	//var aadress="diaryentry.php?dates="+selectedDates.join(",");
-	var aadress="diaryentry.php?dates="+selectedDates;
+	var aadress="functions/diaryentry.php?dates="+selectedDates;
 	console.log(aadress)
     xhr.open("GET", aadress, true);	
     xhr.onreadystatechange=function(){
@@ -52,7 +52,7 @@ function diaryEntry() {
 function printDiv(eleid){
     var PW = window.open('', '_blank', 'Print content');
  
-    PW.document.write('<link rel="stylesheet" type="text/css" href="style.css"/>');
+    PW.document.write('<link rel="stylesheet" type="text/css" href="css/style.css"/>');
  
     PW.document.write(document.getElementById(eleid).innerHTML);
     PW.document.close();
@@ -64,7 +64,7 @@ function printDiv(eleid){
 
 function usersCount() {
 	var xhr=new XMLHttpRequest();
-	var aadress="userscount.php";
+	var aadress="../functions/userscount.php";
 	xhr.open("GET", aadress, true);	
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){
@@ -79,7 +79,7 @@ function sendAverage() {
 	id = document.getElementById("idchoice2").value;
 	answerNr1 = document.getElementById("answerNr1").value;
 	var xhr=new XMLHttpRequest();
-	var aadress="average.php?a1="+id+"&a2="+answerNr1;
+	var aadress="../functions/average.php?a1="+id+"&a2="+answerNr1;
 	xhr.open("GET", aadress, true);	
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){
@@ -94,7 +94,7 @@ function sendMinimum() {
 	id = document.getElementById("idchoice3").value;
 	answerNr2 = document.getElementById("answerNr2").value;
 	var xhr=new XMLHttpRequest();
-	var aadress="minimum.php?a1="+id+"&a2="+answerNr2;
+	var aadress="../functions/minimum.php?a1="+id+"&a2="+answerNr2;
 	xhr.open("GET", aadress, true);	
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){
@@ -109,7 +109,7 @@ function sendMaximum() {
 	id = document.getElementById("idchoice4").value;
 	answerNr3 = document.getElementById("answerNr3").value;
 	var xhr=new XMLHttpRequest();
-	var aadress="maximum.php?a1="+id+"&a2="+answerNr3;
+	var aadress="../functions/maximum.php?a1="+id+"&a2="+answerNr3;
 	xhr.open("GET", aadress, true);	
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){
@@ -124,7 +124,7 @@ function sendFrequencys() {
 	id = document.getElementById("idchoice5").value;
 	answerNr4 = document.getElementById("answerNr4").value;
 	var xhr=new XMLHttpRequest();
-	var aadress="frequencys.php?a1="+id+"&a2="+answerNr4;
+	var aadress="../functions/frequencys.php?a1="+id+"&a2="+answerNr4;
 	xhr.open("GET", aadress, true);	
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){

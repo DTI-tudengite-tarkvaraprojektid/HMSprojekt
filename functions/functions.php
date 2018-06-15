@@ -41,25 +41,20 @@ function test_input ($data){ //funktsiooni tegemine, esitatud andmete kontroll
 	function signIn($username, $password){
 			$notice = "";
 			$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
-			$stmt = $mysqli->prepare("SELECT id, username, email, type, password, status FROM userinfo WHERE username = ?");
+			$stmt = $mysqli->prepare("SELECT id, username, password, status FROM userinfo WHERE username = ?");
 			$stmt->bind_param("s",$username);
-			$stmt->bind_result($id, $usernameFromDb, $emailFromDb, $typeFromDB, $passwordFromDb, $statusFromDB);
+			$stmt->bind_result($id, $usernameFromDb, $passwordFromDb, $statusFromDB);
 			$stmt->execute();
 			
 			//kui vähemalt 1 tulemus
 			if ($stmt->fetch()){
-				if($statusFromDB == NULL){
+				if($statusFromDB === NULL){
 					$hash = hash("sha512", $password);
-					if($hash == $passwordFromDb){
-					
+					if($hash === $passwordFromDb){
 					$_SESSION["userid"] = $id;
 					$_SESSION["username"] = $usernameFromDb;
-					$_SESSION["usertype"] = $typeFromDb;
-					
-					//lähen pealehele
 					header("location: main.php");
 					exit ();
-				
 				} else {
 				$notice = "Vale salasõna";	
 				}	
@@ -91,7 +86,8 @@ function deleteAccount($userid){
 	if ($stmt->execute()){
 		session_destroy();
 		//header("Location: index.php");
-		$notice = "Sinu konto on nüüd kustutatud!";
+		echo "<script>alert('Sinu konto on nüüd kustutatud!');window.location.href='index.php';</script>";
+		//$notice = "Sinu konto on nüüd kustutatud!";
 	} else {
 		echo "\n Tekkis viga : " .$stmt->error;
 	}

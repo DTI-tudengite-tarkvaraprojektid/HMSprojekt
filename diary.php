@@ -1,6 +1,6 @@
 <?php
 require("../../../../config.php");
-require("functions.php");
+require("functions/functions.php");
 $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suhted sõpradega", "Koolitöö", "Välimuse eest hoolitsemine", "Lemmiklooma eest hoolitsemine", "Midagi muud");
 ?>
 
@@ -11,8 +11,8 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA_Compatible" content="ie=edge">
 	<title>Päeviku täitmine</title>
-	<link rel="stylesheet" type="text/css" href="style.css">	
-	<script src="tree.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">	
+	<script src="../js/tree.js" defer></script>
 </head>
 
 

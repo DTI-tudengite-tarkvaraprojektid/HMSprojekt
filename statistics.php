@@ -6,8 +6,8 @@ require("../../../../config.php");
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="style.css">
-<script src="statistics.js" defer></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/statistics.js" defer></script>
 <!--<base target="_blank">-->
 <title>HMS</title>
 </head>

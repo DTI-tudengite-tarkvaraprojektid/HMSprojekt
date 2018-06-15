@@ -1,7 +1,7 @@
 <?php
 	$q = $_REQUEST["q"];
 	$v = $_REQUEST["v"];
-	require("../../../../config.php");
+	require("../../../../../config.php");
 	session_start();
 	$mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	$Answers = array();

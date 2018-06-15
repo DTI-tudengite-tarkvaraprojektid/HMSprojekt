@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	require("../../../../config.php");
+	require("../../../../../config.php");
 
 	$mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	$id = $_SESSION["userid"];
