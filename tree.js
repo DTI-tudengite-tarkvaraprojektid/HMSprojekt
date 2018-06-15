@@ -101,10 +101,10 @@ function button5() {
 }
 
 function button61() {
-    if(document.getElementById("reasons").value == "Midagi muud"){
+    if(document.getElementById("reasons").value == "Midagi muud" || document.getElementById("reasons").value != ""){
         document.getElementById("section62").style.visibility = "visible";
 		document.getElementById("button62").addEventListener("click", button62);
-    }else{
+    }else if(document.getElementById("reasons").value != "Midagi muud" || document.getElementById("reasons").value != ""){
 		document.getElementById("button7").addEventListener("click", button7);
         document.getElementById("section7").style.visibility = "visible";
 		Answer6 = document.getElementById("reasons").value;

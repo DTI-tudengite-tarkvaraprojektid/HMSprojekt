@@ -1,7 +1,7 @@
 <?php
 require("../../../../config.php");
 require("functions.php");
-$reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suhted sõpradega", "Koolitöö", "Välimuse eest hoolitsemine", "Lemmiklooma eest hoolitsemine", "Midagi muud");
+$reasons = array("-", "Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suhted sõpradega", "Koolitöö", "Välimuse eest hoolitsemine", "Lemmiklooma eest hoolitsemine", "Midagi muud");
 ?>
 
 <!DOCTYPE html>
@@ -22,117 +22,80 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 <div id="sections" class="sections">
 
 	<div id="section1" class="section">
-		<h3 id="question1"> 1. Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all? </h3>
+		<h5 id="question1"> 1. Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all? </h5>
 
-		<input type="radio" id="answer11" name="answer1" value="0" onclick="button1()">
+		<label for="answer11"> Üldse mitte </label><input type="radio" id="answer11" name="answer1" value="0" onclick="button1()">
 
-		<p id="option11"> Üldse mitte </p>
+		<label for="answer12"> Vähe </label><input type="radio" id="answer12" name="answer1" value="0" onclick="button1()">
 
-		<input type="radio" id="answer12" name="answer1" value="1" onclick="button1()">
+		<label for="answer13"> Keskmiselt </label><input type="radio" id="answer13" name="answer1" value="0" onclick="button1()">
 
-		<p id="option12"> Vähe </p>
+		<label for="answer14"> Vähe </label><input type="radio" id="answer14" name="answer1" value="0" onclick="button1()">
 
-		<input type="radio" id="answer13" name="answer1" value="2" onclick="button1()">
-
-		<p id="option13"> Keskmiselt </p>
-
-		<input type="radio" id="answer14" name="answer1" value="3" onclick="button1()"> 
-
-		<p id="option14"> Palju </p>
-
-		<input type="radio" id="answer15" name="answer1" value="4" onclick="button1()">
-
-		<p id="option15"> Täiesti </p>
+		<label for="answer15"> Täiesti </label><input type="radio" id="answer15" name="answer1" value="0" onclick="button1()">
 		
 	</div>
 	
 	<div id="start">
 
 	<div id="section2" class="section">
-		<h3 id="question2"> 2. Kui tugevalt hindan meelistegevust sooritada täna? </h3>
+		<h5 id="question2"> 2. Kui tugevalt hindan meelistegevust sooritada täna? </h5>
 
-		<input type="radio" id="answer21" name="answer2" value="0" onclick="button2()">
+		<label for="answer21"> Olematu </label><input type="radio" id="answer21" name="answer2" value="0" onclick="button2()">
 
-		<p id="option21"> Olematu </p>
+		<label for="answer22"> Nõrk </label><input type="radio" id="answer22" name="answer2" value="0" onclick="button2()">
 
-		<input type="radio" id="answer22" name="answer2" value="1" onclick="button2()">
+		<label for="answer23"> Tavaline </label><input type="radio" id="answer23" name="answer2" value="0" onclick="button2()">
 
-		<p id="option22"> Nõrk </p>
+		<label for="answer24"> Kõrge </label><input type="radio" id="answer24" name="answer2" value="0" onclick="button2()">
 
-		<input type="radio" id="answer23" name="answer2" value="2" onclick="button2()">
-
-		<p id="option23"> Tavaline </p>
-
-		<input type="radio" id="answer24" name="answer2" value="3" onclick="button2()"> 
-
-		<p id="option24"> Kõrge </p>
-
-		<input type="radio" id="answer25" name="answer2" value="4" onclick="button2()">
-
-		<p id="option25"> Väga kõrge </p>
+		<label for="answer25"> Väga kõrge </label><input type="radio" id="answer25" name="answer2" value="0" onclick="button2()">
 
 	</div>
 
 	<div id="section3" class="section">
-		<h3 id="question3"> 3. Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista? </h3>
+		<h5 id="question3"> 3. Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista? </h5>
 			
-		<input type="radio" id="answer31" name="answer3" value="0" onclick="button3()">
-		
-		<p id="option31"> Üldse mitte </p>
-		
-		<input type="radio" id="answer32" name="answer3" value="1" onclick="button3()">
-		
-		<p id="option32"> Vähe </p>
-		
-		<input type="radio" id="answer33" name="answer3" value="2" onclick="button3()">
-		
-		<p id="option33"> Keskmiselt </p>
-		
-		<input type="radio" id="answer34" name="answer3" value="3" onclick="button3()"> 
-		
-		<p id="option34"> Palju </p>
-		
-		<input type="radio" id="answer35" name="answer3" value="4" onclick="button3()">
-		
-		<p id="option35"> Täiesti </p>
+		<label for="answer31"> Üldse mitte </label><input type="radio" id="answer31" name="answer3" value="0" onclick="button3()">
+
+		<label for="answer32"> Vähe </label><input type="radio" id="answer32" name="answer3" value="0" onclick="button3()">
+
+		<label for="answer33"> Keskmiselt </label><input type="radio" id="answer33" name="answer3" value="0" onclick="button3()">
+
+		<label for="answer34"> Palju </label><input type="radio" id="answer34" name="answer3" value="0" onclick="button3()">
+
+		<label for="answer35"> Täiesti </label><input type="radio" id="answer35" name="answer3" value="0" onclick="button3()">
 		
 	</div>
 
 	<div id="section4" class="section">
-		<h3 id="question4"> 4. Kas ma täna sooritasin oma meelistegevust? </h3>
+		<h5 id="question4"> 4. Kas ma täna sooritasin oma meelistegevust? </h5>
 			
-		<input type="radio" id="answer41" name="answer4"  value="0" onclick="button4()">
+		<label for="answer41"> Jah </label><input type="radio" id="answer41" name="answer4" value="0" onclick="button4()">
 			
-		<p id="option41"> Jah </p>
+		<label for="answer42"> Ei </label><input type="radio" id="answer42" name="answer4" value="0" onclick="button4()">
 			
-		<input type="radio" id="answer42" name="answer4" value="1" onclick="button4()">
-			
-		<p id="option42"> Ei </p>
 	</div>
 	
-	<h3 id="end1"> Sa olid täna väga tubli, jätka samas vaimus!!! </h3>
+	<h5 id="end1"> Sa olid täna väga tubli, jätka samas vaimus!!! </h5>
 	
 	<button id="send1" type="button" value="">Saada andmed</button>
 
 	<div id="section5" class="section">
-		<h3 id="question5"> 5. Kui palju aega (tunde ja minuteid) ma seda tegevust sooritades veetsin? </h3>
+		<h5 id="question5"> 5. Kui palju aega (tunde ja minuteid) ma seda tegevust sooritades veetsin? </h5>
 	 
-		<p id="answer5start"> Ma kulutasin selle tegevuse peale aega </p>
-		
-		<input id="hours" type="number" min="0" max="24" value="0">
+		<label> Ma kulutasin selle tegevuse peale aega </label><input id="hours" type="number" min="0" max="24" value="0">
 	   
-		<p id="answer5center"> tundi ja </p>
-			
-		<input id="minutes" type="number" min="0" max="59" value="0">
+		<label> tundi ja </label><input id="minutes" type="number" min="0" max="59" value="0">
 		
-		<p  id="answer5end"> minutit. </p>
+		<label> minutit. </label>
 		
 		<button class="fixButtons" id="button5" type="button" onclick="button5()">Fikseeri aeg</button>
 	</div>
 	
 	<div id="section61" class="section">
-		<h3 id="question6"> 6. Kas mul jäi selle tegevuse tõttu muud tegevused sooritamata või ma ei jõudnud neid õigeaegselt valmis? 
-			Kui jah, siis millised muud tegevused seetõttu kannatasid? </h3>
+		<h5 id="question6"> 6. Kas mul jäi selle tegevuse tõttu muud tegevused sooritamata või ma ei jõudnud neid õigeaegselt valmis? 
+			Kui jah, siis millised muud tegevused seetõttu kannatasid? </h5>
 
 		<?php 
 			echo "<select id='reasons'>";
@@ -145,23 +108,21 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 		<button class="fixButtons" id="button61" type="button">Fikseeri vastus</button>
 	</div>
 
-	<div id="section62" class="section">
-		<h3 id="whatnew"> Milline muu tegevus selle tõttu kannatas? </h3>
-		
-		<input id="newreason" type="text" value="" size="43px">
+	<div style="display: inline" id="section62" class="section">
+		<label> Milline muu tegevus selle tõttu kannatas? </label><input id="newreason" class="newreason" type="text" value="">
 		
 		<button class="fixButtons" id="button62" type="button">Fikseeri vastus</button>
 	</div>
 
 	<div id="section7" class="section">
-		<h3 id="question7"> 7. Kirjelda oma mõtteid ja tundeid ning nende muutumist päeva jooksul. </h3>
+		<h5 id="question7"> 7. Kirjelda oma mõtteid ja tundeid ning nende muutumist päeva jooksul. </h5>
 
 		<textarea id="answer7" type="text" rows="4" cols="50" value=""></textarea>
 		
 		<button class="fixButtons" id="button7" type="button">Fikseeri vastus</button>
 	</div>
 	
-	<h3 id="end2"> Sa andsid küll täna oma nõrkusele järele, aga püüa vähemalt homme tublim olla!!! </h3>
+	<h5 id="end2"> Sa andsid küll täna oma nõrkusele järele, aga püüa vähemalt homme tublim olla!!! </h5>
 	
 	<button id="send2" type="button" value="">Saada andmed</button>
 

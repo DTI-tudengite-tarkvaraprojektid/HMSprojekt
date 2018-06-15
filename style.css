@@ -152,6 +152,10 @@ input[type=text], input[type=password], input[type=email] {
     box-sizing: border-box;
 }
 
+input.newreason{
+	width: 10%;
+}
+
 /* Set a style for all buttons */
 button {
     background-color: rgb(255, 212, 70);
@@ -261,9 +265,10 @@ span.psw {
        width: 100%;
     }
 }
+/*
 .section input{
     float: left;
-}
+}*/
   table.diaryTable td, table.diaryTable th {
     border: 1px solid #4D5394;
     padding: 4px 2px;
