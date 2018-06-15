@@ -12,7 +12,7 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 	<meta http-equiv="X-UA_Compatible" content="ie=edge">
 	<title>Päeviku täitmine</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">	
-	<script src="../js/tree.js" defer></script>
+	<script src="js/tree.js" defer></script>
 </head>
 
 
