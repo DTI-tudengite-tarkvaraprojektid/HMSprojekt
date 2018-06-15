@@ -1,7 +1,5 @@
 body,
 html {
-  width: 100%;
-  height: 100%;
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   background-repeat: no-repeat;
@@ -10,14 +8,13 @@ html {
 }
 
 main {
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: 50px;
     bottom: 0;
-    margin-top: 63px;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+    
     margin-bottom: 10px;
     width: 100%;
+    
 }
 
 main > * {
@@ -129,7 +126,7 @@ h3 {
 /*  index.html texts with links  */
 .main-grid{
     display: grid;
-	width: 100vw;
+	width: relative;
     height: 80vh;
     padding: 50px;
 	grid-template-columns: auto auto;
@@ -278,9 +275,7 @@ span.psw {
        width: 100%;
     }
 }
-.section input{
-    float: left;
-}
+
   table.diaryTable td, table.diaryTable th {
     border: 1px solid #4D5394;
     padding: 4px 2px;
@@ -289,10 +284,9 @@ table.diaryTable {
     font-family: Arial, Helvetica, sans-serif;
     border: 6px solid #5E6894;
     border-top-width: 6px;
-    /*border-collapse: collapse;*/
     border-spacing: 0px;
     background-color: #D8E9EE;
-    width: 100%;
+    width: 50%;
     text-align: left;
     margin-bottom:20px;
   }

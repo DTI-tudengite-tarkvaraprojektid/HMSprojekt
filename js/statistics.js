@@ -24,8 +24,8 @@ function entrys() {
 	xhr.send();
 }
 
-function diaryEntry() {
-	let allInputs = document.getElementById("datesToSelect").getElementsByTagName("input");
+function diaryEntry(n) {
+	let allInputs = document.getElementById("datesToSelect"+n).getElementsByTagName("input");
 	
 	let selectedDates = [];
 	for(let i = 0; i < allInputs.length; i ++){
@@ -42,7 +42,8 @@ function diaryEntry() {
     xhr.onreadystatechange=function(){
       if(xhr.readyState==4){
         console.log(xhr.responseText);
-        document.getElementById("diaryAnswers").innerHTML = this.responseText;
+		document.getElementById("diaryAnswers"+n).innerHTML = this.responseText;
+		document.getElementById("printBtn").style.visibility = "visible";
       }
     }
 	xhr.send(); 

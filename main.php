@@ -38,9 +38,9 @@
   <nav class="menu">
     <ul class="menu-list">
       <li class="menu-item"><a href="#home-view" class="menu-link home-view active-menu">Avaleht</a></li>
-      <li class="menu-item"><a href="#app-view" class="menu-link app-view">Päevik</a></li>
+      <li class="menu-item"><a href="#diary-view" class="menu-link diary-view">Päevik</a></li>
       
-      <li class="menu-item menu-text">Tere tulemast, <?php echo $_SESSION["username"]?></li><span><?php echo $notice?></span>
+      <li class="menu-item menu-text" style="text-align: center;">Tere tulemast, <?php echo $_SESSION["username"]?></li>
       <li class="menu-item menu-log"><a href="?logout=1" class="menu-link">Logi välja</a></li>
       
       <li id="confirmation" class="menu-item menu-log menu-link" name="deleteAccount" onclick="document.getElementById('id04').style.display='block'">Kustuta minu konto</li>
@@ -65,11 +65,10 @@
 
    
 
-    <!-- Home -->
+    <!-- Home page -->
     <section id="home-view">
-        <h2>Mängusõltuvuse eneseseire keskkond</h2>
-        <h1>Avaleht</h1>
-        <p>Siin näed statistikat oma sissekannete kohta</p>
+        <h2>Enesejälgimise päevik</h2>
+        <p>Siin näed kokkuvõtet oma sissekannete kohta</p>
         <ul>
           <li>
             <button id="arrayHere">test</button>
@@ -85,19 +84,31 @@
         </div>
     </section>
   
-     <!-- App page -->
-     <section id="app-view">
-        <h1>Päevik</h1>
-        <p>Siin on sinu päeviku sissekanded</p>
-        <button><a href="diary.php" >Päevikut täitma</a></button>
-        <h1>Vaata kõiki sisestusi:</h1>
-        
-          <div id="datesToSelect"><?php readInfo($_SESSION["userid"])?></div>
+     <!-- Diary page -->
+     <section id="diary-view">
+        <h2>Enesejälgimise päevik</h2>
+        <div style="float:left; text-align: center;">
+          <p>Siin on sinu <b style="color: blue;">arvutisõltuvuse</b> jälgimise päeviku sissekanded</p>
+          <button><a href="diary.php?type=1" >Uus sissekanne</a></button>
+          <h1>Vaata kõiki sisestusi:</h1>
+          <div id="datesToSelect1"><?php readInfo($_SESSION["userid"], 1)?></div>
           <div>
-            <button type="submit" id="diaryPost" name="diaryPost" onclick="diaryEntry()">Vali</button>
+            <button type="submit" id="diaryPost" name="diaryPost" onclick="diaryEntry(1)" >Kuva valik</button>
           </div>
-        <div id="printPDF"><p id="diaryAnswers" class="diaryAnswers"></p></div>
-     <button onclick="printDiv('printPDF');"> Print </button>
+          <div style="float:left;" id="printPDF"><p id="diaryAnswers1" class="diaryAnswers"></p></div>
+          <button id="printBtn" onclick="printDiv('printPDF');" style="visibility:hidden;"> Koosta PDF </button>
+        </div>
+        <div style="float:right; text-align: center;">
+          <p>Siin on sinu <b style="color: blue;">hasartmängu sõltuvuse</b> jälgimise päeviku sissekanded</p>
+          <button><a href="diary.php?type=2" >Uus sissekanne</a></button>
+          <h1>Vaata kõiki sisestusi:</h1>
+          <div id="datesToSelect2"><?php readInfo($_SESSION["userid"], 2)?></div>
+          <div>
+            <button type="submit" id="diaryPost" name="diaryPost" onclick="diaryEntry(2)" >Kuva valik</button>
+          </div>
+          <div style="float:right;" id="printPDF"><p id="diaryAnswers2" class="diaryAnswers"></p></div>
+          <button id="printBtn" onclick="printDiv('printPDF');" style="visibility:hidden;"> Koosta PDF </button>
+        </div>
     </section>
 
    

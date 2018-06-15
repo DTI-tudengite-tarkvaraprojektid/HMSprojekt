@@ -139,11 +139,11 @@ mail($to, $subject, $message, implode("\r\n", $headers));
 }
 
 //read all info funktsioon
-function readInfo($userid){
+function readInfo($userid, $type){
 	
 	$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
 	
-	$stmt=$mysqli->prepare("SELECT date FROM diary WHERE id = $userid"); 
+	$stmt=$mysqli->prepare("SELECT date FROM diary WHERE id = $userid AND type = $type"); 
 	
 	
 	$stmt->bind_result($date);

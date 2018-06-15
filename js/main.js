@@ -30,14 +30,9 @@ MainApp.routes = {
       .addEventListener('click', arrayHere) 
     }
   },
-  'app-view': {
+  'diary-view': {
     'render': function () {
       console.log('paevik')
-    }
-  },
-  'user-view': {
-    'render': function () {
-      console.log('user')
     }
   }
 }
