@@ -134,10 +134,10 @@
   <form class="modal-content animate" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
     <div class="container">
       <label for="loginUserName"><b>Kasutajanimi</b></label>
-      <input type="text" placeholder="Sisesta kasutajanimi" name="loginUserName" value="<?php echo $loginUserName; ?>" required>
+      <input type="text" class="longInput" placeholder="Sisesta kasutajanimi" name="loginUserName" value="<?php echo $loginUserName; ?>" required>
 
       <label for="loginPassword"><b>Salasõna</b></label>
-      <input type="password" placeholder="Sisesta salasõna" name="loginPassword" required>
+      <input type="password" class="longInput" placeholder="Sisesta salasõna" name="loginPassword" required>
         
       <button type="submit" name="loginButton">Logi sisse</button> 
       
@@ -153,19 +153,19 @@
       <h3>Palun täida allolevad lahtrid, et end kasutajaks registreerida.</h3>
       <hr>
       <label for="signupUserName"><b>Kasutajanimi</b></label>
-      <input type="text" placeholder="Kirjuta kasutajanimi" name="signupUserName" value="<?php echo $signupUserName; ?>" required>
+      <input type="text" class="longInput" placeholder="Kirjuta kasutajanimi" name="signupUserName" value="<?php echo $signupUserName; ?>" required>
 			<span><?php echo $signupUserNameError; ?></span>
 
       <label for="signupEmail"><b>E-mail</b></label>
-		  <input name="signupEmail" placeholder="Kirjuta oma e-maili aadress" type="email" value="<?php echo $signupEmail; ?>" required>
+		  <input name="signupEmail" class="longInput" placeholder="Kirjuta oma e-maili aadress" type="email" value="<?php echo $signupEmail; ?>" required>
 		  <span><?php echo $signupEmailError; ?></span>
 		  
       <label for="signupPassword"><b>Salasõna</b></label>
-      <input type="password" placeholder="Kirjuta salasõna" name="signupPassword" id="signupPassword"  minlength="8" value="<?php echo $signupPassword; ?>"required>
+      <input type="password" class="longInput" placeholder="Kirjuta salasõna" name="signupPassword" id="signupPassword"  minlength="8" value="<?php echo $signupPassword; ?>"required>
 			<span><?php echo $signupPasswordError; ?></span>
 			
 			<label for="repeatPassword"><b>Korda salasõna</b></label>
-      <input type="password" placeholder="Korda salasõna" name="repeatPassword" id="repeatPassword" onkeyup='check();' minlength="8" value="<?php echo $repeatPassword; ?>"required>
+      <input type="password" class="longInput" placeholder="Korda salasõna" name="repeatPassword" id="repeatPassword" onkeyup='check();' minlength="8" value="<?php echo $repeatPassword; ?>"required>
 			<!--<span><?php echo $signupPasswordError; ?></span>-->
 			<span id='message'></span>
       
@@ -192,10 +192,10 @@
     <div class="container">
 		<h3>Konto taastamiseks sisesta oma kasutajanimi ja registreerimisel sisestatud e-maili aadress.</h3>
       <label for="loginUserName"><b>Kasutajanimi</b></label>
-      <input type="text" placeholder="Sisesta kasutajanimi" name="loginUserName" value="<?php echo $loginUserName; ?>" required>
+      <input type="text" class="longInput" placeholder="Sisesta kasutajanimi" name="loginUserName" value="<?php echo $loginUserName; ?>" required>
 
       <label for="loginEmail"><b>Email</b></label>
-      <input type="email" placeholder="Sisesta oma e-maili aadress" name="loginEmail" required>
+      <input type="email" class="longInput" placeholder="Sisesta oma e-maili aadress" name="loginEmail" required>
         
       <button type="submit" name="recoveryButton">Taasta konto</button> 
       
