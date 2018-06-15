@@ -2,6 +2,19 @@ window.onload = function () {
 	document.getElementById("start").style.visibility = "hidden";
 	document.getElementById("send1").style.visibility = "hidden";
 	document.getElementById("send2").style.visibility = "hidden";
+	
+	var otherCheckbox = document.querySelector('input[value="Midagi muud"]');
+	var otherText = document.querySelector('input[id="otherValue"]');
+	otherText.style.visibility = 'hidden';
+
+	otherCheckbox.onchange = function() {
+	  if(otherCheckbox.checked) {
+		otherText.style.visibility = 'visible';
+		otherText.value = '';
+	  } else {
+		otherText.style.visibility = 'hidden';
+	  }
+	};
 }
 
 var Answer1=null, Answer2=null, Answer3=null, Answer4=null, Answer5=null;
@@ -101,10 +114,10 @@ function button5() {
 }
 
 function button61() {
-    if(document.getElementById("reasons").value == "Midagi muud" || document.getElementById("reasons").value != ""){
+    if(document.getElementById("reasons").value == "Midagi muud"){
         document.getElementById("section62").style.visibility = "visible";
 		document.getElementById("button62").addEventListener("click", button62);
-    }else if(document.getElementById("reasons").value != "Midagi muud" || document.getElementById("reasons").value != ""){
+    }else if(document.getElementById("reasons").value != "Midagi muud"){
 		document.getElementById("button7").addEventListener("click", button7);
         document.getElementById("section7").style.visibility = "visible";
 		Answer6 = document.getElementById("reasons").value;

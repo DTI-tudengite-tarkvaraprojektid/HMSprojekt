@@ -1,7 +1,7 @@
 <?php
 require("../../../../config.php");
 require("functions.php");
-$reasons = array("-", "Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suhted sõpradega", "Koolitöö", "Välimuse eest hoolitsemine", "Lemmiklooma eest hoolitsemine", "Midagi muud");
+$reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suhted sõpradega", "Koolitöö", "Välimuse eest hoolitsemine", "Lemmiklooma eest hoolitsemine", "Midagi muud");
 ?>
 
 <!DOCTYPE html>
@@ -11,13 +11,68 @@ $reasons = array("-", "Ei kannatanud", "Töökohustused", "Suhted lähedastega",
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA_Compatible" content="ie=edge">
 	<title>Päeviku täitmine</title>
-	<script src="tree.js" defer></script>
 	<link rel="stylesheet" type="text/css" href="style.css">	
+	<script src="tree.js" defer></script>
 </head>
 
 
 	
 <body>
+
+<?php
+
+	for ($i = 0; $i < count($reasons); $i++) {
+		if($i<count($reasons)-1){
+			echo "<div>";
+			echo "<input type='checkbox' id=".$reasons[$i]." name='interest' value=".$reasons[$i].">";
+			echo "<label for='".$reasons[$i]."'>".$reasons[$i]."</label>";
+			echo "</div>";
+		}else{
+			echo "<div>";
+			echo "<input type='checkbox' id=".$reasons[$i]." name='interest' value=".$reasons[$i].">";
+			echo "<label for='".$reasons[$i]."'>".$reasons[$i]."</label>";
+			echo "<input style='width: 10%' type='text' id='otherValue' name='other'>";
+			echo "</div>";
+		}
+	}
+	echo "<div>";
+	echo "<button type='submit'>Fikseeri vastus</button>";
+	echo "</div>";
+	
+	echo "<br><br>";
+
+?>
+
+<form>
+    <div>
+      <input type="checkbox" id="coding" name="interest" value="coding">
+      <label for="coding">Coding</label>
+    </div>
+    <div>
+      <input type="checkbox" id="music" name="interest" value="music">
+      <label for="music">Music</label>
+    </div>
+    <div>
+      <input type="checkbox" id="art" name="interest" value="art">
+      <label for="art">Art</label>
+    </div>
+    <div>
+      <input type="checkbox" id="sports" name="interest" value="sports">
+      <label for="sports">Sports</label>
+    </div>
+    <div>
+      <input type="checkbox" id="cooking" name="interest" value="cooking">
+      <label for="cooking">Cooking</label>
+    </div>
+    <div>
+      <input type="checkbox" id="other" name="interest" value="other">
+      <label for="other">Other</label>
+      <input style="width: 10%" type="text" id="otherValue" name="other">
+    </div>
+    <div>
+      <button type="submit">Submit form</button>
+    </div>
+</form>
 
 <div id="sections" class="sections">
 
