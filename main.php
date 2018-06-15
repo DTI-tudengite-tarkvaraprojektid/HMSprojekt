@@ -55,7 +55,6 @@
         <p>Siin on sinu päeviku sissekanded</p>
         <a href="diary.php" class="menu-link">Päevikut täitma</a>
         
-		<p><?php answer1Data()?></p>
     </section>
 
     <!-- Home -->
