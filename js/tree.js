@@ -229,13 +229,13 @@ function send1(){
 	console.log(Answer3);
 	console.log(Answer4);
 	xhr.send();
-	//window.location.href='main.php';
+	window.location.href='main.php';
 }
 
 function send2(){
 	var t = document.getElementById("send2").value;
 	var xhr=new XMLHttpRequest();
-	var aadress="functions/send2.php?t="+t+"&a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4+"&a5="+Answer5+"&a6="+Answer6+"&a7="+Answer7;
+	var aadress="functions/send2.php?t="+t+"&a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4+"&a5="+Answer5+"&a61="+Answer61+"&a62="+Answer62+"&a7="+Answer7;
 	xhr.open("GET", aadress, true);
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){
