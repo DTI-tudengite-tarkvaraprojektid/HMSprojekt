@@ -18,7 +18,7 @@ window.onload = function () {
 }
 
 var Answer1=null, Answer2=null, Answer3=null, Answer4=null, Answer5=null;
-var Answer6=null, Answer7=null;
+var Answer61=null, Answer62=null, Answer7=null;
 
 function button1() {
 	if(document.getElementById("answer11").checked == true){
@@ -103,7 +103,7 @@ function button4() {
 		document.getElementById("section5").style.visibility = "hidden";
 		document.getElementById("button5").style.visibility = "hidden";
 		document.getElementById("section7").style.visibility = "hidden";
-		document.getElementById("section6").style.visibility = "hidden";
+		document.getElementById("section61").style.visibility = "hidden";
 		document.getElementById("button7").style.visibility = "hidden";
 		document.getElementById("otherValue").style.visibility = "hidden";
 		document.getElementById("end2").style.visibility = "hidden";
@@ -114,26 +114,63 @@ function button4() {
 }
 
 function button5() {
-	document.getElementById("button6").addEventListener("click", button6);
+	document.getElementById("button61").addEventListener("click", button61);
     if(document.getElementById("hours").value!=0 || document.getElementById("minutes").value!=0){
-		document.getElementById("button6").addEventListener("click", button6);
 		document.getElementById("button5").style.visibility = "visible";
-		document.getElementById("section6").style.visibility = "visible";
+		document.getElementById("section61").style.visibility = "visible";
 		Answer5 = document.getElementById("hours").value*60 + parseInt(document.getElementById("minutes").value);
     }
 }
 
-function button6() {
-	document.getElementById("section7").style.visibility = "visible";
-	document.getElementById("button7").style.visibility = "visible";
-    Answer6 = document.getElementById("reasons").value;
+function button61() {
+	document.getElementById("button7").addEventListener("click", button7);
+	if(document.getElementById("reasons1").checked == true){
+		document.getElementById("section7").style.visibility = "visible";
+		document.getElementById("button7").style.visibility = "visible";
+		Answer61 = document.getElementById("reasons1").value;
+	}
+	if(document.getElementById("reasons2").checked == true){
+		document.getElementById("section7").style.visibility = "visible";
+		document.getElementById("button7").style.visibility = "visible";
+		Answer61 = document.getElementById("reasons2").value;
+	}
+	if(document.getElementById("reasons3").checked == true){
+		document.getElementById("section7").style.visibility = "visible";
+		document.getElementById("button7").style.visibility = "visible";
+		Answer61 = document.getElementById("reasons3").value;
+	}
+	if(document.getElementById("reasons4").checked == true){
+		document.getElementById("section7").style.visibility = "visible";
+		document.getElementById("button7").style.visibility = "visible";
+		Answer61 = document.getElementById("reasons4").value;
+	}
+	if(document.getElementById("reasons5").checked == true){
+		document.getElementById("section7").style.visibility = "visible";
+		document.getElementById("button7").style.visibility = "visible";
+		Answer61 = document.getElementById("reasons5").value;
+	}
+	if(document.getElementById("reasons6").checked == true){
+		document.getElementById("section7").style.visibility = "visible";
+		document.getElementById("button7").style.visibility = "visible";
+		Answer61 = document.getElementById("reasons6").value;
+	}
+	if(document.getElementById("reasons7").checked == true){
+		document.getElementById("section7").style.visibility = "visible";
+		document.getElementById("button7").style.visibility = "visible";
+		Answer61 = document.getElementById("reasons7").value;
+	}
+	if(document.getElementById("reasons8").checked == true){
+		document.getElementById("section7").style.visibility = "visible";
+		document.getElementById("button7").style.visibility = "visible";
+		Answer61 = document.getElementById("otherValue").value;
+	}
 }
 
 function button7() {
     if(document.getElementById("answer7").value != ""){
+		document.getElementById("send2").addEventListener("click", send2);
         document.getElementById("end2").style.visibility = "visible";
 		document.getElementById("send2").style.visibility = "visible";
-		document.getElementById("send2").addEventListener("click", send2);
 		Answer7 = document.getElementById("answer7").value;
     }
 }

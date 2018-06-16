@@ -93,8 +93,8 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 		<button class="fixButtons" id="button5" type="button" onclick="button5()">Fikseeri aeg</button>
 	</div>
 	
-	<div id="section6" class="section">
-		<h5 id="question6"> 6. Kas mul jäi selle tegevuse tõttu muud tegevused sooritamata või ma ei jõudnud neid õigeaegselt valmis? 
+	<div id="section61" class="section">
+		<h5 id="question61"> 6. Kas mul jäi selle tegevuse tõttu muud tegevused sooritamata või ma ei jõudnud neid õigeaegselt valmis? 
 			Kui jah, siis millised muud tegevused seetõttu kannatasid? </h5>
 
 		<?php
@@ -102,21 +102,21 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 			for ($i = 0; $i < count($reasons); $i++) {
 				if($i<count($reasons)-1){
 					echo "<div>";
-					echo "<input id='reasons' type='checkbox' value='".$reasons[$i]."'>";
+					echo "<input id='reasons".($i+1)."' type='checkbox' value='".$reasons[$i]."'>";
 					echo "<label for='".$reasons[$i]."'>".$reasons[$i]."</label>";
 					echo "</div>";
 				}else{
 					echo "<div>";
-					echo "<input id='reasons' type='checkbox' value='".$reasons[$i]."'>";
+					echo "<input id='reasons".($i+1)."' type='checkbox' value='".$reasons[$i]."'>";
 					echo "<label for='".$reasons[$i]."'>".$reasons[$i]."</label>";
-					echo "<input id='otherValue' style='width: 10%' type='text' name='other'>";
+					echo "<input id='otherValue' style='width: 15%' type='text' name='other'>";
 					echo "</div>";
 				}
 			}
 
 		?>
 			
-		<button class="fixButtons" id="button6" type="button">Fikseeri vastust</button>
+		<button class="fixButtons" id="button61" type="button">Fikseeri vastus</button>
 	</div>
 
 	<div id="section7" class="section">
