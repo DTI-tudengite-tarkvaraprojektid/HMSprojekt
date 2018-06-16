@@ -41,6 +41,8 @@ function button1() {
 		document.getElementById("section2").style.visibility = "visible";
 		Answer1 = "4";
 	}
+	
+	console.log(Answer1);
 }
 
 function button2() {
@@ -64,6 +66,8 @@ function button2() {
 		document.getElementById("section3").style.visibility = "visible";
 		Answer2 = "4";
 	}
+	
+	console.log(Answer2);
 }
 
 function button3() {
@@ -87,6 +91,8 @@ function button3() {
 		document.getElementById("section4").style.visibility = "visible";
 		Answer3 = "4";
 	}
+	
+	console.log(Answer3);
 }
 
 function button4() {
@@ -111,59 +117,85 @@ function button4() {
 		document.getElementById("send1").addEventListener("click", send1);
 		Answer4 = "1";
     }
+	
+	console.log(Answer4);
 }
 
 function button5() {
-	document.getElementById("button61").addEventListener("click", button61);
-    if(document.getElementById("hours").value!=0 || document.getElementById("minutes").value!=0){
-		document.getElementById("button5").style.visibility = "visible";
+	if(document.getElementById("send1").value==1){	
+		document.getElementById("button61").addEventListener("click", button61);
 		document.getElementById("section61").style.visibility = "visible";
-		Answer5 = document.getElementById("hours").value*60 + parseInt(document.getElementById("minutes").value);
-    }
+		
+		console.log("Arvuti");
+	}
+	if(document.getElementById("send1").value==2){	
+		document.getElementById("button62").addEventListener("click", button62);
+		document.getElementById("section62").style.visibility = "visible";
+		console.log("Mängur");
+	}
+	
+	document.getElementById("button5").style.visibility = "visible";	
+	Answer5 = document.getElementById("hours").value*60 + parseInt(document.getElementById("minutes").value);
+	
+	console.log(Answer5);
 }
 
-function button61() {
+function button61() {	
+	if(document.getElementById("hours").value!=0 || document.getElementById("minutes").value!=0){
+		document.getElementById("button7").addEventListener("click", button7);
+		document.getElementById("section7").style.visibility = "visible";
+		
+		if(document.getElementById("reasons1").checked == true){
+			document.getElementById("section7").style.visibility = "visible";
+			document.getElementById("button7").style.visibility = "visible";
+			Answer61 = document.getElementById("reasons1").value;
+		}
+		if(document.getElementById("reasons2").checked == true){
+			document.getElementById("section7").style.visibility = "visible";
+			document.getElementById("button7").style.visibility = "visible";
+			Answer61 = document.getElementById("reasons2").value;
+		}
+		if(document.getElementById("reasons3").checked == true){
+			document.getElementById("section7").style.visibility = "visible";
+			document.getElementById("button7").style.visibility = "visible";
+			Answer61 = document.getElementById("reasons3").value;
+		}
+		if(document.getElementById("reasons4").checked == true){
+			document.getElementById("section7").style.visibility = "visible";
+			document.getElementById("button7").style.visibility = "visible";
+			Answer61 = document.getElementById("reasons4").value;
+		}
+		if(document.getElementById("reasons5").checked == true){
+			document.getElementById("section7").style.visibility = "visible";
+			document.getElementById("button7").style.visibility = "visible";
+			Answer61 = document.getElementById("reasons5").value;
+		}
+		if(document.getElementById("reasons6").checked == true){
+			document.getElementById("section7").style.visibility = "visible";
+			document.getElementById("button7").style.visibility = "visible";
+			Answer61 = document.getElementById("reasons6").value;
+		}
+		if(document.getElementById("reasons7").checked == true){
+			document.getElementById("section7").style.visibility = "visible";
+			document.getElementById("button7").style.visibility = "visible";
+			Answer61 = document.getElementById("reasons7").value;
+		}
+		if(document.getElementById("reasons8").checked == true){
+			document.getElementById("section7").style.visibility = "visible";
+			document.getElementById("button7").style.visibility = "visible";
+			Answer61 = document.getElementById("otherValue").value;
+		}
+	}
+	
+	console.log(Answer61);
+}
+
+function button62() {
 	document.getElementById("button7").addEventListener("click", button7);
-	if(document.getElementById("reasons1").checked == true){
-		document.getElementById("section7").style.visibility = "visible";
-		document.getElementById("button7").style.visibility = "visible";
-		Answer61 = document.getElementById("reasons1").value;
-	}
-	if(document.getElementById("reasons2").checked == true){
-		document.getElementById("section7").style.visibility = "visible";
-		document.getElementById("button7").style.visibility = "visible";
-		Answer61 = document.getElementById("reasons2").value;
-	}
-	if(document.getElementById("reasons3").checked == true){
-		document.getElementById("section7").style.visibility = "visible";
-		document.getElementById("button7").style.visibility = "visible";
-		Answer61 = document.getElementById("reasons3").value;
-	}
-	if(document.getElementById("reasons4").checked == true){
-		document.getElementById("section7").style.visibility = "visible";
-		document.getElementById("button7").style.visibility = "visible";
-		Answer61 = document.getElementById("reasons4").value;
-	}
-	if(document.getElementById("reasons5").checked == true){
-		document.getElementById("section7").style.visibility = "visible";
-		document.getElementById("button7").style.visibility = "visible";
-		Answer61 = document.getElementById("reasons5").value;
-	}
-	if(document.getElementById("reasons6").checked == true){
-		document.getElementById("section7").style.visibility = "visible";
-		document.getElementById("button7").style.visibility = "visible";
-		Answer61 = document.getElementById("reasons6").value;
-	}
-	if(document.getElementById("reasons7").checked == true){
-		document.getElementById("section7").style.visibility = "visible";
-		document.getElementById("button7").style.visibility = "visible";
-		Answer61 = document.getElementById("reasons7").value;
-	}
-	if(document.getElementById("reasons8").checked == true){
-		document.getElementById("section7").style.visibility = "visible";
-		document.getElementById("button7").style.visibility = "visible";
-		Answer61 = document.getElementById("otherValue").value;
-	}
+	document.getElementById("section7").style.visibility = "visible";
+	Answer62 = document.getElementById("money").value;
+	
+	console.log(Answer62);
 }
 
 function button7() {
@@ -172,6 +204,8 @@ function button7() {
         document.getElementById("end2").style.visibility = "visible";
 		document.getElementById("send2").style.visibility = "visible";
 		Answer7 = document.getElementById("answer7").value;
+		
+		console.log(Answer7);
     }
 }
 
@@ -186,8 +220,12 @@ function send1(){
 			console.log(xhr.responseText);
 		}
 	}
+	console.log(Answer1);
+	console.log(Answer2);
+	console.log(Answer3);
+	console.log(Answer4);
 	xhr.send();
-	window.location.href='main.php';
+	//window.location.href='main.php';
 }
 
 function send2(){

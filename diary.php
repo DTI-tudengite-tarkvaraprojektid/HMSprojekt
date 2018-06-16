@@ -71,9 +71,9 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 	<div id="section4" class="section">
 		<h5 id="question4"> 4. Kas ma täna sooritasin oma meelistegevust? </h5>
 			
-		<label for="answer41"> Jah </label><input type="radio" id="answer41" name="answer4" value="1" onclick="button4()">
+		<label for="answer41"> Jah </label><input type="radio" id="answer41" name="answer4" value="0" onclick="button4()">
 			
-		<label for="answer42"> Ei </label><input type="radio" id="answer42" name="answer4" value="0" onclick="button4()">
+		<label for="answer42"> Ei </label><input type="radio" id="answer42" name="answer4" value="1" onclick="button4()">
 			
 	</div>
 	
@@ -117,6 +117,17 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 		?>
 			
 		<button class="fixButtons" id="button61" type="button">Fikseeri vastus</button>
+	</div>
+	
+	<div id="section62" class="section">
+	
+		<h5 id="question62"> 6. Kui palju sa raha mängimisele kulutasid (välja arvatud võidud)? </h5>
+		
+		<label> Ma mängisin täna maha </label><input id="money" type="number" min="0" value="">
+		<label> eurot. </label>
+		
+		<button class="fixButtons" id="button62" type="button">Fikseeri summa</button>
+			
 	</div>
 
 	<div id="section7" class="section">
