@@ -122,6 +122,8 @@
 				$table .= '<div class="a"> ';
 				$table .= $answer8;
 				$table .= " </div>";
+			}else{
+				$table.= '<div class="a">- </div><div class="a">- </div><div class="a">- </div><div class="a">- </div><div class="a">- </div> ';
 			}
 		}
 		$table .='</div></div>';

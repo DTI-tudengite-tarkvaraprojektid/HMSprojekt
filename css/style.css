@@ -365,9 +365,10 @@ box-sizing: border-box;
 
 .day{
     grid-column: auto;
-    grid-row: 1;
+    grid-row: auto;
     border: 1px black solid;
     box-sizing: border-box;
+    
 }
 .q{
     grid-column: 1;
@@ -375,9 +376,10 @@ box-sizing: border-box;
     border: 1px black solid;
 }
 .a{
-    grid-column: 1;
+    grid-column: auto;
     grid-row: auto;
     border: 1px black solid;
+    
 }
 .options-grid{
     grid-column: 1/3;
