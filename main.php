@@ -86,32 +86,33 @@
   
      <!-- Diary page -->
      <section id="diary-view">
-        <h2>Enesejälgimise päevik</h2>
-
-        <div style="float:left; text-align: center;">
+      <h2>Enesejälgimise päevik</h2>
+      <div class="diary-grid">
+        <div class="comp-grid">
           <p>Siin on sinu <b style="color: blue;">arvutisõltuvuse</b> jälgimise päeviku sissekanded</p>
           <button><a href="diary.php?type=1" >Uus sissekanne</a></button>
           <h1>Vaata kõiki sisestusi:</h1>
           <div id="datesToSelect1"><?php readInfo($_SESSION["userid"], 1)?></div>
-          <div>
-            <button type="submit" id="diaryPost" name="diaryPost" onclick="diaryEntry(1)" >Kuva valik</button>
-          </div>
-          <div style="float:left;" id="printPDF"><p id="diaryAnswers1" class="diaryAnswers"></p></div>
+          <div><button type="submit" id="diaryPost" name="diaryPost" onclick="diaryEntry(1)" >Kuva valik</button></div>
           
         </div>
 
-        <div style="float:right; text-align: center;">
+        <div class="gamb-grid">
           <p>Siin on sinu <b style="color: blue;">hasartmängu sõltuvuse</b> jälgimise päeviku sissekanded</p>
           <button><a href="diary.php?type=2" >Uus sissekanne</a></button>
           <h1>Vaata kõiki sisestusi:</h1>
           <div id="datesToSelect2"><?php readInfo($_SESSION["userid"], 2)?></div>
-          <div>
-            <button type="submit" id="diaryPost" name="diaryPost" onclick="diaryEntry(2)" >Kuva valik</button>
-          </div>
-          <div style="float:right;" id="printPDF"><p id="diaryAnswers2" class="diaryAnswers"></p></div>
+          <div><button type="submit" id="diaryPost" name="diaryPost" onclick="diaryEntry(2)" >Kuva valik</button></div>
           
         </div>
-        <div><button id="printBtn" class="printBtn" onclick="printDiv('printPDF');" > Koosta PDF </button></div>
+      
+        <div class="result-grid" id="printPDF">
+          <div id="diaryAnswers1" class="diaryAnswers"></div>
+          <div id="diaryAnswers2" class="diaryAnswers"></div>
+        </div>
+        <div class="options-grid"><button id="printBtn" class="printBtn" onclick="printDiv('printPDF');" > Koosta PDF </button></div>
+
+      </div>
     </section>
 
    
