@@ -110,6 +110,7 @@ function button4() {
 		document.getElementById("button5").style.visibility = "hidden";
 		document.getElementById("section7").style.visibility = "hidden";
 		document.getElementById("section61").style.visibility = "hidden";
+		document.getElementById("section62").style.visibility = "hidden";
 		document.getElementById("button7").style.visibility = "hidden";
 		document.getElementById("otherValue").style.visibility = "hidden";
 		document.getElementById("end2").style.visibility = "hidden";
@@ -191,9 +192,12 @@ function button61() {
 }
 
 function button62() {
-	document.getElementById("button7").addEventListener("click", button7);
-	document.getElementById("section7").style.visibility = "visible";
-	Answer62 = document.getElementById("money").value;
+	if(document.getElementById("money").value!=0){
+		document.getElementById("button7").addEventListener("click", button7);
+		document.getElementById("section7").style.visibility = "visible";
+		document.getElementById("button7").style.visibility = "visible";
+		Answer62 = document.getElementById("money").value;
+	}
 	
 	console.log(Answer62);
 }
