@@ -242,6 +242,14 @@ function send2(){
 			console.log(xhr.responseText);
 		}
 	}
+	console.log(Answer1);
+	console.log(Answer2);
+	console.log(Answer3);
+	console.log(Answer4);
+	console.log(Answer5);
+	console.log(Answer61);
+	console.log(Answer62);
+	console.log(Answer7);
 	xhr.send();
 	window.location.href='main.php';
 }

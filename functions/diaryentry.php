@@ -91,14 +91,14 @@
 			}
 			$table .= " </div>";
 			$table .= '<div class="a"> ';
-			if($answer4==1){
+			if($answer4==0){
 				$table .= "Jah.";
 			}
-			if($answer4==0){
+			if($answer4==1){
 				$table .= "Ei.";
 			}
 			$table .= " </div>";
-			if($answer4==1){
+			if($answer4==0){
 				$table .= '<div class="a"> ';
 				if($answer5<60){
 					$table .= "Sa kulutasid mängimisele ".$answer5." minutit.";

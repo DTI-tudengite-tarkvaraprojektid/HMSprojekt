@@ -49,6 +49,8 @@ function diaryEntry(n) {
 	xhr.send(); 
   }
 
+
+
  
 function printDiv(eleid){
     var PW = window.open('', '_blank', 'Print content');
