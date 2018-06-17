@@ -1,0 +1,11 @@
+1. Kasutaja saab registreerida end keskkonda, et hakata seda kasutama.
+Oma sõltuvuse vastu abi otsiv klient registreerib end anonüümselt kesskonda kasutajaks sisestades mingi kasutajanime, emaili aadressi (ei pea olema toimiv, peaasi, et ta seda mäletaks hiljem) ja parooli.
+
+2. Kasutaja saab keskkonda sisse logida , et saaks enesejälgimise päevikut täitma hakata.
+Klient saab keskkonda sisse logida sisestades selleks oma registreerimisel sisestatud kasutajanime ja parooli.
+
+3. Kasutaja saab sisselogitult päevikut pidada ja vajadusel valitud sissekanded nõustajale saata.
+Klient saab peale sisse logimist hakata täitma päevikut, mis koosneb etteantud küsimustest. Lisaks näeb ta kõikidest oma sissekannetest kokkuvõtlikku statistikat ja saab vajadusel valitud sissekanded saata keskkonnast otse nõustajale.
+
+4. Kasutaja saab oma konto kustutada ja ka taastada.
+Klient saab nõustamisperioodi lõppemisel oma konto kustutada. Kui kunagi peaks vaja minema uuesti päeviku täitmist alustada, siis saab ta oma konto taastada, sisestades selleks oma esimesel registreerimisel sisestatud kasutajanime ja emaili aadressi. Tema sissekanded kuvatakse talle siis uuesti.
