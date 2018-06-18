@@ -249,3 +249,14 @@ function send2(){
 	xhr.send();
 	window.location.href='main.php';
 }
+
+function newreasons() {
+	var xhr=new XMLHttpRequest();
+	var aadress="functions/newreasons.php";
+	xhr.open("GET", aadress, true);
+	xhr.onreadystatechange=function(){
+		if(xhr.readyState==4){
+			console.log(xhr.responseText);
+		}
+	}
+}

@@ -141,15 +141,15 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 	<div id="section8" class="section">
 		<h5 id="question8"> 8. Vali emotsioon, mis kirjeldab teie olekut kõige ilmekamalt. </h5>
 
-		<label for="answer81"> Väga kurb </label><input type="radio" id="answer81" name="answer1" value="0" onclick="button8()">
+		<label for="answer81"> Väga kurb </label><input type="radio" id="answer81" class="answer81" name="answer1" value="0" onclick="button8()">
 
-		<label for="answer82"> Kurb </label><input type="radio" id="answer82" name="answer1" value="1" onclick="button8()">
+		<label for="answer82"> Kurb </label><input type="radio" id="answer82" class="answer82" name="answer1" value="1" onclick="button8()">
 
-		<label for="answer83"> Normaalne </label><input type="radio" id="answer83" name="answer1" value="2" onclick="button8()">
+		<label for="answer83"> Normaalne </label><input type="radio" id="answer83" class="answer83" name="answer1" value="2" onclick="button8()">
 
-		<label for="answer84"> Rõõmus </label><input type="radio" id="answer84" name="answer1" value="3" onclick="button8()">
+		<label for="answer84"> Rõõmus </label><input type="radio" id="answer84" class="answer84" name="answer1" value="3" onclick="button8()">
 
-		<label for="answer85"> Väga rõõmus </label><input type="radio" id="answer85" name="answer1" value="4" onclick="button8()">
+		<label for="answer85"> Väga rõõmus </label><input type="radio" id="answer85" class="answer85" name="answer1" value="4" onclick="button8()">
 		
 	</div>
 	
