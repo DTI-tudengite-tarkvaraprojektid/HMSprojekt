@@ -33,20 +33,26 @@ function diaryEntry(n) {
 			selectedDates.push(allInputs[i].value);
 		}
 	}
-	//console.log(selectedDates);
-	var xhr=new XMLHttpRequest();
-	//var aadress="diaryentry.php?dates="+selectedDates.join(",");
-	var aadress="functions/diaryentry.php?t="+n+"&dates="+selectedDates;
-	console.log(aadress)
-    xhr.open("GET", aadress, true);	
-    xhr.onreadystatechange=function(){
-      if(xhr.readyState==4){
-        console.log(xhr.responseText);
-		document.getElementById("diaryAnswers"+n).innerHTML = this.responseText;
-		document.getElementById("printBtn").style.visibility = "visible";
-      }
-    }
-	xhr.send(); 
+	if(selectedDates != 0){
+		//console.log(selectedDates);
+		var xhr=new XMLHttpRequest();
+		//var aadress="diaryentry.php?dates="+selectedDates.join(",");
+		var aadress="functions/diaryentry.php?t="+n+"&dates="+selectedDates;
+		console.log(aadress)
+		xhr.open("GET", aadress, true);	
+		xhr.onreadystatechange=function(){
+		if(xhr.readyState==4){
+			console.log(xhr.responseText);
+			document.getElementById("diaryAnswers"+n).style.display = "block";
+			document.getElementById("diaryAnswers"+n).innerHTML = this.responseText;
+			document.getElementById("printBtn").style.visibility = "visible";
+		}
+		}
+		xhr.send(); 
+	}else{
+		document.getElementById("diaryAnswers"+n).style.display = "none";
+		document.getElementById("printBtn").style.visibility = "hidden";
+	}
   }
 
 

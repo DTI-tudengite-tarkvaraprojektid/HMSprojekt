@@ -114,26 +114,57 @@
 				$diaryAnswersRow6 .= '<td class="diaryAnswer61">'.$answer61.'</td>';
 				$diaryAnswersRow7 .= '<td class="diaryAnswer62">'.$answer62.'</td>';
 				$diaryAnswersRow8 .= '<td class="diaryAnswer7">'.$answer7.'</td>';
+				if($answer8==0){
+					$answer8='<img src="images/sadface.png" style="width:70px; height:60px;">';
+				}
+				if($answer8==1){
+					$answer8='<img src="images/slightlysadface.png" style="width:70px; height:60px;">';
+				}
+				if($answer8==2){
+					$answer8='<img src="images/mehface.png" style="width:70px; height:60px;">';
+				}
+				if($answer8==3){
+					$answer8='<img src="images/happyface.png" style="width:70px; height:60px;">';
+				}
+				if($answer8==4){
+					$answer8='<img src="images/reallyhappyface.png" style="width:70px; height:60px;">';
+				}
 				$diaryAnswersRow9 .= '<td class="diaryAnswer8">'.$answer8.'</td>';
 			}else{
 			$diaryAnswersRow5 .= '<td>-</td>';
 			$diaryAnswersRow6 .= '<td>-</td>';
 			$diaryAnswersRow7 .= '<td>-</td>';
-			$diaryAnswersRow8 .= '<td>-</td>';
-			$diaryAnswersRow9 .= '<td>-</td>';
+			$diaryAnswersRow8 .= '<td class="diaryAnswer7">'.$answer7.'</td>';
+				if($answer8==0){
+					$answer8='<img src="images/sadface.png" style="width:70px; height:60px;">';
+				}
+				if($answer8==1){
+					$answer8='<img src="images/slightlysadface.png" style="width:70px; height:60px;">';
+				}
+				if($answer8==2){
+					$answer8='<img src="images/mehface.png" style="width:70px; height:60px;">';
+				}
+				if($answer8==3){
+					$answer8='<img src="images/happyface.png" style="width:70px; height:60px;">';
+				}
+				if($answer8==4){
+					$answer8='<img src="images/reallyhappyface.png" style="width:70px; height:60px;">';
+				}
+				$diaryAnswersRow9 .= '<td class="diaryAnswer8">'.$answer8.'</td>';
 			}
 		}
-		$diaryAnswersRow1 .= '</tr>';
-		$diaryAnswersRow2 .= '</tr>';
-		$diaryAnswersRow3 .= '</tr>';
-		$diaryAnswersRow4 .= '</tr>';
-		$diaryAnswersRow5 .= '</tr>';
-		$diaryAnswersRow6 .= '</tr>';
-		$diaryAnswersRow7 .= '</tr>';
-		$diaryAnswersRow8 .= '</tr>';
-		$diaryAnswersRow9 .= '</tr>';
+		
 		
 	}
+	$diaryAnswersRow1 .= '</tr>';
+	$diaryAnswersRow2 .= '</tr>';
+	$diaryAnswersRow3 .= '</tr>';
+	$diaryAnswersRow4 .= '</tr>';
+	$diaryAnswersRow5 .= '</tr>';
+	$diaryAnswersRow6 .= '</tr>';
+	$diaryAnswersRow7 .= '</tr>';
+	$diaryAnswersRow8 .= '</tr>';
+	$diaryAnswersRow9 .= '</tr>';
 	$html .= $diaryAnswersHeader .$diaryAnswersRow1 .$diaryAnswersRow2 .$diaryAnswersRow3 .$diaryAnswersRow4 .$diaryAnswersRow5 .$diaryAnswersRow6 .$diaryAnswersRow7 .$diaryAnswersRow8 .$diaryAnswersRow9;
 	$html .= '</table>';
 	$stmt->close();

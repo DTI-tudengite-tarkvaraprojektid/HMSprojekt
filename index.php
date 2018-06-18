@@ -209,24 +209,30 @@
 
 <div id="page" class="main-grid">
 	<h2>Mängusõltuvuse eneseseire keskkond</h2>
+
     <div id="item1" class="grid-item item1">
 		<h2>Hasartmängusõltuvus</h2>
       <p>Lühike info <b>hasartmängusõltuvuse</b> kohta
         Hasartmängusõltuvus on sõltuvushäire, mille põhiliseks tunnuseks on võimetus vastu seista tungile mängida hasartmänge. 
         Selle tagajärjel kogeb inimene probleeme sotsiaalses, tööalases ja/või materiaalses toimetulekus, suhetes ja kohustuste täitmises.
-				<hr>
-				<button onclick="window.location.href='http://15410.ee/avaleht.php?c=27&h=111&a=144'">Loe lisaks </button>
-				<button onclick="window.location.href='http://15410.ee/?t=test'">Tee test</button></p>
-    </div>
+				
+		</div>
+		<div id="item1a" class="grid-item item1a">
+			<button onclick="window.location.href='http://15410.ee/avaleht.php?c=27&h=111&a=144'">Loe lisaks </button>
+			<button onclick="window.location.href='http://15410.ee/?t=test'">Tee test</button></p>
+		</div>
+		
     <div id="item2" class="grid-item item2">
 		<h2>Arvutisõltuvus</h2>
     <p>Lühike info <b>digisõltuvuse</b> kohta
         Terve vs ebaterve, ülemäärase, patoloogilise, sõltuvusliku jne. arvutikasutamise vaheline piir läheb sealt, kus inimene hakkab seoses arvutikasutamisega eemalduma suhetest, töö või muud olulised eluvaldkonnad kannatavad ja tegevus arvutis saab kõikehõlmavaks teiste tegevuste ees.
-				<hr> 
-				<button onclick="window.location.href='http://15410.ee/avaleht.php?c=27&h=127&a=111'">Loe lisaks</button>
-				<button onclick="window.location.href='http://15410.ee/?t=test2'">Tee test</button></p>
-    </div>
-  </div>
+		</div>
+		<div id="item2a" class="grid-item item2a">
+			<button onclick="window.location.href='http://15410.ee/avaleht.php?c=27&h=127&a=111'">Loe lisaks</button>
+			<button onclick="window.location.href='http://15410.ee/?t=test2'">Tee test</button></p>
+		</div>
+		
+</div>
 
 
 </body>
