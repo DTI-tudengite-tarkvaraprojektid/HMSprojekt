@@ -69,28 +69,25 @@
     <section id="home-view">
         <h2>Enesejälgimise päevik</h2>
         <p>Siin näed kokkuvõtet oma sissekannete kohta</p>
-        <ul>
+        <!--<ul>
           <li>
-            <label>Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?</label><input id="arrayHere1" type="radio" name="imgsel"  value="" checked="checked" />
-            <label>Kui tugevalt hindan meelistegevust sooritada täna?</label><input id="arrayHere2" type="radio" name="imgsel"  value=""/> 
-            <label>Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista?</label><input id="arrayHere3" type="radio" name="imgsel"  value=""  /> 
-            <!--<button id="arrayHere1">Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?</button>
+            <label>Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?</label>
+            <input id="arrayHere1" type="checkBox" value="" checked="checked" />
+            <label>Kui tugevalt hindan meelistegevust sooritada täna?</label>
+            <input id="arrayHere2" type="checkBox" value="" /> 
+            <label>Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista?</label>
+            <input id="arrayHere3" type="checkBox" value="" /> 
+            <button id="arrayHere1">Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?</button>
             <button id="arrayHere2">Kui tugevalt hindan meelistegevust sooritada täna?</button>
-            <button id="arrayHere3">Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista?</button>-->
+            <button id="arrayHere3">Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista?</button>
           </li>
-        </ul>
-        <div class="chartContainer1" style="position: absolute; width:50%; height:40%">
+        </ul>-->
+        <div class="chartContainer1" style="position: absolute; width:60%; height:50%">
           <canvas id="myChart1"></canvas>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <ul>
-          <li>
-            <button id="arrayHere4">jah/ei pie</button>
-          </li>
-        </ul>
-        <div class="chartContainer3" style="position: absolute; width:50%; height:40%">
+        <!--<div class="chartContainer3" style="position: absolute; width:60%; height:50%">
           <canvas id="myPieChart"></canvas>
-        </div>
+        </div>-->
     </section>
   
      <!-- Diary page -->

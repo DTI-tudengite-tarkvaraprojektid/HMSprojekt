@@ -3,8 +3,8 @@ let chartLabels1 = [];
 let chartData1 = [];
 let chartData2 = [];
 let chartData3 = [];
-let pieChartLabels = ["ei", "jah"];
-let pieChartData = [1 ,0 ,1 ,0 ,1 ,1 ,1 ,1 ,0 ,0 , 1];
+let pieChartLabels = [];
+let pieChartData = [];
 
 const MainApp = function () {
   if (MainApp.instance) {
@@ -22,7 +22,7 @@ MainApp.routes = {
   'home-view': {
     'render': function () {
       console.log('home')
-      document 
+      /*document 
       .querySelector('#arrayHere1') 
       .addEventListener('click', arrayHere1)
       document 
@@ -31,10 +31,7 @@ MainApp.routes = {
       document 
       .querySelector('#arrayHere3') 
       .addEventListener('click', arrayHere3)
-      document 
-      .querySelector('#arrayHere4') 
-      .addEventListener('click', arrayHere4)
-      //window.addEventListener('click', loadData)
+      //window.addEventListener('click', loadData)*/
     }
   },
   'diary-view': {
@@ -89,7 +86,7 @@ function arrayHere1() {
             tempData.push(myObj[i][1])
           }
           //console.log("vana: " + tempData)
-          //console.log("vana: " + tempLabels)
+          console.log("vana: " + tempLabels)
           chartData1 = tempData
           chartLabels1 = tempLabels
           addData1();
@@ -162,11 +159,13 @@ function arrayHere3() {
           let newPieChartData = []
           for (i=0; i<myObj.length; i++){
             newPieChartLabels.push(myObj[i][0])
-            newPiechartData.push(myObj[i][1])
+            newPieChartData.push(myObj[i][1])
           }
-          console.log(newPieChartData)
-          console.log(newPieChartLabels)
-          //console.log(JSON.parse(xmlhttp.responseText))
+          pieChartData = newPieChartData
+          pieChartLabels = newPieChartLabels
+          console.log(pieChartData)
+          console.log(pieChartLabels)
+          addData4();
       }
   };
   xmlhttp.open("GET", aadress, true);
@@ -176,27 +175,24 @@ function arrayHere3() {
 
 /* < <  C H A R T S   > > */
 
-ctx = document.getElementById('myPieChart').getContext('2d');
+/*ctx = document.getElementById('myPieChart').getContext('2d');
 let myPieChart = new Chart(ctx, {
   type: 'pie',
   data: {
     datasets: [{
-      data: [1 ,1 ,0 ,1 ,0 ,1 ,1],
+      data: pieChartData,
       backgroundColor: [
         'rgb(25, 99, 132)',
         'rgb(255,140,0)',
       ],
       label: 'Kas ma sooritasin oma meelistegevust?'
     }],
-    labels: [
-      "ei",
-      "jah"
-    ]
+    labels: ["jah", "ei"],
   },
   options: {
     responsive: true
   }
-});
+});*/
 
 ctx = document.getElementById('myChart1').getContext('2d');
 let chart1 = new Chart(ctx, {
@@ -210,15 +206,15 @@ let chart1 = new Chart(ctx, {
     borderColor: 'rgb(25, 99, 132)',
     data: chartData1,
     "fill": false,
-    }, {
+    }, { 
       label: "Kui tugevalt hindan meelistegevust sooritada täna?",
       borderColor: 'rgb(255,140,0)',
-      data: [1 ,2 ,3 ,],
+      data: chartData2,
       "fill": false,
     }, {
     label: "Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista?",
     borderColor: 'rgb(75, 16, 30)',
-    data: [2, 3, 4, 1],
+    data: chartData3,
     "fill": false,
     }
   ]},
@@ -264,30 +260,38 @@ function addData1(){
   //console.log("tulev data: " + chartData);
   //console.log("tulev labels: " + chartLabels);
   chart1.update();
+  console.log("osa1")
   //console.log("data: " + chart1.data.datasets[0].data);
   //console.log("labels: " + chart1.data.labels);
   //console.log("data2: " + chart2.data.datasets.data);
 };
 function addData2(){
-  chart1.data.datasets[0].data = chartData2;
+  chart1.data.datasets[1].data = chartData2;
   chart1.data.labels = chartLabels1;
   //console.log("tulev data: " + chartData);
   //console.log("tulev labels: " + chartLabels);
   chart1.update();
+  console.log("osa2")
   //console.log("data: " + chart1.data.datasets[0].data);
   //console.log("labels: " + chart1.data.labels);
   //console.log("data2: " + chart2.data.datasets.data);
 };
 function addData3(){
-  chart1.data.datasets[0].data = chartData3;
+  chart1.data.datasets[2].data = chartData3;
   chart1.data.labels = chartLabels1;
   //console.log("tulev data: " + chartData);
   //console.log("tulev labels: " + chartLabels);
   chart1.update();
+  console.log("osa3")
   //console.log("data: " + chart1.data.datasets[0].data);
   //console.log("labels: " + chart1.data.labels);
   //console.log("data2: " + chart2.data.datasets.data);
 };
+
+/*function addData4(){
+  myPieChart.data.datasets[0].data = pieChartData;
+  myPieChart.update();
+}*/
 
 /*function loadData () {
   // after typing init autosave
@@ -306,4 +310,7 @@ window.onload = function () {
   const app = new MainApp()
   window.app = app
   arrayHere1()
+  arrayHere2()
+  arrayHere3()
+  //arrayHere4()
 }
