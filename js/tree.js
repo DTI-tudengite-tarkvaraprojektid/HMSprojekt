@@ -142,50 +142,24 @@ function button5() {
 	console.log(Answer5);
 }
 
-function button61() {	
+function button61() {
+	let allCheckboxes = document.getElementById("section61").getElementsByTagName("input");
+	console.log(allCheckboxes);
+	
 	if(document.getElementById("hours").value!=0 || document.getElementById("minutes").value!=0){
 		document.getElementById("button7").addEventListener("click", button7);
 		document.getElementById("section7").style.visibility = "visible";
 		
-		if(document.getElementById("reasons1").checked == true){
-			document.getElementById("section7").style.visibility = "visible";
-			document.getElementById("button7").style.visibility = "visible";
-			Answer61 = document.getElementById("reasons1").value;
-		}
-		if(document.getElementById("reasons2").checked == true){
-			document.getElementById("section7").style.visibility = "visible";
-			document.getElementById("button7").style.visibility = "visible";
-			Answer61 = document.getElementById("reasons2").value;
-		}
-		if(document.getElementById("reasons3").checked == true){
-			document.getElementById("section7").style.visibility = "visible";
-			document.getElementById("button7").style.visibility = "visible";
-			Answer61 = document.getElementById("reasons3").value;
-		}
-		if(document.getElementById("reasons4").checked == true){
-			document.getElementById("section7").style.visibility = "visible";
-			document.getElementById("button7").style.visibility = "visible";
-			Answer61 = document.getElementById("reasons4").value;
-		}
-		if(document.getElementById("reasons5").checked == true){
-			document.getElementById("section7").style.visibility = "visible";
-			document.getElementById("button7").style.visibility = "visible";
-			Answer61 = document.getElementById("reasons5").value;
-		}
-		if(document.getElementById("reasons6").checked == true){
-			document.getElementById("section7").style.visibility = "visible";
-			document.getElementById("button7").style.visibility = "visible";
-			Answer61 = document.getElementById("reasons6").value;
-		}
-		if(document.getElementById("reasons7").checked == true){
-			document.getElementById("section7").style.visibility = "visible";
-			document.getElementById("button7").style.visibility = "visible";
-			Answer61 = document.getElementById("reasons7").value;
-		}
-		if(document.getElementById("reasons8").checked == true){
-			document.getElementById("section7").style.visibility = "visible";
-			document.getElementById("button7").style.visibility = "visible";
-			Answer61 = document.getElementById("otherValue").value;
+		for(var i=0; i<allCheckboxes.length-1; i++){
+			if(document.getElementById(allCheckboxes[i].id).checked == true){
+				document.getElementById("section7").style.visibility = "visible";
+				document.getElementById("button7").style.visibility = "visible";
+				if(allCheckboxes[i].id!="Midagi muud"){
+					Answer61 = allCheckboxes[i].id;
+				}else{
+					Answer61 = document.getElementById("otherValue").value;
+				}
+			}
 		}
 	}
 	

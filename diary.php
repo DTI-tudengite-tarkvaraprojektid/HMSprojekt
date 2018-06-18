@@ -102,12 +102,12 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 			for ($i = 0; $i < count($reasons); $i++) {
 				if($i<count($reasons)-1){
 					echo "<div>";
-					echo "<input id='reasons".($i+1)."' type='checkbox' value='".$reasons[$i]."'>";
+					echo "<input id='".$reasons[$i]."' type='checkbox' value='".$reasons[$i]."'>";
 					echo "<label for='".$reasons[$i]."'>".$reasons[$i]."</label>";
 					echo "</div>";
 				}else{
 					echo "<div>";
-					echo "<input id='reasons".($i+1)."' type='checkbox' value='".$reasons[$i]."'>";
+					echo "<input id='".$reasons[$i]."' type='checkbox' value='".$reasons[$i]."'>";
 					echo "<label for='".$reasons[$i]."'>".$reasons[$i]."</label>";
 					echo "<input id='otherValue' style='width: 15%' type='text' name='other'>";
 					echo "</div>";
