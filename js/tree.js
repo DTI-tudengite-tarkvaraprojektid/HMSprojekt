@@ -42,7 +42,7 @@ function button1() {
 		Answer1 = "4";
 	}
 	
-	console.log(Answer1);
+	//console.log(Answer1);
 }
 
 function button2() {
@@ -67,7 +67,7 @@ function button2() {
 		Answer2 = "4";
 	}
 	
-	console.log(Answer2);
+	//console.log(Answer2);
 }
 
 function button3() {
@@ -92,7 +92,7 @@ function button3() {
 		Answer3 = "4";
 	}
 	
-	console.log(Answer3);
+	//console.log(Answer3);
 }
 
 function button4() {
@@ -119,7 +119,7 @@ function button4() {
 		Answer4 = "1";
     }
 	
-	console.log(Answer4);
+	//console.log(Answer4);
 }
 
 function button5() {
@@ -127,18 +127,18 @@ function button5() {
 		document.getElementById("button61").addEventListener("click", button61);
 		document.getElementById("section61").style.visibility = "visible";
 		
-		console.log("Arvuti");
+		//console.log("Arvuti");
 	}
 	if(document.getElementById("send1").value==2){	
 		document.getElementById("button62").addEventListener("click", button62);
 		document.getElementById("section62").style.visibility = "visible";
-		console.log("Mängur");
+		//console.log("Mängur");
 	}
 	
 	document.getElementById("button5").style.visibility = "visible";	
 	Answer5 = document.getElementById("hours").value*60 + parseInt(document.getElementById("minutes").value);
 	
-	console.log(Answer5);
+	//console.log(Answer5);
 }
 
 function button61() {	
@@ -188,7 +188,7 @@ function button61() {
 		}
 	}
 	
-	console.log(Answer61);
+	//console.log(Answer61);
 }
 
 function button62() {
@@ -199,7 +199,7 @@ function button62() {
 		Answer62 = document.getElementById("money").value;
 	}
 	
-	console.log(Answer62);
+	//console.log(Answer62);
 }
 
 function button7() {
@@ -209,7 +209,7 @@ function button7() {
 		document.getElementById("send2").style.visibility = "visible";
 		Answer7 = document.getElementById("answer7").value;
 		
-		console.log(Answer7);
+		//console.log(Answer7);
     }
 }
 
@@ -229,27 +229,19 @@ function send1(){
 	console.log(Answer3);
 	console.log(Answer4);
 	xhr.send();
-	window.location.href='main.php';
+	//window.location.href='main.php';
 }
 
 function send2(){
 	var t = document.getElementById("send2").value;
 	var xhr=new XMLHttpRequest();
-	var aadress="functions/send2.php?t="+t+"&a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4+"&a5="+Answer5+"&a61="+Answer61+"&a62="+Answer62+"&a7="+Answer7;
+	var aadress="../functions/send2.php?t="+t+"&a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4+"&a5="+Answer5+"&a6="+Answer6+"&a7="+Answer7;
 	xhr.open("GET", aadress, true);
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){
 			console.log(xhr.responseText);
 		}
 	}
-	console.log(Answer1);
-	console.log(Answer2);
-	console.log(Answer3);
-	console.log(Answer4);
-	console.log(Answer5);
-	console.log(Answer61);
-	console.log(Answer62);
-	console.log(Answer7);
 	xhr.send();
 	window.location.href='main.php';
 }
