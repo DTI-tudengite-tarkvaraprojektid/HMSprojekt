@@ -79,22 +79,13 @@
         </div>
         <ul>
           <li>
-            <button id="arrayHere1">esimene küsimus</button>
-            <button id="arrayHere2">teine küsimus</button>
-            <button id="addData">add</button>
+            <button id="arrayHere1">Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?</button>
+            <button id="arrayHere2">Kui tugevalt hindan meelistegevust sooritada täna?</button>
+            <button id="arrayHere3">Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista?</button>
           </li>
         </ul>
-        <div class="chartContainer1" style="width:45%;">
+        <div class="chartContainer1" style="position: absolute; width:80%; height:40%">
           <canvas id="myChart1"></canvas>
-        </div>
-        <br>
-        <ul>
-          <li>
-            <button id="arrayHere3">kolmas küsimus</button>
-          </li>
-        </li>
-        <div class="chartContainer2" style="width:45%;">
-          <canvas id="myChart2"></canvas>
         </div>
     </section>
   

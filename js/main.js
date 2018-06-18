@@ -3,8 +3,6 @@ let chartLabels = [];
 let chartData = [];
 let pieChartLabels = ["ei", "jah"];
 let pieChartData = [1 ,0 ,1 ,0 ,1 ,1 ,1 ,1 ,0 ,0 , 1];
-var test1 = [3 ,3 ,1 ,2 ,3];
-var testMonth2 = ["7.06.2018", "8.06.2018", "9.06.2018", "10.06.2018", "11.06.2018"];
 
 const MainApp = function () {
   if (MainApp.instance) {
@@ -17,8 +15,6 @@ const MainApp = function () {
 
   this.init()
 }
-
-
 
 MainApp.routes = {
   'home-view': {
@@ -36,10 +32,6 @@ MainApp.routes = {
       document 
       .querySelector('#arrayHere4') 
       .addEventListener('click', arrayHere4)
-      document 
-      .querySelector('#addData') 
-      .addEventListener('click', addData) 
-
       //window.addEventListener('click', loadData)
     }
   },
@@ -98,6 +90,7 @@ function arrayHere1() {
           //console.log("vana: " + tempLabels)
           chartData = tempData
           chartLabels = tempLabels
+          addData();
           //console.log("uus: " + chartData)
           //console.log("uus: " + chartLabels)
           //console.log(JSON.parse(xmlhttp.responseText))
@@ -116,14 +109,15 @@ function arrayHere2() {
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
           let myObj = JSON.parse(this.responseText)
-          let chartLabels = []
-          let chartData = []
+          let tempLabels = []
+          let tempData = []
           for (i=0; i<myObj.length; i++){
-            chartLabels.push(myObj[i][0])
-            chartData.push(myObj[i][1])
+            tempLabels.push(myObj[i][0])
+            tempData.push(myObj[i][1])
           }
-          console.log(chartData)
-          console.log(chartLabels)
+          chartData = tempData
+          chartLabels = tempLabels
+          addData();
           //console.log(JSON.parse(xmlhttp.responseText))
       }
   };
@@ -137,22 +131,25 @@ function arrayHere3() {
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
           let myObj = JSON.parse(this.responseText)
-          let chartLabels = []
-          let chartData = []
+          let tempoLabels = []
+          let tempData = []
+          let tempLabels = []
           for (i=0; i<myObj.length; i++){
-            chartLabels.push(myObj[i][0])
-            chartData.push(myObj[i][1])
+            tempoLabels.push(myObj[i][0])
+            tempData.push(myObj[i][1])
+            for (j=0; j<tempoLabels.length; j++){
+              tempoLabels.toString();
           }
-          console.log(chartData)
-          console.log(chartLabels)
-          //console.log(JSON.parse(xmlhttp.responseText))
+          chartData = tempData
+          chartLabels = tempLabels
+          addData();
       }
   };
   xmlhttp.open("GET", aadress, true);
   xmlhttp.send()
 }
 
-function arrayHere4() {
+/*function arrayHere4() {
   let xmlhttp = new XMLHttpRequest();
   var aadress="functions/answer1.php?q=answer4&v=date";
   xmlhttp.onreadystatechange = function() {
@@ -176,12 +173,12 @@ function arrayHere4() {
 
 /* < <  C H A R T S   > > */
 
-/*ctx = document.getElementById('myPieChart').getContext('2d');
+ctx = document.getElementById('myPieChart').getContext('2d');
 let myPieChart = new Chart(ctx, {
   type: 'pie',
   data: {
     datasets: [{
-      data: pieChartLabels,
+      data: [1 ,1 ,0 ,1 ,0 ,1 ,1],
       backgroundColor: [
         'rgb(25, 99, 132)',
         'rgb(255,140,0)'
@@ -196,7 +193,7 @@ let myPieChart = new Chart(ctx, {
   options: {
     responsive: true
   }
-});*/
+});
 
 ctx = document.getElementById('myChart1').getContext('2d');
 let chart1 = new Chart(ctx, {
@@ -206,8 +203,15 @@ let chart1 = new Chart(ctx, {
   data: {
     labels: chartLabels,
     datasets: [{
-      label: "Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?",
-      borderColor: 'rgb(25, 99, 132)',
+      label: [
+        //"Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?",
+        //"Kui tugevalt hindan meelistegevust sooritada täna?",
+      //"Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista?"
+      ],
+      borderColor: [
+        //'rgb(25, 99, 132)',
+        'rgb(255,140,0)'
+      ],
       data: chartData,
       "fill": false,
       }]
@@ -248,97 +252,17 @@ let chart1 = new Chart(ctx, {
   }
 });
 
-
-
-
-ctx = document.getElementById('myChart2').getContext('2d');
-let chart2 = new Chart(ctx, {
-  // The type of chart we want to create
-  type: 'line',
-  // The data for our dataset
-  data: {
-    labels: testMonth2,
-    datasets: [{
-      label: "Kui tugevalt hindan meelistegevust sooritada?",
-      borderColor: 'rgb(255,140,0)',
-      data: test1,
-      "fill": false,
-      }]
-  },
-// Configuration options go here
-  options: {
-    spangap: false,
-    animation: {
-      duration: 0,
-      },
-    hover: {
-      animationDuration: 0,
-      },
-    responsiveAnimationDuration: 0,
-    scales: {
-      yAxes: [{
-        ticks: {
-          min: 0,
-          max: 4,
-          stepSize: 1,
-          callback: function(label, index, labels){
-            switch (label) {
-              case 0:
-                return 'Üldiselt mitte';
-              case 1:
-                return 'Vähe';
-              case 2:
-                return 'Keskmiselt';
-              case 3:
-                return 'Palju';
-              case 4:
-                return 'Täiesti';
-            }
-          }
-        }
-      }]
-    }
-  } 
-});
-
-// none of these update types work...
-
-/*function addData(chart1) {
-  chart1.data.datasets[0].label = 'new title';
-  chart1.update();
-}*/
-
 function addData(){
   chart1.data.datasets[0].data = chartData;
   chart1.data.labels = chartLabels;
-  console.log("tulev data: " + chartData);
-  console.log("tulev labels: " + chartLabels);
+  //console.log("tulev data: " + chartData);
+  //console.log("tulev labels: " + chartLabels);
   chart1.update();
-  console.log("data: " + chart1.data.datasets[0].data);
-  console.log("labels: " + chart1.data.labels);
-  console.log("data2: " + chart2.data.datasets.data);
+  //console.log("data: " + chart1.data.datasets[0].data);
+  //console.log("labels: " + chart1.data.labels);
+  //console.log("data2: " + chart2.data.datasets.data);
 };
 
-/*function addData() {
-  chart2.data.labels.pop();
-  chart2.data.datasets.forEach((dataset) => {
-      dataset.data.pop();
-  });
-  chart2.update();
-  //chart.update();
-};*/
-
-/*function addData() {
-  chart1.data.labels.push(chartLabels);
-  chart1.data.datasets.forEach((dataset) => {
-      dataset.data.push(chartData);
-  });
-  console.log("tulev data: " + chartData);
-  console.log("tulev labels: " + chartLabels);
-  chart1.update();
-  console.log("sees data: " + chart1.data.datasets.data);
-  console.log("sees labels: " + chart1.data.labels);
-}*/
 
 /*function loadData () {
   // after typing init autosave
