@@ -19,9 +19,10 @@ Mihkel Jäe
 
 Keskkond kasutab kahete SQL andmebaasi tabelit:
 
+```
 CREATE TABLE diary( id INT, type INT, date timestamp, answer1 INT, answer2 INT, answer3 INT, nswer4 INT, answer5 INT, answer61 VARCHAR(100), answer62 INT, answer7 VARCHAR(1000), answer8 INT );
 
 CREATE TABLE userinfo( id INT AUTO_INCREMENT, username VARCHAR(50), email VARCHAR(128), password VARCHAR(128), status INT DEFAULT NULL );
-
+```
 MIT litsents:
 

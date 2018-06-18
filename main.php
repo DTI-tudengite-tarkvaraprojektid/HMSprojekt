@@ -26,7 +26,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Main</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
   <script src="js/main.js" defer></script>
   <script src="js/statistics.js" defer></script>
@@ -71,8 +71,11 @@
         <p>Siin näed kokkuvõtet oma sissekannete kohta</p>
         <ul>
           <li>
-            <button id="arrayHere">test</button>
-            <button id="addData">should add</button>
+            <button id="arrayHere1">esimene küsimus</button>
+            <button id="arrayHere2">teine küsimus</button>
+            <button id="arrayHere3">kolmas küsimus</button>
+            <button id="arrayHere4">neljas küsimus</button>
+            <button id="addData">add</button>
           </li>
         </ul>
         <div class="chartContainer" style="width:45%;">
