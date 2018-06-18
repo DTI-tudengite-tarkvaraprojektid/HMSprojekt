@@ -344,9 +344,8 @@ box-sizing: border-box;
     border: 1px black solid;
     background-color: #c2d9f7;
     box-sizing: border-box;
-   /* display: grid;
-    grid-template-columns: 50px ;
-    grid-template-rows: repeat(10, [row] 30px  );*/
+    
+  
 }
 .Q{
     grid-column: 1;
@@ -361,6 +360,7 @@ box-sizing: border-box;
     grid-template-rows: repeat(10, [row] 50px  );
     border: 1px black solid;
     box-sizing: border-box;
+    display: inline-block;
 }
 
 .day{
@@ -368,7 +368,7 @@ box-sizing: border-box;
     grid-row: auto;
     border: 1px black solid;
     box-sizing: border-box;
-    
+    display: inline-block;
 }
 .q{
     grid-column: 1;
@@ -380,6 +380,7 @@ box-sizing: border-box;
     grid-row: auto;
     border: 1px black solid;
     
+    
 }
 .options-grid{
     grid-column: 1/3;
@@ -387,6 +388,8 @@ box-sizing: border-box;
     border: 1px black solid;
     
 }
+
+
 
 
 /*
