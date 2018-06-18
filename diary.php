@@ -117,7 +117,12 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 
 		<?php
 
-			for ($i = 0; $i < count($reasons); $i++) {
+			echo "<div>";
+			echo "<input id='".$reasons[0]."' type='checkbox' value='".$reasons[0]."' onclick='goneFunction()'>";
+			echo "<label for='".$reasons[0]."'>".$reasons[0]."</label>";
+			echo "</div>";
+			
+			for ($i = 1; $i < count($reasons); $i++) {
 				if($i<count($reasons)-1){
 					echo "<div>";
 					echo "<input id='".$reasons[$i]."' type='checkbox' value='".$reasons[$i]."'>";

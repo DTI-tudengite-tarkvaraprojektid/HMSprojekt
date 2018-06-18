@@ -156,11 +156,17 @@ function button5() {
 }
 
 function goneFunction() {
+	
 	allCheckboxes = document.getElementById("section61").getElementsByTagName("input");
+	console.log(allCheckboxes.length-1);
 	
 	if(document.getElementById(allCheckboxes[0].id).checked == true){
 		for(var i=1; i<allCheckboxes.length-1; i++){
-			allCheckboxes[i].id.style.display = "block";
+			allCheckboxes[i].style.display = "none";
+		}
+	}else{
+		for(var i=1; i<allCheckboxes.length-1; i++){
+			allCheckboxes[i].style.display = "block";
 		}
 	}
 }
@@ -176,6 +182,8 @@ function button61() {
 				document.getElementById("button7").addEventListener("click", button7);
 				document.getElementById("section7").style.display = "block";
 				Answer61 = allCheckboxes[i].id;
+			}else if(allCheckboxes[i].id=="Ei kannatanud"){
+				goneFunction();
 			}else{
 				document.getElementById("button7").addEventListener("click", button7);
 				document.getElementById("section7").style.display = "block";
@@ -183,12 +191,6 @@ function button61() {
 			}
 		}
 	}
-	
-	console.log(allCheckboxes.length-1);
-		
-	//if(allCheckboxes[allCheckboxes.length-1].checked==true){
-		console.log("valikud kaovad");
-	//}
 	
 	console.log(Answer61);
 }
