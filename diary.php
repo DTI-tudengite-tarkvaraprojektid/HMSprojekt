@@ -2,6 +2,23 @@
 require("../../../../config.php");
 require("functions/functions.php");
 $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suhted sõpradega", "Koolitöö", "Välimuse eest hoolitsemine", "Lemmiklooma eest hoolitsemine", "Midagi muud");
+
+$mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
+	$id = $_SESSION["userid"];
+	$result = $mysqli->prepare("SELECT answer61 FROM diary WHERE id=?");
+	$result->bind_param("i", $id);
+	$result->bind_result($answer61);
+	
+	$result->execute();
+	
+	while($result->fetch()){
+		if(!in_array($answer61, $reasons)==true && $answer61!=NULL){
+			array_push($reasons, $answer61);
+		}
+	}
+	
+	$result->close();
+	$mysqli->close();
 ?>
 
 <!DOCTYPE html>
@@ -19,12 +36,6 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 	
 <body>
 
-<div>
-
-	
-
-</div>
-
 <div id="sections" class="sections">
 
 	<div id="section1" class="section">
@@ -41,8 +52,6 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 		<label for="answer15"> Täiesti </label><input type="radio" id="answer15" name="answer1" value="4" onclick="button1()">
 		
 	</div>
-	
-	<div id="start">
 
 	<div id="section2" class="section">
 		<h5 id="question2"> 2. Kui tugevalt hindan meelistegevust sooritada täna? </h5>
@@ -164,8 +173,6 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 	<button id="send2" type="button" value="<?php echo $_REQUEST['type'] ?>">Saada andmed</button>
 
 	</div>
-	
-</div>
 
 </body>
 
