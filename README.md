@@ -29,7 +29,7 @@ CREATE TABLE diary(
  answer3 INT, 
  nswer4 INT, 
  answer5 INT, 
- answer61 VARCHAR(100), 
+ answer61 VARCHAR(1000), 
  answer62 INT, 
  answer7 VARCHAR(1000), 
  answer8 INT );
