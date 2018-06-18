@@ -19,6 +19,12 @@ $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suh
 	
 <body>
 
+<div>
+
+	
+
+</div>
+
 <div id="sections" class="sections">
 
 	<div id="section1" class="section">

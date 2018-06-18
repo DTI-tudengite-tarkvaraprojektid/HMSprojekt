@@ -259,4 +259,5 @@ function newreasons() {
 			console.log(xhr.responseText);
 		}
 	}
+	xhr.send();
 }
