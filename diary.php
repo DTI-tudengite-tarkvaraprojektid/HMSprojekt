@@ -1,7 +1,8 @@
 <?php
 require("../../../../config.php");
 require("functions/functions.php");
-$reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suhted sõpradega", "Koolitöö", "Välimuse eest hoolitsemine", "Lemmiklooma eest hoolitsemine", "Midagi muud");
+$reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
+	"Koolitöö", "Välimuse eest hoolitsemine", "Lemmiklooma eest hoolitsemine");
 
 $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	$id = $_SESSION["userid"];
@@ -16,6 +17,8 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 			array_push($reasons, $answer61);
 		}
 	}
+	
+	array_push($reasons, "Midagi muud");
 	
 	$result->close();
 	$mysqli->close();
