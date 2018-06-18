@@ -1,0 +1,161 @@
+Arvutisõltlase päeviku täitmise testid:
+
+1. Esimesele küsimusele vastamine:
+Tegevus: Valin ühe suvalise valiku 5-st
+Eeldatav tulemus: Kuvatakse teine küsimus
+Tegelik tulemus: Kuvatakse teine küsimus
+
+2. Kui esimene ja teine küsimus on avatud ja muudan esimese küsimuse valikut:
+Tegevus: Muudan eelneva valiku ümber kõigi võimalike valikutega
+Eeldatav tulemus: Esimese küsimuse valik jääb uude kohta ja teine küsimus jääb avatuks
+Tegelik tulemus: Esimese küsimuse valik jääb uude kohta ja teine küsimus jääb avatuks
+
+3. Teisele küsimusele vastamine:
+Tegevus: Valin ühe suvalise valiku 5-st
+Eeldatav tulemus: Kuvatakse kolmas küsimus ning esimene ja teine küsimus jääb avatuks
+Tegelik tulemus: Kuvatakse kolmas küsimus ning esimene ja teine küsimus jääb avatuks
+
+4. Kui esimene kuni kolmas küsimus on avatud ja muudan esimese või teise küsimuse valikut:
+Tegevus: Muudan ära kõik esimese ja teise küsimuse valikud
+Eeldatav tulemus: Esimese ja teise küsimuse valik jääb uude kohta ja kolmas küsimus jääb avatuks
+Tegelik tulemus: Esimese ja teise küsimuse valik jääb uude kohta ja kolmas küsimus jääb avatuks
+
+5. Kolmandale küsimusele vastamine:
+Tegevus: Valin ühe suvalise valiku 5-st
+Eeldatav tulemus: Kuvatakse neljas küsimus ning esimene, teine ja kolmas küsimus jääb avatuks
+Tegelik tulemus: Kuvatakse neljas küsimus ning esimene, teine ja kolmas küsimus jääb avatuks
+
+6. Kui esimene kuni neljas küsimus on avatud ja muudan esimese, teise või kolmanda küsimuse valikut:
+Tegevus: Muudan ära kõik esimese, teise ja kolmanda küsimuse valikud
+Eeldatav tulemus: Esimese, teise ja kolmanda küsimuse valik jääb uude kohta ja neljas küsimus jääb avatuks
+Tegelik tulemus: Esimese, teise ja kolmanda küsimuse valik jääb uude kohta ja neljas küsimus jääb avatuks
+
+7. Neljandale küsimusele vastamine:
+Tegevus: Valin ühe kahest valikust (jah/ei):
+Eeldatav tulemus: Kui valin 'jah', siis kuvatakse viies küsimus, kui valin 'ei', siis kuvatakse võimalus 'saada andmed'
+Tegelik tulemus: Kui valin 'jah', siis kuvatakse viies küsimus, kui valin 'ei', siis kuvatakse võimalus 'saada andmed'
+
+8. Andmete saatmine (juhul, kui kasutaja vastas neljandale küsimusele 'ei'):
+Tegevus: Vajutan nuppu 'saada andmed'
+Eeldatav tulemus: Päeviku täitja viiakse tagasi avalehele
+Tegelik tulemus: Päeviku täitja viiakse tagasi avalehele
+
+9. Viiendale küsimusele vastamine:
+Tegevus: Valin mitu tundi ja mitu minutit ma oma meelistegevuse peale kulutasin ja fikseerin tulemuse:
+Eeldatav tulemus: Kuvatakse kuues küsimus ja esimene kuni viies küsimus jääb avatuks, kui midagi ei valita, siis jääb lehe sisu samaks
+Tegelik tulemus: Kuvatakse kuues küsimus ja esimene kuni viies küsimus jääb avatuks, kui midagi ei valita, siis jääb lehe sisu samaks
+
+10. Kuuendale küsimusele vastamine:
+Tegevus: Valin tegevuse mis meelistegevuse sooritamise tõttu kannatas, kui sobivat valikut pole, siis vajutan midagi muud ja sisestan ise tegevuse:
+Eeldatav tulemus: Kuvatakse seitsmes küsimus ja esimene kuni kuues küsimus jääb avatuks, kui midagi ei valita, siis jääb lehe sisu samaks
+Tegelik tulemus: Kuvatakse seitsmes küsimus ja esimene kuni kuues küsimus jääb avatuks, kui midagi ei valita, siis jääb lehe sisu samaks
+
+11. Seitsmendale küsimusele vastamine:
+Tegevus: Kirjeldan oma mõtteid ja tundeid ja fikseerin tulemuse:
+Eeldatav tulemus: Kuvatakse valik saada 'saada andmed' ja kõik eelnevad küsimused jäävad avatuks
+Tegelik tulemus: Kuvatakse valik saada 'saada andmed' ja kõik eelnevad küsimused jäävad avatuks
+
+12. Andmete saatmine (juhul, kui kasutaja vastas neljandale küsimusele 'jah'):
+Tegevus: Vajutan nuppu 'saada andmed'
+Eeldatav tulemus: Päeviku täitja viiakse tagasi avalehele
+Tegelik tulemus: Päeviku täitja viiakse tagasi avalehele
+
+13. Vastates viiendat küsimust otsustan, et neljandale küsimusele vastan siiski 'ei':
+Tegevus: Muudan neljanda küsimuse vastuse 'jah' pealt 'ei' peale:
+Oodatav tulemus: Viies küsimus kaob ekraanilt ja kuvatakse nupp 'saada andmed'
+Tegelik tulemus: Viies küsimus kaob ekraanilt ja kuvatakse nupp 'saada andmed'
+
+14. Vastates kuuendat küsimust otsustan, et neljandale küsimusele vastan siiski 'ei':
+Tegevus: Muudan neljanda küsimuse vastuse 'jah' pealt 'ei' peale:
+Oodatav tulemus: Viies ja kuues küsimus kaob ekraanilt ja kuvatakse nupp 'saada andmed'
+Tegelik tulemus: Viies ja kuues küsimus kaob ekraanilt ja kuvatakse nupp 'saada andmed'
+
+15. Vastates seitsmendat küsimust otsustan, et neljandale küsimusele vastan siiski 'ei':
+Tegevus: Muudan neljanda küsimuse vastuse 'jah' pealt 'ei' peale:
+Oodatav tulemus: Viies, kuues ja seitsmes küsimus kaob ekraanilt ja kuvatakse nupp 'saada andmed'
+Tegelik tulemus: Viies, kuues ja seitsmes ja kuues küsimus kaob ekraanilt ja kuvatakse nupp 'saada andmed'
+
+
+
+
+
+Hasartmängusõltlase päeviku täitmise testid:
+
+1. Esimesele küsimusele vastamine:
+Tegevus: Valin ühe suvalise valiku 5-st
+Eeldatav tulemus: Kuvatakse teine küsimus
+Tegelik tulemus: Kuvatakse teine küsimus
+
+2. Kui esimene ja teine küsimus on avatud ja muudan esimese küsimuse valikut:
+Tegevus: Muudan eelneva valiku ümber kõigi võimalike valikutega
+Eeldatav tulemus: Esimese küsimuse valik jääb uude kohta ja teine küsimus jääb avatuks
+Tegelik tulemus: Esimese küsimuse valik jääb uude kohta ja teine küsimus jääb avatuks
+
+3. Teisele küsimusele vastamine:
+Tegevus: Valin ühe suvalise valiku 5-st
+Eeldatav tulemus: Kuvatakse kolmas küsimus ning esimene ja teine küsimus jääb avatuks
+Tegelik tulemus: Kuvatakse kolmas küsimus ning esimene ja teine küsimus jääb avatuks
+
+4. Kui esimene kuni kolmas küsimus on avatud ja muudan esimese või teise küsimuse valikut:
+Tegevus: Muudan ära kõik esimese ja teise küsimuse valikud
+Eeldatav tulemus: Esimese ja teise küsimuse valik jääb uude kohta ja kolmas küsimus jääb avatuks
+Tegelik tulemus: Esimese ja teise küsimuse valik jääb uude kohta ja kolmas küsimus jääb avatuks
+
+5. Kolmandale küsimusele vastamine:
+Tegevus: Valin ühe suvalise valiku 5-st
+Eeldatav tulemus: Kuvatakse neljas küsimus ning esimene, teine ja kolmas küsimus jääb avatuks
+Tegelik tulemus: Kuvatakse neljas küsimus ning esimene, teine ja kolmas küsimus jääb avatuks
+
+6. Kui esimene kuni neljas küsimus on avatud ja muudan esimese, teise või kolmanda küsimuse valikut:
+Tegevus: Muudan ära kõik esimese, teise ja kolmanda küsimuse valikud
+Eeldatav tulemus: Esimese, teise ja kolmanda küsimuse valik jääb uude kohta ja neljas küsimus jääb avatuks
+Tegelik tulemus: Esimese, teise ja kolmanda küsimuse valik jääb uude kohta ja neljas küsimus jääb avatuks
+
+7. Neljandale küsimusele vastamine:
+Tegevus: Valin ühe kahest valikust (jah/ei):
+Eeldatav tulemus: Kui valin 'jah', siis kuvatakse viies küsimus, kui valin 'ei', siis kuvatakse võimalus 'saada andmed'
+Tegelik tulemus: Kui valin 'jah', siis kuvatakse viies küsimus, kui valin 'ei', siis kuvatakse võimalus 'saada andmed'
+
+8. Andmete saatmine (juhul, kui kasutaja vastas neljandale küsimusele 'ei'):
+Tegevus: Vajutan nuppu 'saada andmed'
+Eeldatav tulemus: Päeviku täitja viiakse tagasi avalehele
+Tegelik tulemus: Päeviku täitja viiakse tagasi avalehele
+
+9. Viiendale küsimusele vastamine:
+Tegevus: Valin mitu tundi ja mitu minutit ma oma meelistegevuse peale kulutasin ja fikseerin tulemuse:
+Eeldatav tulemus: Kuvatakse kuues küsimus ja esimene kuni viies küsimus jääb avatuks, kui midagi ei valita, siis jääb lehe sisu samaks
+Tegelik tulemus: Kuvatakse kuues küsimus ja esimene kuni viies küsimus jääb avatuks, kui midagi ei valita, siis jääb lehe sisu samaks
+
+10. Kuuendale küsimusele vastamine:
+Tegevus: Valin numbriliselt, kui palju ma täna raha maha mängisin:
+Eeldatav tulemus: Kuvatakse seitsmes küsimus ja esimene kuni kuues küsimus jääb avatuks, kui midagi ei valita, siis jääb lehe sisu samaks
+Tegelik tulemus: Kuvatakse seitsmes küsimus ja esimene kuni kuues küsimus jääb avatuks, kui midagi ei valita, siis jääb lehe sisu samaks
+
+11. Seitsmendale küsimusele vastamine:
+Tegevus: Kirjeldan oma mõtteid ja tundeid ja fikseerin tulemuse:
+Eeldatav tulemus: Kuvatakse valik saada 'saada andmed' ja kõik eelnevad küsimused jäävad avatuks
+Tegelik tulemus: Kuvatakse valik saada 'saada andmed' ja kõik eelnevad küsimused jäävad avatuks
+
+12. Andmete saatmine (juhul, kui kasutaja vastas neljandale küsimusele 'jah'):
+Tegevus: Vajutan nuppu 'saada andmed'
+Eeldatav tulemus: Päeviku täitja viiakse tagasi avalehele
+Tegelik tulemus: Päeviku täitja viiakse tagasi avalehele
+
+13. Vastates viiendat küsimust otsustan, et neljandale küsimusele vastan siiski 'ei':
+Tegevus: Muudan neljanda küsimuse vastuse 'jah' pealt 'ei' peale:
+Oodatav tulemus: Viies küsimus kaob ekraanilt ja kuvatakse nupp 'saada andmed'
+Tegelik tulemus: Viies küsimus kaob ekraanilt ja kuvatakse nupp 'saada andmed'
+
+14. Vastates kuuendat küsimust otsustan, et neljandale küsimusele vastan siiski 'ei':
+Tegevus: Muudan neljanda küsimuse vastuse 'jah' pealt 'ei' peale:
+Oodatav tulemus: Viies ja kuues küsimus kaob ekraanilt ja kuvatakse nupp 'saada andmed'
+Tegelik tulemus: Viies ja kuues küsimus kaob ekraanilt ja kuvatakse nupp 'saada andmed'
+
+15. Vastates seitsmendat küsimust otsustan, et neljandale küsimusele vastan siiski 'ei':
+Tegevus: Muudan neljanda küsimuse vastuse 'jah' pealt 'ei' peale:
+Oodatav tulemus: Viies, kuues ja seitsmes küsimus kaob ekraanilt ja kuvatakse nupp 'saada andmed'
+Tegelik tulemus: Viies, kuues ja seitsmes ja kuues küsimus kaob ekraanilt ja kuvatakse nupp 'saada andmed'
+
+
+
+

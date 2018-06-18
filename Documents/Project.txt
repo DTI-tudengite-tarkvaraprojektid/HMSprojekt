@@ -1,0 +1,38 @@
+Projekti nimetus: 
+
+Hasartmängusõltlastele eneseseire tööriist
+
+Kirjeldus:
+
+Tarkvara võimaldab pidada hasartmängu- või arvutisõltlasel enesjälgimise päevikut.
+Lisaks on võimalik päeviku täitjal näha oma päeviku sissekandeid, valida detaile statistika kuvamisel, 
+saata valitud sissekanded otse keskkonnast nõustajale. 
+
+Pealehe sisu:     
+		  
+1) kasutajaks registreerimine
+
+2) kasutajaks registreerunu sisselogimine
+
+3) Konto taastamine
+  
+4) hasartmängu sõltuvuse lühitutvustus, link lisalugemiseks ja algtest koos teooriaga lingina
+
+5) arvuti sõltuvuse lühitutvustus, link lisalugemiseks ja algtest koos teooriaga lingina
+  
+
+*Kasutajana sisseloginu võimalused:
+
+1) Avalehel on näha päeviku sissekannete statistikat graafiliselt
+
+2) Päeviku lehel saab teha uusi sissekandeid, kuvada valitud sissekannetest tabeli(d) küsimus-vastus vormis 
+
+ja soovi korral saata valik otse nõustajale
+
+3) Konto kustutamine ja välja logimine
+
+
+
+
+		  
+
