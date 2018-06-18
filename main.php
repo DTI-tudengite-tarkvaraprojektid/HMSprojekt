@@ -71,17 +71,28 @@
         <p>Siin näed kokkuvõtet oma sissekannete kohta</p>
         <ul>
           <li>
+            <button id="arrayHere4">jah/ei pie</button>
+          </li>
+        </li>
+        <div class="chartContainer3" style="width:55%;">
+          <canvas id="myPieChart"></canvas>
+        </div>
+        <ul>
+          <li>
             <button id="arrayHere1">esimene küsimus</button>
             <button id="arrayHere2">teine küsimus</button>
-            <button id="arrayHere3">kolmas küsimus</button>
-            <button id="arrayHere4">neljas küsimus</button>
             <button id="addData">add</button>
           </li>
         </ul>
-        <div class="chartContainer" style="width:45%;">
-          <canvas id="myChart"></canvas>
+        <div class="chartContainer1" style="width:45%;">
+          <canvas id="myChart1"></canvas>
         </div>
         <br>
+        <ul>
+          <li>
+            <button id="arrayHere3">kolmas küsimus</button>
+          </li>
+        </li>
         <div class="chartContainer2" style="width:45%;">
           <canvas id="myChart2"></canvas>
         </div>

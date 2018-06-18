@@ -1,7 +1,9 @@
 let ctx;
 let chartLabels = [];
 let chartData = [];
-var test1 = [3, 3, 1, 2, 3];
+let pieChartLabels = ["ei", "jah"];
+let pieChartData = [1 ,0 ,1 ,0 ,1 ,1 ,1 ,1 ,0 ,0 , 1];
+var test1 = [3 ,3 ,1 ,2 ,3];
 var testMonth2 = ["7.06.2018", "8.06.2018", "9.06.2018", "10.06.2018", "11.06.2018"];
 
 const MainApp = function () {
@@ -86,19 +88,26 @@ function arrayHere1() {
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
           let myObj = JSON.parse(this.responseText)
-          let chartLabels = []
-          let chartData = []
+          let tempLabels = []
+          let tempData = []
           for (i=0; i<myObj.length; i++){
-            chartLabels.push(myObj[i][0])
-            chartData.push(myObj[i][1])
+            tempLabels.push(myObj[i][0])
+            tempData.push(myObj[i][1])
           }
-          console.log(chartData)
-          console.log(chartLabels)
+          //console.log("vana: " + tempData)
+          //console.log("vana: " + tempLabels)
+          chartData = tempData
+          chartLabels = tempLabels
+          //console.log("uus: " + chartData)
+          //console.log("uus: " + chartLabels)
           //console.log(JSON.parse(xmlhttp.responseText))
       }
   };
+  
   xmlhttp.open("GET", aadress, true);
   xmlhttp.send()
+  //console.log(newChartData)
+  //console.log(newChartLabels)
 }
 
 function arrayHere2() {
@@ -112,9 +121,6 @@ function arrayHere2() {
           for (i=0; i<myObj.length; i++){
             chartLabels.push(myObj[i][0])
             chartData.push(myObj[i][1])
-          }
-          for (i=0; i<chartLabels.length; i++){
-            chartLabels.push(myObj[i][0])
           }
           console.log(chartData)
           console.log(chartLabels)
@@ -152,14 +158,14 @@ function arrayHere4() {
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
           let myObj = JSON.parse(this.responseText)
-          let chartLabels = []
-          let chartData = []
+          let newPieChartLabels = []
+          let newPieChartData = []
           for (i=0; i<myObj.length; i++){
-            chartLabels.push(myObj[i][0])
-            chartData.push(myObj[i][1])
+            newPieChartLabels.push(myObj[i][0])
+            newPiechartData.push(myObj[i][1])
           }
-          console.log(chartData)
-          console.log(chartLabels)
+          console.log(newPieChartData)
+          console.log(newPieChartLabels)
           //console.log(JSON.parse(xmlhttp.responseText))
       }
   };
@@ -170,13 +176,35 @@ function arrayHere4() {
 
 /* < <  C H A R T S   > > */
 
-ctx = document.getElementById('myChart').getContext('2d');
+/*ctx = document.getElementById('myPieChart').getContext('2d');
+let myPieChart = new Chart(ctx, {
+  type: 'pie',
+  data: {
+    datasets: [{
+      data: pieChartLabels,
+      backgroundColor: [
+        'rgb(25, 99, 132)',
+        'rgb(255,140,0)'
+      ],
+      label: 'Kas ma sooritasin oma meelistegevust?'
+    }],
+    labels: [
+      "ei",
+      "jah"
+    ]
+  },
+  options: {
+    responsive: true
+  }
+});*/
+
+ctx = document.getElementById('myChart1').getContext('2d');
 let chart1 = new Chart(ctx, {
   // The type of chart we want to create
   type: 'line',
   // The data for our dataset
   data: {
-    labels: ["2018-06-17 20:38:53", "2018-06-17 20:39:47"],
+    labels: chartLabels,
     datasets: [{
       label: "Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?",
       borderColor: 'rgb(25, 99, 132)',
@@ -280,34 +308,36 @@ let chart2 = new Chart(ctx, {
   chart1.update();
 }*/
 
-function addData(chart1){
+function addData(){
   chart1.data.datasets[0].data = chartData;
-  chart1.data.labels[0] = chartLabels;
+  chart1.data.labels = chartLabels;
+  console.log("tulev data: " + chartData);
+  console.log("tulev labels: " + chartLabels);
   chart1.update();
-  console.log(chartData)
+  console.log("data: " + chart1.data.datasets[0].data);
+  console.log("labels: " + chart1.data.labels);
+  console.log("data2: " + chart2.data.datasets.data);
 };
 
-/*function addData(chart2) {
+/*function addData() {
   chart2.data.labels.pop();
   chart2.data.datasets.forEach((dataset) => {
       dataset.data.pop();
   });
   chart2.update();
-  chart.update();
+  //chart.update();
 };*/
 
-/*function addData(chart1, data, labels) {
-  chart1.data.label.push = 'new title';
-  chart1.update();
-}*/
-
-/*function addData(chart1, chartLabels, chartData) {
-  console.log(labels)
+/*function addData() {
   chart1.data.labels.push(chartLabels);
   chart1.data.datasets.forEach((dataset) => {
       dataset.data.push(chartData);
   });
-  chart.update();
+  console.log("tulev data: " + chartData);
+  console.log("tulev labels: " + chartLabels);
+  chart1.update();
+  console.log("sees data: " + chart1.data.datasets.data);
+  console.log("sees labels: " + chart1.data.labels);
 }*/
 
 /*function loadData () {
