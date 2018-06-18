@@ -108,26 +108,27 @@ function button3() {
 
 function button4() {
     if(document.getElementById("answer41").checked == true){
-		document.getElementById("end1").style.display = "none"; 
-		document.getElementById("send1").style.display = "none";
         document.getElementById("section5").style.display = "block";
-		document.getElementById("button5").style.display = "block";
+		document.getElementById("section7").style.display = "none";
+		document.getElementById("section8").style.display = "none";
+		document.getElementById("button5").style.display = "block";	
+		document.getElementById("end1").style.display = "none";
+		document.getElementById("end2").style.display = "none";
+		document.getElementById("send1").style.display = "none";
+		document.getElementById("send2").style.display = "none";
 		Answer4 = "0";
     }
     if(document.getElementById("answer42").checked == true){
-        document.getElementById("end1").style.display = "block"; 
-		document.getElementById("send1").style.display = "block";
 		document.getElementById("section5").style.display = "none";
-		document.getElementById("button5").style.display = "none";
-		document.getElementById("section7").style.display = "none";
-		document.getElementById("section8").style.display = "none";
 		document.getElementById("section61").style.display = "none";
 		document.getElementById("section62").style.display = "none";
-		document.getElementById("button7").style.display = "none";
-		document.getElementById("otherValue").style.display = "none";
+		document.getElementById("section7").style.display = "block";
+		document.getElementById("section8").style.display = "none";
+		document.getElementById("end1").style.display = "none";
 		document.getElementById("end2").style.display = "none";
+		document.getElementById("send1").style.display = "none";
 		document.getElementById("send2").style.display = "none";
-		document.getElementById("send1").addEventListener("click", send1);
+		document.getElementById("button7").addEventListener("click", button7);
 		Answer4 = "1";
     }
 	
@@ -166,7 +167,7 @@ function goneFunction() {
 		}
 	}else{
 		for(var i=1; i<allCheckboxes.length-1; i++){
-			allCheckboxes[i].style.display = "block";
+			allCheckboxes[i].style.display = "inline-block";
 		}
 	}
 }
@@ -220,22 +221,57 @@ function button8() {
 	document.getElementById("end2").style.display = "block";
 	document.getElementById("send2").style.display = "block";
 	if(document.getElementById("answer81").checked == true){
+		if(Answer4=="0"){
+			document.getElementById("end2").style.display = "block";
+			document.getElementById("end1").style.display = "none";
+		}else if(Answer4=="1"){
+			document.getElementById("end1").style.display = "block";
+			document.getElementById("end2").style.display = "none";
+		}
 		document.getElementById("section2").style.display = "block";
 		Answer8 = "0";
 	}
 	if(document.getElementById("answer82").checked == true){
+		if(Answer4=="0"){
+			document.getElementById("end2").style.display = "block";
+			document.getElementById("end1").style.display = "none";
+		}else if(Answer4=="1"){
+			document.getElementById("end1").style.display = "block";
+			document.getElementById("end2").style.display = "none";
+		}
 		document.getElementById("section2").style.display = "block";
 		Answer8 = "1";
 	}
 	if(document.getElementById("answer83").checked == true){
+		if(Answer4=="0"){
+			document.getElementById("end2").style.display = "block";
+			document.getElementById("end1").style.display = "none";
+		}else if(Answer4=="1"){
+			document.getElementById("end1").style.display = "block";
+			document.getElementById("end2").style.display = "none";
+		}
 		document.getElementById("section2").style.display = "block";
 		Answer8 = "3";
 	}
 	if(document.getElementById("answer84").checked == true){
+		if(Answer4=="0"){
+			document.getElementById("end2").style.display = "block";
+			document.getElementById("end1").style.display = "none";
+		}else if(Answer4=="1"){
+			document.getElementById("end1").style.display = "block";
+			document.getElementById("end2").style.display = "none";
+		}
 		document.getElementById("section2").style.display = "block";
 		Answer8 = "4";
 	}
 	if(document.getElementById("answer85").checked == true){
+		if(Answer4=="0"){
+			document.getElementById("end2").style.display = "block";
+			document.getElementById("end1").style.display = "none";
+		}else if(Answer4=="1"){
+			document.getElementById("end1").style.display = "block";
+			document.getElementById("end2").style.display = "none";
+		}
 		document.getElementById("section2").style.display = "block";
 		Answer8 = "4";
 	}
@@ -247,7 +283,7 @@ function send1(){
 	type = document.getElementById("send1").value;
 	console.log(type);
 	var xhr=new XMLHttpRequest();
-	var aadress="functions/send1.php?type="+type+"&a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4;
+	var aadress="functions/send1.php?type="+type+"&a1="+Answer1+"&a2="+Answer2+"&a3="+Answer3+"&a4="+Answer4+"&a7="+Answer7+"&a8="+Answer8;
 	xhr.open("GET", aadress, true);
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){

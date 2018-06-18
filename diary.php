@@ -42,7 +42,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 <div id="sections" class="sections">
 
 	<div id="section1" class="section">
-		<h5 id="question1"> 1. Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all? </h5>
+		<h5 id="question1"> Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all? </h5>
 
 		<label for="answer11"> Üldse mitte </label><input type="radio" id="answer11" name="answer1" value="0" onclick="button1()">
 
@@ -57,7 +57,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	</div>
 
 	<div id="section2" class="section">
-		<h5 id="question2"> 2. Kui tugevalt hindan meelistegevust sooritada täna? </h5>
+		<h5 id="question2"> Kui tugevalt hindan meelistegevust sooritada täna? </h5>
 
 		<label for="answer21"> Olematu </label><input type="radio" id="answer21" name="answer2" value="0" onclick="button2()">
 
@@ -72,7 +72,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	</div>
 
 	<div id="section3" class="section">
-		<h5 id="question3"> 3. Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista? </h5>
+		<h5 id="question3"> Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista? </h5>
 			
 		<label for="answer31"> Üldse mitte </label><input type="radio" id="answer31" name="answer3" value="0" onclick="button3()">
 
@@ -87,7 +87,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	</div>
 
 	<div id="section4" class="section">
-		<h5 id="question4"> 4. Kas ma täna sooritasin oma meelistegevust? </h5>
+		<h5 id="question4"> Kas ma täna sooritasin oma meelistegevust? </h5>
 			
 		<label for="answer41"> Jah </label><input type="radio" id="answer41" name="answer4" value="0" onclick="button4()">
 			
@@ -95,12 +95,10 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 			
 	</div>
 	
-	<h5 id="end1"> Sa olid täna väga tubli, jätka samas vaimus!!! </h5>
-	
 	<button id="send1" type="button" value="<?php echo $_REQUEST["type"]; ?>">Saada andmed</button>
 
 	<div id="section5" class="section">
-		<h5 id="question5"> 5. Kui palju aega (tunde ja minuteid) ma seda tegevust sooritades veetsin? </h5>
+		<h5 id="question5"> Kui palju aega (tunde ja minuteid) ma seda tegevust sooritades veetsin? </h5>
 	 
 		<label> Ma kulutasin selle tegevuse peale aega </label><input id="hours" type="number" min="0" max="24" value="0">
 	   
@@ -112,7 +110,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	</div>
 	
 	<div id="section61" class="section">
-		<h5 id="question61"> 6. Kas mul jäi selle tegevuse tõttu muud tegevused sooritamata või ma ei jõudnud neid õigeaegselt valmis? 
+		<h5 id="question61"> Kas mul jäi selle tegevuse tõttu muud tegevused sooritamata või ma ei jõudnud neid õigeaegselt valmis? 
 			Kui jah, siis millised muud tegevused seetõttu kannatasid? </h5>
 
 		<?php
@@ -144,7 +142,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	
 	<div id="section62" class="section">
 	
-		<h5 id="question62"> 6. Kui palju sa raha mängimisele kulutasid (välja arvatud võidud)? </h5>
+		<h5 id="question62"> Kui palju sa raha mängimisele kulutasid (välja arvatud võidud)? </h5>
 		
 		<label> Ma mängisin täna maha </label><input id="money" type="number" min="0" value="">
 		<label> eurot. </label>
@@ -154,7 +152,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	</div>
 
 	<div id="section7" class="section">
-		<h5 id="question7"> 7. Kirjelda oma mõtteid ja tundeid ning nende muutumist päeva jooksul. </h5>
+		<h5 id="question7"> Kirjelda oma mõtteid ja tundeid ning nende muutumist päeva jooksul. </h5>
 
 		<textarea id="answer7" type="text" rows="4" cols="50" value=""></textarea>
 		
@@ -162,7 +160,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	</div>
 	
 	<div id="section8" class="section">
-		<h5 id="question8"> 8. Vali emotsioon, mis kirjeldab teie olekut kõige ilmekamalt. </h5>
+		<h5 id="question8"> Vali emotsioon, mis kirjeldab teie olekut kõige ilmekamalt. </h5>
 
 		<label for="answer81"><input type="radio" id="answer81" class="answer81" name="answer1" value="0" onclick="button8()"><img src="images/sadface.png"></label>
 
@@ -176,6 +174,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 		
 	</div>
 	
+	<h5 id="end1"> Sa olid täna väga tubli, jätka samas vaimus!!! </h5>
 	<h5 id="end2"> Sa andsid küll täna oma nõrkusele järele, aga püüa vähemalt homme tublim olla!!! </h5>
 	
 	<button id="send2" type="button" value="<?php echo $_REQUEST['type'] ?>">Saada andmed</button>
