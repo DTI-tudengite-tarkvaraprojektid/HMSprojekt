@@ -140,6 +140,7 @@ function arrayHere3() {
             for (j=0; j<tempoLabels.length; j++){
               tempoLabels.toString();
           }
+        }
           chartData = tempData
           chartLabels = tempLabels
           addData();
