@@ -1,10 +1,16 @@
 let ctx;
 let chartLabels1 = [];
+let chartLabels6 = [];
 let chartData1 = [];
 let chartData2 = [];
 let chartData3 = [];
+let chartData6 = [];
+let chartData7 = [];
+let chartData8 = [];
 let pieChartLabels = [];
 let pieChartData = [];
+let ansYes;
+let ansNo;
 
 const MainApp = function () {
   if (MainApp.instance) {
@@ -21,22 +27,16 @@ const MainApp = function () {
 MainApp.routes = {
   'home-view': {
     'render': function () {
-      console.log('home')
-      /*document 
-      .querySelector('#arrayHere1') 
+      document 
+      .querySelector('#daySeven') 
       .addEventListener('click', arrayHere1)
       document 
-      .querySelector('#arrayHere2') 
-      .addEventListener('click', arrayHere2)
-      document 
-      .querySelector('#arrayHere3') 
-      .addEventListener('click', arrayHere3)
-      //window.addEventListener('click', loadData)*/
+      .querySelector('#dayMonth') 
+      .addEventListener('click', arrayHere6)
     }
   },
   'diary-view': {
     'render': function () {
-      console.log('paevik')
     }
   }
 }
@@ -72,6 +72,7 @@ MainApp.prototype = {
 }//main
 
 /* < <   A J A X   > > */
+//7days
 
 function arrayHere1() {
   let xmlhttp = new XMLHttpRequest();
@@ -85,21 +86,17 @@ function arrayHere1() {
             tempLabels.push(myObj[i][0])
             tempData.push(myObj[i][1])
           }
-          //console.log("vana: " + tempData)
-          console.log("vana: " + tempLabels)
-          chartData1 = tempData
-          chartLabels1 = tempLabels
+          chartData1 = tempData.slice(-7)
+          chartLabels1 = tempLabels.slice(-7)
           addData1();
-          //console.log("uus: " + chartData)
-          //console.log("uus: " + chartLabels1)
-          //console.log(JSON.parse(xmlhttp.responseText))
+          arrayHere2();
+          arrayHere3();
+
       }
   };
   
   xmlhttp.open("GET", aadress, true);
   xmlhttp.send()
-  //console.log(newChartData)
-  //console.log(newChartLabels)
 }
 
 function arrayHere2() {
@@ -114,10 +111,9 @@ function arrayHere2() {
             tempLabels.push(myObj[i][0])
             tempData.push(myObj[i][1])
           }
-          chartData2 = tempData
-          chartLabels1 = tempLabels
+          chartData2 = tempData.slice(-7)
+          chartLabels1 = tempLabels.slice(-7)
           addData2();
-          //console.log(JSON.parse(xmlhttp.responseText))
       }
   };
   xmlhttp.open("GET", aadress, true);
@@ -130,18 +126,14 @@ function arrayHere3() {
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
           let myObj = JSON.parse(this.responseText)
-          //let tempoLabels = []
           let tempData = []
           let tempLabels = []
           for (i=0; i<myObj.length; i++){
             tempLabels.push(myObj[i][0])
             tempData.push(myObj[i][1])
-            /*for (j=0; j<tempoLabels.length; j++){
-              tempoLabels.toString();
-          }*/
         }
-          chartData3 = tempData
-          chartLabels1 = tempLabels
+          chartData3 = tempData.slice(-7)
+          chartLabels1 = tempLabels.slice(-7)
           addData3();
       }
   };
@@ -149,7 +141,7 @@ function arrayHere3() {
   xmlhttp.send()
 }
 
-/*function arrayHere4() {
+function arrayHere4() {
   let xmlhttp = new XMLHttpRequest();
   var aadress="functions/answer1.php?q=answer4&v=date";
   xmlhttp.onreadystatechange = function() {
@@ -163,8 +155,6 @@ function arrayHere3() {
           }
           pieChartData = newPieChartData
           pieChartLabels = newPieChartLabels
-          console.log(pieChartData)
-          console.log(pieChartLabels)
           addData4();
       }
   };
@@ -172,15 +162,79 @@ function arrayHere3() {
   xmlhttp.send()
 }
 
+function arrayHere6() {
+  let xmlhttp = new XMLHttpRequest();
+  var aadress="functions/answer1.php?q=answer1&v=date";
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          let myObj = JSON.parse(this.responseText)
+          let tempLabels = []
+          let tempData = []
+          for (i=0; i<myObj.length; i++){
+            tempLabels.push(myObj[i][0])
+            tempData.push(myObj[i][1])
+          }
+          chartData6 = tempData.slice(-30)
+          chartLabels6 = tempLabels.slice(-30)
+          addData6();
+          arrayHere7();
+          arrayHere8();
+      }
+  };
+  xmlhttp.open("GET", aadress, true);
+  xmlhttp.send()
+}
 
-/* < <  C H A R T S   > > */
+function arrayHere7() {
+  let xmlhttp = new XMLHttpRequest();
+  var aadress="functions/answer1.php?q=answer2&v=date";
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          let myObj = JSON.parse(this.responseText)
+          let tempLabels = []
+          let tempData = []
+          for (i=0; i<myObj.length; i++){
+            tempLabels.push(myObj[i][0])
+            tempData.push(myObj[i][1])
+          }
+          chartData7 = tempData.slice(-30)
+          chartLabels6 = tempLabels.slice(-30)
+          addData7();
+      }
+  };
+  xmlhttp.open("GET", aadress, true);
+  xmlhttp.send()
+}
 
-/*ctx = document.getElementById('myPieChart').getContext('2d');
+function arrayHere8() {
+  let xmlhttp = new XMLHttpRequest();
+  var aadress="functions/answer1.php?q=answer3&v=date";
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          let myObj = JSON.parse(this.responseText)
+          let tempData = []
+          let tempLabels = []
+          for (i=0; i<myObj.length; i++){
+            tempLabels.push(myObj[i][0])
+            tempData.push(myObj[i][1])
+        }
+          chartData8 = tempData.slice(-30)
+          chartLabels6 = tempLabels.slice(-30)
+          addData8();
+      }
+  };
+  xmlhttp.open("GET", aadress, true);
+  xmlhttp.send()
+}
+
+/*   C H A R T S   */
+
+ctx = document.getElementById('myPieChart').getContext('2d');
 let myPieChart = new Chart(ctx, {
   type: 'pie',
   data: {
     datasets: [{
-      data: pieChartData,
+      data: [ansYes, ansNo],
       backgroundColor: [
         'rgb(25, 99, 132)',
         'rgb(255,140,0)',
@@ -192,7 +246,7 @@ let myPieChart = new Chart(ctx, {
   options: {
     responsive: true
   }
-});*/
+});
 
 ctx = document.getElementById('myChart1').getContext('2d');
 let chart1 = new Chart(ctx, {
@@ -259,54 +313,51 @@ let chart1 = new Chart(ctx, {
 function addData1(){
   chart1.data.datasets[0].data = chartData1;
   chart1.data.labels = chartLabels1;
-  //console.log("tulev data: " + chartData);
-  //console.log("tulev labels: " + chartLabels);
   chart1.update();
-  console.log("osa1")
-  //console.log("data: " + chart1.data.datasets[0].data);
-  //console.log("labels: " + chart1.data.labels);
-  //console.log("data2: " + chart2.data.datasets.data);
 };
 function addData2(){
   chart1.data.datasets[1].data = chartData2;
   chart1.data.labels = chartLabels1;
-  //console.log("tulev data: " + chartData);
-  //console.log("tulev labels: " + chartLabels);
   chart1.update();
-  console.log("osa2")
-  //console.log("data: " + chart1.data.datasets[0].data);
-  //console.log("labels: " + chart1.data.labels);
-  //console.log("data2: " + chart2.data.datasets.data);
 };
 function addData3(){
   chart1.data.datasets[2].data = chartData3;
   chart1.data.labels = chartLabels1;
-  //console.log("tulev data: " + chartData);
-  //console.log("tulev labels: " + chartLabels);
   chart1.update();
-  console.log("osa3")
-  //console.log("data: " + chart1.data.datasets[0].data);
-  //console.log("labels: " + chart1.data.labels);
-  //console.log("data2: " + chart2.data.datasets.data);
+};
+function addData6(){
+  chart1.data.datasets[0].data = chartData6;
+  chart1.data.labels = chartLabels6;
+  chart1.update();
+};
+function addData7(){
+  chart1.data.datasets[1].data = chartData7;
+  chart1.data.labels = chartLabels6;
+  chart1.update();
+};
+function addData8(){
+  chart1.data.datasets[2].data = chartData8;
+  chart1.data.labels = chartLabels6;
+  chart1.update();
 };
 
-/*function addData4(){
-  myPieChart.data.datasets[0].data = pieChartData;
+function addData4(){
+  let one = 0;
+  let otherone = 0;
+  for(let i = 0; i < pieChartData.length; ++i){
+    if(pieChartData[i] === 1) 
+      one++;
+  } 
+  for(let i = 0; i < pieChartData.length; ++i){
+    if(pieChartData[i] === 0) 
+      otherone++;
+  } 
+  ansYes = one;
+  ansNo = otherone;
+  myPieChart.data.datasets[0].data[0] = ansYes;
+  myPieChart.data.datasets[0].data[1] = ansNo;
   myPieChart.update();
-}*/
-
-/*function loadData () {
-  // after typing init autosave
-  
-    const doneClicking = 1000
-  
-    if (timer) { clearTimeout(timer) }
-    timer = window.setTimeout(function () {
-      // TODO check if really changed
-      saveLocal()
-      console.log('loadData')
-    }, doneClicking)
-  }*/
+}
 
 window.onload = function () {
   const app = new MainApp()
@@ -314,5 +365,5 @@ window.onload = function () {
   arrayHere1()
   arrayHere2()
   arrayHere3()
-  //arrayHere4()
+  arrayHere4()
 }

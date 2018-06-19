@@ -69,25 +69,19 @@
     <section id="home-view">
         <h2>Enesejälgimise päevik</h2>
         <p>Siin näed kokkuvõtet oma sissekannete kohta</p>
-        <!--<ul>
+        <ul>
           <li>
-            <label>Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?</label>
-            <input id="arrayHere1" type="checkBox" value="" checked="checked" />
-            <label>Kui tugevalt hindan meelistegevust sooritada täna?</label>
-            <input id="arrayHere2" type="checkBox" value="" /> 
-            <label>Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista?</label>
-            <input id="arrayHere3" type="checkBox" value="" /> 
-            <button id="arrayHere1">Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?</button>
-            <button id="arrayHere2">Kui tugevalt hindan meelistegevust sooritada täna?</button>
-            <button id="arrayHere3">Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista?</button>
+            <button id="daySeven">7 päeva</button>
+            <button id="dayMonth">30 päeva</button>
           </li>
-        </ul>-->
-        <div class="chartContainer1" style="position: absolute; width:90%; height:40%">
+        </ul>
+        <div class="chartContainer1" style="position: absolute; width:60%; height:50%">
           <canvas id="myChart1"></canvas>
         </div>
-        <!--<div class="chartContainer3" style="position: absolute; width:60%; height:50%">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="chartContainer3" style="position: absolute; width:50%; height:50%">
           <canvas id="myPieChart"></canvas>
-        </div>-->
+        </div>
     </section>
   
      <!-- Diary page -->
@@ -116,10 +110,8 @@
           <div id="diaryAnswers1" class="diaryAnswers"></div>
           <div id="diaryAnswers2" class="diaryAnswers"></div>
         </div>
-        
-        
         <div class="options-grid"><button id="printBtn" class="printBtn" onclick="printDiv('printPDF');" > Koosta PDF </button></div>
-        
+
       </div>
     </section>
 
