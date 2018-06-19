@@ -1,35 +1,35 @@
 Projekti nimetus: 
 
-Hasartmängusõltlastele eneseseire tööriist
+HasartmÃ¤ngusÃµltlastele eneseseire tÃ¶Ã¶riist.
 
 Kirjeldus:
 
-Tarkvara võimaldab pidada hasartmängu- või arvutisõltlasel enesjälgimise päevikut.
-Lisaks on võimalik päeviku täitjal näha oma päeviku sissekandeid, valida detaile statistika kuvamisel, 
-saata valitud sissekanded otse keskkonnast nõustajale. 
+Tarkvara vÃµimaldab pidada hasartmÃ¤ngu- vÃµi arvutisÃµltlasel enesejÃ¤lgimise pÃ¤evikut.
+Lisaks on vÃµimalik pÃ¤eviku tÃ¤itjal nÃ¤ha oma pÃ¤eviku sissekandeid, valida detaile statistika kuvamisel, 
+saata valitud sissekanded nÃµustajale. 
 
-Pealehe sisu:     
+** Pealehe sisu:     
 		  
 1) kasutajaks registreerimine
 
 2) kasutajaks registreerunu sisselogimine
 
-3) Konto taastamine
+3) konto taastamine
   
-4) hasartmängu sõltuvuse lühitutvustus, link lisalugemiseks ja algtest koos teooriaga lingina
+4) hasartmÃ¤ngu sÃµltuvuse lÃ¼hitutvustus, link lisalugemiseks ja algtest koos teooriaga lingina
 
-5) arvuti sõltuvuse lühitutvustus, link lisalugemiseks ja algtest koos teooriaga lingina
+5) arvuti sÃµltuvuse lÃ¼hitutvustus, link lisalugemiseks ja algtest koos teooriaga lingina.
   
 
-*Kasutajana sisseloginu võimalused:
+** Kasutajana sisseloginu vÃµimalused:
 
-1) Avalehel on näha päeviku sissekannete statistikat graafiliselt
+1) avalehel on alates kolmandast sissekandest nÃ¤ha pÃ¤eviku sissekannete statistikat graafiliselt
 
-2) Päeviku lehel saab teha uusi sissekandeid, kuvada valitud sissekannetest tabeli(d) küsimus-vastus vormis 
+2) pÃ¤eviku lehel saab teha uusi sissekandeid, kuvada valitud sissekannetest tabeli(d) kÃ¼simus-vastus vormis 
 
-ja soovi korral saata valik otse nõustajale
+ja soovi korral koostada PDF, mida saab saata nÃµustajale
 
-3) Konto kustutamine ja välja logimine
+3) konto kustutamine ja vÃ¤lja logimine.
 
 
 
