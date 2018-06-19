@@ -140,6 +140,9 @@ input[type="radio"] {
 .sections button{
     align: center;
 }
+#goBack{
+    float:right;
+}
 
 * {
 box-sizing: border-box;
