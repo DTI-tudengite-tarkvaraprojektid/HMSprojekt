@@ -108,7 +108,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 		
 		<label> minutit. </label>
 		
-		<br><button class="fixButtons" id="button5" type="button" onclick="button5()">Fikseeri aeg</button>
+		<br><button class="fixButtons" id="button5" type="button" onclick="button5()">Järgmine küsimus</button>
 	</div>
 	
 	<div id="section61" class="section">
@@ -140,7 +140,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 
 		?>
 			
-			<br><button class="fixButtons" id="button61" type="button">Fikseeri vastus</button>
+			<br><button class="fixButtons" id="button61" type="button">Järgmine küsimus</button>
 	</div>
 	
 	<div id="section62" class="section">
@@ -150,7 +150,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 		<label> Ma mängisin täna maha </label><input id="money" type="number" min="0" value="">
 		<label> eurot. </label>
 		
-		<br><button class="fixButtons" id="button62" type="button">Fikseeri summa</button>
+		<br><button class="fixButtons" id="button62" type="button">Järgmine küsimus</button>
 			
 	</div>
 
@@ -159,7 +159,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 
 		<textarea id="answer7" type="text" rows="4" cols="50" value=""></textarea>
 		
-		<br><button class="fixButtons" id="button7" type="button">Fikseeri vastus</button>
+		<br><button class="fixButtons" id="button7" type="button">Järgmine küsimus</button>
 	</div>
 	
 	<div id="section8" class="section">
@@ -177,12 +177,12 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 		
 	</div>
 	
-	<h5 id="end1"> Sa olid täna väga tubli, jätka samas vaimus!!! </h5>
-	<h5 id="end2"> Sa andsid küll täna oma nõrkusele järele, aga püüa vähemalt homme tublim olla!!! </h5>
+	<h5 id="end1"> Tänane sissekanne edukalt tehtud! </h5>
+	<h5 id="end2"> Tänane sissekanne edukalt tehtud! </h5>
 
-	<br><button id="send1" type="button" value="<?php echo $_REQUEST["type"]; ?>">Saada andmed</button>
+	<br><button id="send1" type="button" value="<?php echo $_REQUEST["type"]; ?>">Salvesta sissekanne</button>
 
-	<br><button id="send2" type="button" value="<?php echo $_REQUEST['type'] ?>">Saada andmed</button>
+	<br><button id="send2" type="button" value="<?php echo $_REQUEST['type'] ?>">Salvesta sissekanne</button>
 
 	</div>
 
