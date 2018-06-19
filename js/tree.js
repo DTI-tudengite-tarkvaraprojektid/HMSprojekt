@@ -53,7 +53,7 @@ function button1() {
 	}
 	
 	
-	console.log(Answer1);
+	//console.log(Answer1);
 }
 
 function button2() {
@@ -78,7 +78,7 @@ function button2() {
 		Answer2 = "4";
 	}
 	
-	console.log(Answer2);
+	//console.log(Answer2);
 }
 
 function button3() {
@@ -103,7 +103,7 @@ function button3() {
 		Answer3 = "4";
 	}
 	
-	console.log(Answer3);
+	//console.log(Answer3);
 }
 
 function button4() {
@@ -111,7 +111,7 @@ function button4() {
         document.getElementById("section5").style.display = "block";
 		document.getElementById("section7").style.display = "none";
 		document.getElementById("section8").style.display = "none";
-		document.getElementById("button5").style.display = "block";	
+		document.getElementById("button5").style.display = "inline-block";	
 		document.getElementById("end1").style.display = "none";
 		document.getElementById("end2").style.display = "none";
 		document.getElementById("send1").style.display = "none";
@@ -132,7 +132,7 @@ function button4() {
 		Answer4 = "1";
     }
 	
-	console.log(Answer4);
+	//console.log(Answer4);
 }
 
 function button5() {
@@ -149,11 +149,11 @@ function button5() {
 			console.log("Mängur");
 		}
 		
-		document.getElementById("button5").style.display = "block";	
+		document.getElementById("button5").style.display = "inline-block";	
 		Answer5 = document.getElementById("hours").value*60 + parseInt(document.getElementById("minutes").value);
 	}
 	
-	console.log(Answer5);
+	//console.log(Answer5);
 }
 
 function goneFunction() {
@@ -178,7 +178,7 @@ function button61() {
 	for(var i=0; i<allCheckboxes.length-1; i++){
 		if(document.getElementById(allCheckboxes[i].id).checked == true){
 			document.getElementById("section7").style.display = "block";
-			document.getElementById("button7").style.display = "block";
+			document.getElementById("button7").style.display = "inline-block";
 			if(allCheckboxes[i].id!="Midagi muud"){
 				document.getElementById("button7").addEventListener("click", button7);
 				document.getElementById("section7").style.display = "block";
@@ -193,7 +193,7 @@ function button61() {
 		}
 	}
 	
-	console.log(Answer61);
+	//console.log(Answer61);
 }
 
 function button62() {
@@ -204,22 +204,30 @@ function button62() {
 		Answer62 = document.getElementById("money").value;
 	}
 	
-	console.log(Answer62);
+	//console.log(Answer62);
 }
 
 function button7() {
 	if(document.getElementById("answer7").value!=""){
-		document.getElementById("section8").style.display = "block";
+		document.getElementById("section8").style.display = "inline-block";
 		Answer7 = document.getElementById("answer7").value;
 	}
 	
-	console.log(Answer7);
+	//console.log(Answer7);
 }
 
 function button8() {
-	document.getElementById("send2").addEventListener("click", send2);
-	document.getElementById("end2").style.display = "block";
-	document.getElementById("send2").style.display = "block";
+	if(Answer4=="0"){
+		console.log("esimene");
+		document.getElementById("end2").style.display = "block";
+		document.getElementById("send2").style.display = "inline-block";
+		document.getElementById("send2").addEventListener("click", send2);
+	}else if(Answer4=="1"){
+		console.log("teine");
+		document.getElementById("end1").style.display = "block";
+		document.getElementById("send1").style.display = "inline-block";
+		document.getElementById("send1").addEventListener("click", send1);
+	}
 	if(document.getElementById("answer81").checked == true){
 		if(Answer4=="0"){
 			document.getElementById("end2").style.display = "block";
@@ -276,7 +284,7 @@ function button8() {
 		Answer8 = "4";
 	}
 	
-	console.log(Answer8);
+	//console.log(Answer8);
 }
 
 function send1(){
@@ -290,10 +298,6 @@ function send1(){
 			console.log(xhr.responseText);
 		}
 	}
-	console.log(Answer1);
-	console.log(Answer2);
-	console.log(Answer3);
-	console.log(Answer4);
 	xhr.send();
 	window.location.href='main.php';
 }
