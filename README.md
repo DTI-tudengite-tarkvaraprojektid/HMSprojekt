@@ -1,5 +1,5 @@
 # Enesejälgimispäevik
-# Hasartmängusõltlastele eneseseire tööriist
+## Hasartmängusõltlastele eneseseire tööriist
 
 Avalik avaleht
 ![leht](images/startingPage.png)
@@ -10,14 +10,14 @@ Päeviku lehe kasutusnäide
 Päeviku täitmise küsimustik
 ![leht](images/diaryEntryPage.png)
 
-# Projekti eesmärk 
+## Projekti eesmärk 
 on võimaldada hasartmängu- ja arvutisõltlastele keskkond, kus nad saavad igapäevaselt oma edusammudest ja tagasilöökidest päevikut pidada ja vajadusel sissekandeid oma nõustajale saata, et nõustamisel oleks hea ülevaade vahepealse perioodi toimumistest.
 
 Projekt on tehtud 
-# TLU DTI 
+## TLU DTI 
 informaatika eriala esimese kursuse tarkvaraarenduse aine raames.
 
-# Projektis osalesid:
+## Projektis osalesid:
 
 Julika Maiste
 
@@ -26,7 +26,7 @@ Tanel Kuklane
 Mihkel Jäe
 
 
-# Kasutatud tehnoloogiad:
+## Kasutatud tehnoloogiad:
 HTML 5.1
 
 CSS3
@@ -39,11 +39,11 @@ PHP 5.6.29
 
 Chart.js 2.7.2
 
-# Kasutusjuhend:
+## Kasutusjuhend:
 Lae alla ZIP fail. Ava fail ja tõsta sisu veebikataloogi. Tekita config.php 1 kaust veebikataloogist välja. Tee MYSQL käskudega andmebaasi 2 tabelit. 
 
 
-# Config fail
+## Config fail
 
 ```
 <?php
@@ -55,7 +55,7 @@ Lae alla ZIP fail. Ava fail ja tõsta sisu veebikataloogi. Tekita config.php 1 k
 
 ```
 
-# MYSQL andmebaasi tabelite käsud:
+## MYSQL andmebaasi tabelite käsud:
 
 ```
 CREATE TABLE diary( 
