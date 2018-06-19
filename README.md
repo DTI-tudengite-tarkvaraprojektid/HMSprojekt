@@ -1,10 +1,14 @@
 # Enesejälgimispäevik
 # Hasartmängusõltlastele eneseseire tööriist
 
+Kasutaja avaleht
 ![leht](images/openingPage.png)
-![leht](images/userPage.png)
+Avalik avaleht
+![leht](images/startingPage.png)
+Päeviku avaleht
 ![leht](images/diaryPage.png)
-![leht](images/diaryEntry.png)
+Päeviku täitmise küsimustik
+![leht](images/diaryEntryPage.png)
 
 # Projekti eesmärk 
 on võimaldada hasartmängu- ja arvutisõltlastele keskkond, kus nad saavad igapäevaselt oma edusammudest ja tagasilöökidest päevikut pidada ja vajadusel sissekandeid oma nõustajale saata, et nõustamisel oleks hea ülevaade vahepealse perioodi toimumistest.
