@@ -27,6 +27,21 @@ MySQL 5.5.54
 PHP 5.6.29
 Chart.js 2.7.2
 
+Kasutusjuhend:
+Lae alla ZIP fail. Ava fail ja tõsta sisu veebikataloogi. Tekita config.php 1 kaust veebikataloogist välja. Tee MYSQL käskudega andmebaasi 2 tabelit. 
+
+
+CONFIG.PHP
+
+```
+<?php
+	$serverHost = "xxxxxxxxx";
+	$serverUsername = "xxxx";
+	$serverPassword = "xxxxxxxx";
+  $database = "xxxxxx";
+?>
+
+```
 
 Keskkond kasutab kahete SQL andmebaasi tabelit, mida saab tekitada allolevate käskudega:
 
