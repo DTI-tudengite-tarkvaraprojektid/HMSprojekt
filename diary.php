@@ -176,9 +176,6 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 		<label for="answer85"><input type="radio" id="answer85" class="answer85" name="answer1" value="4" onclick="button8()"><img src="images/reallyhappyface.png"></label>
 		
 	</div>
-	
-	<h5 id="end1"> Tänane sissekanne edukalt tehtud! </h5>
-	<h5 id="end2"> Tänane sissekanne edukalt tehtud! </h5>
 
 	<br><button id="send1" type="button" value="<?php echo $_REQUEST["type"]; ?>">Salvesta sissekanne</button>
 

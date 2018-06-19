@@ -9,8 +9,6 @@ window.onload = function () {
 	document.getElementById("section8").style.display = "none";
 	document.getElementById("send1").style.display = "none";
 	document.getElementById("send2").style.display = "none";
-	document.getElementById("end1").style.display = "none";
-	document.getElementById("end2").style.display = "none";
 	
 	if(document.getElementById("send1").value=="1"){
 		document.getElementById("header").innerHTML = "Arvuti sõltuvuse enesejälgimise päevik";
@@ -63,9 +61,6 @@ function button1() {
 		document.getElementById("section2").style.display = "block";
 		Answer1 = "4";
 	}
-	
-	
-	//console.log(Answer1);
 }
 
 function button2() {
@@ -89,8 +84,6 @@ function button2() {
 		document.getElementById("section3").style.display = "block";
 		Answer2 = "4";
 	}
-	
-	//console.log(Answer2);
 }
 
 function button3() {
@@ -114,8 +107,6 @@ function button3() {
 		document.getElementById("section4").style.display = "block";
 		Answer3 = "4";
 	}
-	
-	//console.log(Answer3);
 }
 
 function button4() {
@@ -124,8 +115,6 @@ function button4() {
 		document.getElementById("section7").style.display = "none";
 		document.getElementById("section8").style.display = "none";
 		document.getElementById("button5").style.display = "inline-block";	
-		document.getElementById("end1").style.display = "none";
-		document.getElementById("end2").style.display = "none";
 		document.getElementById("send1").style.display = "none";
 		document.getElementById("send2").style.display = "none";
 		Answer4 = "0";
@@ -136,15 +125,11 @@ function button4() {
 		document.getElementById("section62").style.display = "none";
 		document.getElementById("section7").style.display = "block";
 		document.getElementById("section8").style.display = "none";
-		document.getElementById("end1").style.display = "none";
-		document.getElementById("end2").style.display = "none";
 		document.getElementById("send1").style.display = "none";
 		document.getElementById("send2").style.display = "none";
 		document.getElementById("button7").addEventListener("click", button7);
 		Answer4 = "1";
     }
-	
-	//console.log(Answer4);
 }
 
 function button5() {
@@ -152,8 +137,6 @@ function button5() {
 		if(document.getElementById("send1").value==1){	
 			document.getElementById("button61").addEventListener("click", button61);
 			document.getElementById("section61").style.display = "block";
-			
-			console.log("Arvuti");
 		}
 		if(document.getElementById("send1").value==2){	
 			document.getElementById("button62").addEventListener("click", button62);
@@ -164,8 +147,6 @@ function button5() {
 		document.getElementById("button5").style.display = "inline-block";	
 		Answer5 = document.getElementById("hours").value*60 + parseInt(document.getElementById("minutes").value);
 	}
-	
-	//console.log(Answer5);
 }
 
 function goneFunction() {
@@ -204,8 +185,6 @@ function button61() {
 			}
 		}
 	}
-	
-	//console.log(Answer61);
 }
 
 function button62() {
@@ -215,8 +194,6 @@ function button62() {
 		document.getElementById("button7").style.display = "inline-block";
 		Answer62 = document.getElementById("money").value;
 	}
-	
-	//console.log(Answer62);
 }
 
 function button7() {
@@ -224,79 +201,36 @@ function button7() {
 		document.getElementById("section8").style.display = "inline-block";
 		Answer7 = document.getElementById("answer7").value;
 	}
-	
-	//console.log(Answer7);
 }
 
 function button8() {
 	if(Answer4=="0"){
-		console.log("esimene");
-		document.getElementById("end2").style.display = "block";
 		document.getElementById("send2").style.display = "inline-block";
 		document.getElementById("send2").addEventListener("click", send2);
 	}else if(Answer4=="1"){
-		console.log("teine");
-		document.getElementById("end1").style.display = "block";
 		document.getElementById("send1").style.display = "inline-block";
 		document.getElementById("send1").addEventListener("click", send1);
 	}
 	if(document.getElementById("answer81").checked == true){
-		if(Answer4=="0"){
-			document.getElementById("end2").style.display = "block";
-			document.getElementById("end1").style.display = "none";
-		}else if(Answer4=="1"){
-			document.getElementById("end1").style.display = "block";
-			document.getElementById("end2").style.display = "none";
-		}
 		document.getElementById("section2").style.display = "block";
 		Answer8 = "0";
 	}
 	if(document.getElementById("answer82").checked == true){
-		if(Answer4=="0"){
-			document.getElementById("end2").style.display = "block";
-			document.getElementById("end1").style.display = "none";
-		}else if(Answer4=="1"){
-			document.getElementById("end1").style.display = "block";
-			document.getElementById("end2").style.display = "none";
-		}
 		document.getElementById("section2").style.display = "block";
 		Answer8 = "1";
 	}
 	if(document.getElementById("answer83").checked == true){
-		if(Answer4=="0"){
-			document.getElementById("end2").style.display = "block";
-			document.getElementById("end1").style.display = "none";
-		}else if(Answer4=="1"){
-			document.getElementById("end1").style.display = "block";
-			document.getElementById("end2").style.display = "none";
-		}
 		document.getElementById("section2").style.display = "block";
 		Answer8 = "3";
 	}
 	if(document.getElementById("answer84").checked == true){
-		if(Answer4=="0"){
-			document.getElementById("end2").style.display = "block";
-			document.getElementById("end1").style.display = "none";
-		}else if(Answer4=="1"){
-			document.getElementById("end1").style.display = "block";
-			document.getElementById("end2").style.display = "none";
-		}
 		document.getElementById("section2").style.display = "block";
 		Answer8 = "4";
 	}
 	if(document.getElementById("answer85").checked == true){
-		if(Answer4=="0"){
-			document.getElementById("end2").style.display = "block";
-			document.getElementById("end1").style.display = "none";
-		}else if(Answer4=="1"){
-			document.getElementById("end1").style.display = "block";
-			document.getElementById("end2").style.display = "none";
-		}
 		document.getElementById("section2").style.display = "block";
 		Answer8 = "4";
 	}
-	
-	//console.log(Answer8);
 }
 
 function send1(){
