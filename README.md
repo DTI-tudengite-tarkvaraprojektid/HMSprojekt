@@ -5,7 +5,7 @@ Avalik avaleht
 ![leht](images/openingPage.png)
 Kasutaja avaleht
 ![leht](images/startingPage.png)
-Päeviku avaleht
+Päeviku lehe kasutusnäide
 ![leht](images/diaryPage.png)
 Päeviku täitmise küsimustik
 ![leht](images/diaryEntryPage.png)
