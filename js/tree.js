@@ -12,6 +12,14 @@ window.onload = function () {
 	document.getElementById("end1").style.display = "none";
 	document.getElementById("end2").style.display = "none";
 	
+	if(document.getElementById("send1").value=="1"){
+		document.getElementById("header").innerHTML = "Arvuti sõltuvuse enesejälgimise päevik";
+	}else if(document.getElementById("send1").value=="2"){
+		document.getElementById("header").innerHTML = "Hasartmängu sõltuvuse enesejälgimise päevik";
+	}
+	
+	document.getElementById("goBack").addEventListener("click", goBack);
+	
 	var otherCheckbox = document.querySelector('input[value="Midagi muud"]');
 	var otherText = document.querySelector('input[id="otherValue"]');
 	otherText.style.display = 'none';
@@ -29,6 +37,10 @@ window.onload = function () {
 var Answer1=null, Answer2=null, Answer3=null, Answer4=null, Answer5=null;
 var Answer61=null, Answer62=null, Answer7=null, Answer8=null, type=null;
 let allCheckboxes;
+
+function goBack() {
+	window.location.href='main.php#diary-view';
+}
 
 function button1() {
 	if(document.getElementById("answer11").checked == true){
@@ -299,7 +311,7 @@ function send1(){
 		}
 	}
 	xhr.send();
-	window.location.href='main.php';
+	window.location.href='main.php#diary-view';
 }
 
 function send2(){
@@ -320,7 +332,7 @@ function send2(){
 		}
 	}
 	xhr.send();
-	window.location.href='main.php';
+	window.location.href='main.php#diary-view';
 }
 
 function newreasons() {
