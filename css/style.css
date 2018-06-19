@@ -416,6 +416,15 @@ table caption{
     margin-left: 45%;
 }
 
-
+.chart{
+    width:100%;
+    height:auto;
+    display:flex;
+}
+.chartContainer1,.chartContainer3{
+    width:50%;
+    height:100px;
+    margin:10px;
+}
 
 

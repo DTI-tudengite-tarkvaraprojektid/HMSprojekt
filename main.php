@@ -68,20 +68,21 @@
     <!-- Home page -->
     <section id="home-view">
         <h2>Enesejälgimise päevik</h2>
-        <p>Siin näed kokkuvõtet oma sissekannete kohta</p>
+        <h3>Siin näed kokkuvõtet oma sissekannete kohta</h3><h3 id="noEntrys"></h3>
         <ul>
           <li>
             <button id="daySeven">7 päeva</button>
             <button id="dayMonth">30 päeva</button>
           </li>
         </ul>
-        
-        <div class="chartContainer1" style="position: realtive; width:90%; height:20% ">
+      <div class="chart">
+        <div class="chartContainer1" >
           <canvas id="myChart1"></canvas>
         </div>
-        <div class="chartContainer3" style="position: relative; width:50%; height:40% ">
+        <div class="chartContainer3" >
           <canvas id="myPieChart"></canvas>
         </div>
+      </div>
     </section>
   
      <!-- Diary page -->
@@ -89,7 +90,7 @@
       <h2>Enesejälgimise päevik</h2>
       <div class="diary-grid">
         <div class="comp-grid">
-          <p>Siin on sinu <b style="color: blue;">arvutisõltuvuse</b> jälgimise päeviku sissekanded</p>
+          <h3>Siin on sinu <b style="color: blue;">arvutisõltuvuse</b><br> jälgimise päeviku sissekanded</h3>
           <button><a href="diary.php?type=1" >Uus sissekanne</a></button>
           <h1>Vaata kõiki sisestusi:</h1>
           <div id="datesToSelect1"><?php readInfo($_SESSION["userid"], 1)?></div>
@@ -98,7 +99,7 @@
         </div>
 
         <div class="gamb-grid">
-          <p>Siin on sinu <b style="color: blue;">hasartmängu sõltuvuse</b> jälgimise päeviku sissekanded</p>
+          <h3>Siin on sinu <b style="color: blue;">hasartmängu sõltuvuse</b><br> jälgimise päeviku sissekanded</h3>
           <button><a href="diary.php?type=2" >Uus sissekanne</a></button>
           <h1>Vaata kõiki sisestusi:</h1>
           <div id="datesToSelect2"><?php readInfo($_SESSION["userid"], 2)?></div>
@@ -113,12 +114,7 @@
         <div class="options-grid"><button id="printBtn" class="printBtn" onclick="printDiv('printPDF');" > Koosta PDF </button></div>
 
       </div>
-    </section>
-
-   
-        <!--<form method="POST"><button id="sendEmail" class="cancelbtn" name="sendEmail">Saada email</button></form>-->
-        
-        
+    </section>  
     </section>
   </main>
 

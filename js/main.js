@@ -241,7 +241,7 @@ let myPieChart = new Chart(ctx, {
       ],
       label: 'Kas ma sooritasin oma meelistegevust?'
     }],
-    labels: ["jah", "ei"],
+    labels: ["ei", "jah"],
   },
   options: {
     responsive: true,
@@ -363,6 +363,13 @@ function addData4(){
   myPieChart.update();
 }
 
+function noEntry(){
+
+  if(document.getElementById("datesToSelect1").childNodes.length < 2 || document.getElementById("datesToSelect2").childNodes.length < 2){
+    document.getElementById("noEntrys").innerHTML = '(Sul ei ole veel piisavalt sissekandeid, et siia midagi kuvada)';
+    }
+}
+
 window.onload = function () {
   const app = new MainApp()
   window.app = app
@@ -370,4 +377,6 @@ window.onload = function () {
   arrayHere2()
   arrayHere3()
   arrayHere4()
+  
+  noEntry()
 }

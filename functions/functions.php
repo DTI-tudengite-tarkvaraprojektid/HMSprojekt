@@ -90,25 +90,6 @@ function deleteAccount($userid){
 	$mysqli->close();
 	return $notice;
 }
-/*
-function Email($email, $text){
-	// Multiple recipients
-$to = $email; // note the comma
-
-// Subject
-$subject = 'Testmail';
-
-// Message
-$message = $text;
-
-// To send HTML mail, the Content-type header must be set
-$headers[] = 'MIME-Version: 1.0';
-$headers[] = 'Content-type: text/html; charset=iso-8859-1';
-
-// Mail it
-mail($to, $subject, $message, implode("\r\n", $headers));
-
-}*/
 
 //read all info funktsioon
 function readInfo($userid, $type){
