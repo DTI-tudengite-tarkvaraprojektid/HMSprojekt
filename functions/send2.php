@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	require("../../../../../config.php");
+	require("../../../config.php");
 	$mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	if($_REQUEST["type"]==1){
 		$stmt = $mysqli->prepare("INSERT INTO diary (id, type, answer1, answer2, answer3, answer4, answer5, answer61, answer7, answer8) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");

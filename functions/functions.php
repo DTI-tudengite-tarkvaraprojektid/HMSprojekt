@@ -1,6 +1,5 @@
 <?php
-require("../../../../config.php");
-$database = "if17_HMS";
+require("../../../config.php");
 //alustame sessiooni
 session_start();
 
@@ -14,7 +13,6 @@ function test_input ($data){ //funktsiooni tegemine, esitatud andmete kontroll
 	
 	function signUp($signupUserName, $signupEmail, $signupType, $signupPassword){
 	//loome andmebaasiühenduse
-		$database = "if17_HMS";
 		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
 		//valmistame ette käsu andmebaasiserverile
 		$stmt = $mysqli->prepare("INSERT INTO userinfo (username, email, password) VALUES (?, ?, ?)");

@@ -1,5 +1,5 @@
 <?php
-require("../../../../config.php");
+require("../../config.php");
 require("functions/functions.php");
 $reasons = array("Ei kannatanud", "Töökohustused", "Suhted lähedastega", "Suhted sõpradega", 
 	"Koolitöö", "Välimuse eest hoolitsemine", "Lemmiklooma eest hoolitsemine");
