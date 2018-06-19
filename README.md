@@ -1,7 +1,6 @@
 # Enesejälgimispäevik
 Hasartmängusõltlastele eneseseire tööriist
 
-PILT
 ![leht](images/openingPage.png)
 ![leht](images/userPage.png)
 ![leht](images/diaryPage.png)
@@ -51,4 +50,5 @@ CREATE TABLE userinfo(
   status INT DEFAULT NULL );
 ```
 MIT litsents:
+
 
