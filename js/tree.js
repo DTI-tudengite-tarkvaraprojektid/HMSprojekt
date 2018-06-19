@@ -200,7 +200,7 @@ function button62() {
 	if(document.getElementById("money").value!=0){
 		document.getElementById("button7").addEventListener("click", button7);
 		document.getElementById("section7").style.display = "block";
-		document.getElementById("button7").style.display = "block";
+		document.getElementById("button7").style.display = "inline-block";
 		Answer62 = document.getElementById("money").value;
 	}
 	
