@@ -94,10 +94,10 @@
 		if (!empty($loginUserName) and !empty ($_POST["loginEmail"])){
 			$hash = hash("sha512", $_POST["loginEmail"]);
 			$notice=recoverAccount($loginUserName, $hash);
-			//$notice = "Oled edukalt konto taastanud. Saad nüüd uuesti sisse logida!";
+			
 		}
 	}	
-//	$notice = $_REQUEST["note"];
+
 ?>
 
 <!DOCTYPE html>
@@ -166,13 +166,8 @@
 			
 			<label for="repeatPassword"><b>Korda salasõna</b></label>
       <input type="password" class="longInput" placeholder="Korda salasõna" name="repeatPassword" id="repeatPassword" onkeyup='check();' minlength="8" value="<?php echo $repeatPassword; ?>"required>
-			<!--<span><?php echo $signupPasswordError; ?></span>-->
+			
 			<span id='message'></span>
-      
-			<!--<label for="signupType"><b>Vali oma mure</b></label>
-      <input type="radio" name="signupType" value="1" <?php if ($signupType == '1') {echo 'checked';} ?> required><label>Hasartmängusõltuvus</label>
-      <input type="radio" name="signupType" value="2" <?php if ($signupType == '2') {echo 'checked';} ?>><label>Arvutisõltuvus</label>
-      <span><?php echo $signupTypeError; ?></span>-->
       
 			<br><hr>
         <input type="checkbox" name="statistika" class="statistics" required>Olen teadlik, et minu poolt sisestatud andmeid kasutatakse üldistatud kujul statistika tegemiseks.
