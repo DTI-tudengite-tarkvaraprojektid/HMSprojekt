@@ -1,3 +1,16 @@
+Testimise kirjeldus:
+
+Päeviku sissekannete testimist oli vaja viia läbi iga päev ja seda pole meil dokumenteeritud. Iga uue funktsionaalsuse 
+lisamisel/kaotamisel oli vaja testida kogu süsteemi toimimist. Kui tekkisid/kadusid/asendusid mingid uued valikud või 
+nupud, siis oli vaja jälgida, et andmebaasi jõuaksid ikka samad andmed mis kasutaja sisestas. Lisaks oli vaja jälgida, 
+et teatud valikuid tehes või neljandale küsimusele (võtmeküsimus järgneva sisu kuvamises) vastates kaoksid ära vanad 
+valikud ja asenduksid vajadusel uuele valikule vastava sisuga (näiteks neljandale küsimusele 'jah' asemel 'ei' vajutades
+ja ka vastupidi kuvatakse kasutajale viimasena valitud valikule vastavalt järgmine küsimus ja eelnevad kaovad ära).
+Jägnevad testid peale tegevuse lõppemist on kõik positiivsed (eeldatav tulemus ühtib tegeliku tulemusega), sest kõik 
+vastupidised olukorrad, mida märkasime on meil praeguseks parandatud).
+
+
+
 Arvutisõltlase päeviku täitmise testid:
 
 1. Esimesele küsimusele vastamine:
@@ -36,17 +49,22 @@ Eeldatav tulemus: Kui valin 'jah', siis kuvatakse viies küsimus, kui valin 'ei',
 Tegelik tulemus: Kui valin 'jah', siis kuvatakse viies küsimus, kui valin 'ei', siis kuvatakse seitsmes küsimus
 
 8. Viiendale küsimusele vastamine (eeldusel, et kasutaja on neljandale küsimusele vastanud 'jah'):
-Tegevus: Valin mitu tundi ja mitu minutit ma oma meelistegevuse peale kulutasin ja fikseerin tulemuse:
-Eeldatav tulemus: Kuvatakse kuues küsimus ja esimene kuni viies küsimus jääb avatuks, kui midagi ei valita, siis jääb 'fikseeri aeg' nuppu vajutades lehe sisu samaks
-Tegelik tulemus: Kuvatakse kuues küsimus ja esimene kuni viies küsimus jääb avatuks, kui midagi ei valita, siis jääb 'fikseeri aeg' nuppu vajutades lehe sisu samaks
+Tegevus: Valin mitu tundi ja mitu minutit ma oma meelistegevuse peale kulutasin ja vajutan nuppu 'järgmine küsimus':
+Eeldatav tulemus: Kuvatakse kuues küsimus ja esimene kuni viies küsimus jääb avatuks, kui midagi ei valita, siis 
+jääb 'järgmine küsimus' nuppu vajutades lehe sisu samaks
+Tegelik tulemus: Kuvatakse kuues küsimus ja esimene kuni viies küsimus jääb avatuks, kui midagi ei valita, siis 
+jääb 'järgmine küsimus' nuppu vajutades lehe sisu samaks
 
 9. Kuuendale küsimusele vastamine (eeldusel, et kasutaja on neljandale küsimusele vastanud 'jah'):
-Tegevus: Valin tegevuse mis meelistegevuse sooritamise tõttu kannatas, kui sobivat valikut pole, siis vajutan midagi muud ja sisestan ise tegevuse:
-Eeldatav tulemus: Kuvatakse seitsmes küsimus ja esimene kuni kuues küsimus jääb avatuks, kui midagi ei valita, siis jääb lehe sisu fikseerides samaks
-Tegelik tulemus: Kuvatakse seitsmes küsimus ja esimene kuni kuues küsimus jääb avatuks, kui midagi ei valita, siis jääb lehe sisu fikseerides samaks
+Tegevus: Valin tegevuse mis meelistegevuse sooritamise tõttu kannatas, kui sobivat valikut pole, siis vajutan 
+'midagi muud' ja sisestan ise tegevuse ja vajutan seejärel nuppu 'järgmine küsimus':
+Eeldatav tulemus: Kuvatakse seitsmes küsimus ja esimene kuni kuues küsimus jääb avatuks, kui midagi ei valita, 
+siis nupu 'järgmine küsimus' vajutamisel jääb lehe sisu samaks
+Tegelik tulemus: Kuvatakse seitsmes küsimus ja esimene kuni kuues küsimus jääb avatuks, kui midagi ei valita, 
+siis nupu 'järgmine küsimus' vajutamisel jääb lehe sisu samaks
 
 10. Seitsmendale küsimusele vastamine:
-Tegevus: Kirjeldan oma mõtteid ja tundeid ja fikseerin tulemuse:
+Tegevus: Kirjeldan oma mõtteid ja tundeid ning vajutan nuppu 'järgmine küsimus':
 Eeldatav tulemus: Kuvatakse kaheksas küsimus ja kõik eelnevad küsimused jäävad avatuks
 Tegelik tulemus: Kuvatakse kaheksas küsimus ja kõik eelnevad küsimused jäävad avatuks
 
@@ -56,49 +74,65 @@ Eeldatav tulemus: Kuvatakse valik 'Saada andmed' ja kõik eelnevad küsimused jääv
 Tegelik tulemus: Kuvatakse kaheksas küsimus ja kõik eelnevad küsimused jäävad avatuks
 
 12. Andmete saatmine:
-Tegevus: Vajutan nuppu 'saada andmed'
-Eeldatav tulemus: Päeviku täitja viiakse tagasi päeviku lehele
-Tegelik tulemus: Päeviku täitja viiakse tagasi päeviku lehele
+Tegevus: Vajutan nuppu 'salvesta sissekanne'
+Eeldatav tulemus: Andmed salvestatakse andmebaasi ja päeviku täitja viiakse tagasi päeviku lehele
+Tegelik tulemus: Andmed salvestatakse andmebaasi ja päeviku täitja viiakse tagasi päeviku lehele
 
 13. Viiendat küsimust vastates otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'jah' pealt 'ei' peale
-Eeldatav tulemus: Viies küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Viies küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Viies küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni neljas 
+küsimus jäävad ekraanile
+Tegelik tulemus: Viies küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni neljas 
+küsimus jäävad ekraanile
 
 15. Kuuendat küsimust vastates otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'jah' pealt 'ei' peale
-Eeldatav tulemus: Viies ja kuues küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Viies ja kuues küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Viies ja kuues küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni 
+neljas küsimus jäävad ekraanile
+Tegelik tulemus: Viies ja kuues küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni 
+neljas küsimus jäävad ekraanile
 
 16. Seitsmendat küsimust vastates otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'jah' pealt 'ei' peale
-Eeldatav tulemus: Viies ja kuues küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Viies ja kuues küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Viies ja kuues küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas 
+küsimus jäävad ekraanile
+Tegelik tulemus: Viies ja kuues küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas 
+küsimus jäävad ekraanile
 
 17. Kaheksandat küsimust vastates otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'jah' pealt 'ei' peale
-Eeldatav tulemus: Viies, kuues ja kaheksas küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Viies, kuues ja kaheksas küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Viies, kuues ja kaheksas küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni 
+neljas küsimus jäävad ekraanile
+Tegelik tulemus: Viies, kuues ja kaheksas küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni 
+neljas küsimus jäävad ekraanile
 
 18. Kaheksanda küsimuse ära fikseerimisel otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'jah' pealt 'ei' peale
-Eeldatav tulemus: Viies, kuues ja kaheksas küsimus ning nupp 'Saada andmed' kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Viies, kuues ja kaheksas küsimus ning nupp 'Saada andmed' kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Viies, kuues ja kaheksas küsimus ning nupp 'Salvesta sissekanne' kaob ekraanilt ja alles jääb seitsmes 
+küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Tegelik tulemus: Viies, kuues ja kaheksas küsimus ning nupp 'Salvesta sissekanne' kaob ekraanilt ja alles jääb seitsmes 
+küsimus ning esimene kuni neljas küsimus jäävad ekraanile
 
 19. Seitsmendat küsimust vastates otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'ei' pealt 'jah' peale
-Eeldatav tulemus: Seitsmes küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Seitsmes küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Seitsmes küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene kuni neljas 
+küsimus jäävad ekraanile
+Tegelik tulemus: Seitsmes küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene kuni neljas 
+küsimus jäävad ekraanile
 
 20. Kaheksandat küsimust vastates otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'ei' pealt 'jah' peale
-Eeldatav tulemus: Seitsmes ja kaheksas küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Seitsmes ja kaheksas küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Seitsmes ja kaheksas küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene 
+kuni neljas küsimus jäävad ekraanile
+Tegelik tulemus: Seitsmes ja kaheksas küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene 
+kuni neljas küsimus jäävad ekraanile
 
 21. Kaheksanda küsimuse ära fikseerimisel otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'ei' pealt 'jah' peale
-Eeldatav tulemus: Seitsmes ja kaheksas küsimus ning nupp 'Saada andmed' kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Viies, kuues ja kaheksas küsimus ning nupp 'Saada andmed' kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Seitsmes ja kaheksas küsimus ning nupp 'Salvesta sissekanne' kaob ekraanilt ja alles jääb seitsmes 
+küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Tegelik tulemus: Viies, kuues ja kaheksas küsimus ning nupp 'Salvesta sissekanne' kaob ekraanilt ja alles jääb seitsmes 
+küsimus ning esimene kuni neljas küsimus jäävad ekraanile
 
 
 Hasartmängusõltlase päeviku täitmise testid:
@@ -139,69 +173,91 @@ Eeldatav tulemus: Kui valin 'jah', siis kuvatakse viies küsimus, kui valin 'ei',
 Tegelik tulemus: Kui valin 'jah', siis kuvatakse viies küsimus, kui valin 'ei', siis kuvatakse seitsmes küsimus
 
 8. Viiendale küsimusele vastamine (eeldusel, et kasutaja on neljandale küsimusele vastanud 'jah'):
-Tegevus: Valin mitu tundi ja mitu minutit ma oma meelistegevuse peale kulutasin ja fikseerin tulemuse:
-Eeldatav tulemus: Kuvatakse kuues küsimus ja esimene kuni viies küsimus jääb avatuks, kui midagi ei valita, siis jääb 'fikseeri aeg' nuppu vajutades lehe sisu samaks
-Tegelik tulemus: Kuvatakse kuues küsimus ja esimene kuni viies küsimus jääb avatuks, kui midagi ei valita, siis jääb 'fikseeri aeg' nuppu vajutades lehe sisu samaks
+Tegevus: Valin mitu tundi ja mitu minutit ma oma meelistegevuse peale kulutasin ja vajutan nuppu 'järgmine küsimus':
+Eeldatav tulemus: Kuvatakse kuues küsimus ja esimene kuni viies küsimus jääb avatuks, kui midagi ei valita, siis 
+jääb 'järgmine küsimus' nuppu vajutades lehe sisu samaks
+Tegelik tulemus: Kuvatakse kuues küsimus ja esimene kuni viies küsimus jääb avatuks, kui midagi ei valita, siis 
+jääb 'järgmine küsimus' nuppu vajutades lehe sisu samaks
 
 9. Kuuendale küsimusele vastamine (eeldusel, et kasutaja on neljandale küsimusele vastanud 'jah'):
-Tegevus: Valin summa palju ma täna maha mängisin ja fikseerin tulemuse:
-Eeldatav tulemus: Kuvatakse seitsmes küsimus ja esimene kuni kuues küsimus jääb avatuks, kui midagi ei valita, siis jääb lehe sisu fikseerides samaks
-Tegelik tulemus: Kuvatakse seitsmes küsimus ja esimene kuni kuues küsimus jääb avatuks, kui midagi ei valita, siis jääb lehe sisu fikseerides samaks
+Tegevus: Valin summa palju ma täna maha mängisin ja vajutan nuppu 'järgmine küsimus':
+Eeldatav tulemus: Kuvatakse seitsmes küsimus ja esimene kuni kuues küsimus jääb avatuks, kui midagi ei valita, siis 
+jääb nupule 'järgmine küsimus' vajutades lehe sisu samaks
+Tegelik tulemus: Kuvatakse seitsmes küsimus ja esimene kuni kuues küsimus jääb avatuks, kui midagi ei valita, siis 
+jääb nupule 'järgmine küsimus' vajutades lehe sisu samaks
 
 10. Seitsmendale küsimusele vastamine:
-Tegevus: Kirjeldan oma mõtteid ja tundeid ja fikseerin tulemuse:
-Eeldatav tulemus: Kuvatakse kaheksas küsimus ja kõik eelnevad küsimused jäävad avatuks
-Tegelik tulemus: Kuvatakse kaheksas küsimus ja kõik eelnevad küsimused jäävad avatuks
+Tegevus: Kirjeldan oma mõtteid ja tundeid ja vajutan nuppu 'järgmine küsimus':
+Eeldatav tulemus: Kuvatakse kaheksas küsimus ja kõik eelnevad küsimused jäävad avatuks, kui midagi ei sisestata, siis 
+jääb nupule 'järgmine küsimus' vajutades lehe sisu samaks
+Tegelik tulemus: Kuvatakse kaheksas küsimus ja kõik eelnevad küsimused jäävad avatuks, kui midagi ei sisestata, siis 
+jääb nupule 'järgmine küsimus' vajutades lehe sisu samaks
 
 11. Kaheksandale küsimusele vastamine:
 Tegevus: Valin emotsiooni (vajutades sobivale näo pildile), mis kirjeldab minu olekut kõige ilmekamalt:
-Eeldatav tulemus: Kuvatakse valik 'Saada andmed' ja kõik eelnevad küsimused jäävad avatuks
-Tegelik tulemus: Kuvatakse kaheksas küsimus ja kõik eelnevad küsimused jäävad avatuks
+Eeldatav tulemus: Kuvatakse valik 'Salvesta sissekanne' ja kõik eelnevad küsimused jäävad avatuks
+Tegelik tulemus: Kuvatakse valik 'Salvesta sissekanne' ja kõik eelnevad küsimused jäävad avatuks
 
 12. Andmete saatmine:
 Tegevus: Vajutan nuppu 'saada andmed'
-Eeldatav tulemus: Päeviku täitja viiakse tagasi päeviku lehele
-Tegelik tulemus: Päeviku täitja viiakse tagasi päeviku lehele
+Eeldatav tulemus: Vastused salvestatakse andmebaasi ja päeviku täitja viiakse tagasi päeviku lehele
+Tegelik tulemus: Vastused salvestatakse andmebaasi ja päeviku täitja viiakse tagasi päeviku lehele
 
 13. Viiendat küsimust vastates otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'jah' pealt 'ei' peale
-Eeldatav tulemus: Viies küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Viies küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Viies küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni neljas küsimus 
+jäävad ekraanile
+Tegelik tulemus: Viies küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni neljas küsimus 
+jäävad ekraanile
 
 15. Kuuendat küsimust vastates otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'jah' pealt 'ei' peale
-Eeldatav tulemus: Viies ja kuues küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Viies ja kuues küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Viies ja kuues küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni neljas 
+küsimus jäävad ekraanile
+Tegelik tulemus: Viies ja kuues küsimus kaob ekraanilt ja selle asemele tekib seitsmes küsimus ning esimene kuni neljas 
+küsimus jäävad ekraanile
 
 16. Seitsmendat küsimust vastates otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'jah' pealt 'ei' peale
-Eeldatav tulemus: Viies ja kuues küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Viies ja kuues küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Viies ja kuues küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus 
+jäävad ekraanile
+Tegelik tulemus: Viies ja kuues küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus 
+jäävad ekraanile
 
 17. Kaheksandat küsimust vastates otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'jah' pealt 'ei' peale
-Eeldatav tulemus: Viies, kuues ja kaheksas küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Viies, kuues ja kaheksas küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Viies, kuues ja kaheksas küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas 
+küsimus jäävad ekraanile
+Tegelik tulemus: Viies, kuues ja kaheksas küsimus kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas 
+küsimus jäävad ekraanile
 
 18. Kaheksanda küsimuse ära fikseerimisel otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'jah' pealt 'ei' peale
-Eeldatav tulemus: Viies, kuues ja kaheksas küsimus ning nupp 'Saada andmed' kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Viies, kuues ja kaheksas küsimus ning nupp 'Saada andmed' kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Viies, kuues ja kaheksas küsimus ning nupp 'Salvesta sissekanne' kaob ekraanilt ja alles jääb seitsmes 
+küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Tegelik tulemus: Viies, kuues ja kaheksas küsimus ning nupp 'Salvesta sissekanne' kaob ekraanilt ja alles jääb seitsmes 
+küsimus ning esimene kuni neljas küsimus jäävad ekraanile
 
 19. Seitsmendat küsimust vastates otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'ei' pealt 'jah' peale
-Eeldatav tulemus: Seitsmes küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Seitsmes küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Seitsmes küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene kuni neljas küsimus 
+jäävad ekraanile
+Tegelik tulemus: Seitsmes küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene kuni neljas küsimus 
+jäävad ekraanile
 
 20. Kaheksandat küsimust vastates otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'ei' pealt 'jah' peale
-Eeldatav tulemus: Seitsmes ja kaheksas küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Seitsmes ja kaheksas küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Seitsmes ja kaheksas küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene kuni neljas
+ küsimus jäävad ekraanile
+Tegelik tulemus: Seitsmes ja kaheksas küsimus kaob ekraanilt ja selle asemele tekib viies küsimus ning esimene kuni neljas 
+küsimus jäävad ekraanile
 
 21. Kaheksanda küsimuse ära fikseerimisel otsustan neljanda küsimuse vastust muuta
 Tegevus: Muudan neljanda vastuse 'ei' pealt 'jah' peale
-Eeldatav tulemus: Seitsmes ja kaheksas küsimus ning nupp 'Saada andmed' kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
-Tegelik tulemus: Viies, kuues ja kaheksas küsimus ning nupp 'Saada andmed' kaob ekraanilt ja alles jääb seitsmes küsimus ning esimene kuni neljas küsimus jäävad ekraanile
+Eeldatav tulemus: Seitsmes ja kaheksas küsimus ning nupp 'Salvesta sissekanne' kaob ekraanilt ja alles jääb seitsmes küsimus ning 
+esimene kuni neljas küsimus jäävad ekraanile
+Tegelik tulemus: Viies, kuues ja kaheksas küsimus ning nupp 'Salvesta sissekanne' kaob ekraanilt ja alles jääb seitsmes küsimus ning 
+esimene kuni neljas küsimus jäävad ekraanile
 
 
 
