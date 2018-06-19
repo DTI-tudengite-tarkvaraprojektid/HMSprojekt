@@ -6,16 +6,9 @@ Hasartmängusõltlastele eneseseire tööriist
 ![leht](images/diaryPage.png)
 ![leht](images/diaryEntry.png)
 
-Projekti eesmärk on võimaldada hasartmängu- ja arvutisõltlastele keskkond, kus nad saavad igapäevaselt oma edusammudest ja tagasilöökidest päevikut pidada ja vajadusel sissekandeid otse oma nõustajale saata, et nõustamisel oleks hea ülevaade vahepealse perioodi toimumistest.
+Projekti eesmärk on võimaldada hasartmängu- ja arvutisõltlastele keskkond, kus nad saavad igapäevaselt oma edusammudest ja tagasilöökidest päevikut pidada ja vajadusel sissekandeid oma nõustajale saata, et nõustamisel oleks hea ülevaade vahepealse perioodi toimumistest.
 
 Projekt on tehtud TLU DTI informaatika eriala esimese kursuse tarkvaraarenduse aine raames.
-
-Kasutatud tehnoloogiad:
-HTML 5.1
-CSS3
-JavaScript
-MySQL 5.5.54
-PHP 5.6.29
 
 Projektis osalesid:
 
@@ -25,7 +18,17 @@ Tanel Kuklane
 
 Mihkel Jäe
 
-Keskkond kasutab kahete SQL andmebaasi tabelit:
+
+Kasutatud tehnoloogiad:
+HTML 5.1
+CSS3
+JavaScript
+MySQL 5.5.54
+PHP 5.6.29
+Chart.js 2.7.2
+
+
+Keskkond kasutab kahete SQL andmebaasi tabelit, mida saab tekitada allolevate käskudega:
 
 ```
 CREATE TABLE diary( 
