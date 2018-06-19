@@ -49,6 +49,6 @@ CREATE TABLE userinfo(
   password VARCHAR(128), 
   status INT DEFAULT NULL );
 ```
-MIT litsents:
 
+[MIT litsents](documents/license.txt)
 
