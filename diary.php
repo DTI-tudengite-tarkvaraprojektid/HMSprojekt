@@ -95,8 +95,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 			
 	</div>
 	
-	<button id="send1" type="button" value="<?php echo $_REQUEST["type"]; ?>">Saada andmed</button>
-
+	
 	<div id="section5" class="section">
 		<h5 id="question5"> Kui palju aega (tunde ja minuteid) ma seda tegevust sooritades veetsin? </h5>
 	 
@@ -106,7 +105,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 		
 		<label> minutit. </label>
 		
-		<button class="fixButtons" id="button5" type="button" onclick="button5()">Fikseeri aeg</button>
+		<br><button class="fixButtons" id="button5" type="button" onclick="button5()">Fikseeri aeg</button>
 	</div>
 	
 	<div id="section61" class="section">
@@ -114,7 +113,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 			Kui jah, siis millised muud tegevused seetõttu kannatasid? </h5>
 
 		<?php
-
+		echo '<div class="checkboxQuestion">';
 			echo "<div>";
 			echo "<input id='".$reasons[0]."' type='checkbox' value='".$reasons[0]."' onclick='goneFunction()'>";
 			echo "<label for='".$reasons[0]."'>".$reasons[0]."</label>";
@@ -134,10 +133,11 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 					echo "</div>";
 				}
 			}
+		echo "</div>";
 
 		?>
 			
-		<button class="fixButtons" id="button61" type="button">Fikseeri vastus</button>
+			<br><button class="fixButtons" id="button61" type="button">Fikseeri vastus</button>
 	</div>
 	
 	<div id="section62" class="section">
@@ -147,7 +147,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 		<label> Ma mängisin täna maha </label><input id="money" type="number" min="0" value="">
 		<label> eurot. </label>
 		
-		<button class="fixButtons" id="button62" type="button">Fikseeri summa</button>
+		<br><button class="fixButtons" id="button62" type="button">Fikseeri summa</button>
 			
 	</div>
 
@@ -156,7 +156,7 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 
 		<textarea id="answer7" type="text" rows="4" cols="50" value=""></textarea>
 		
-		<button class="fixButtons" id="button7" type="button">Fikseeri vastus</button>
+		<br><button class="fixButtons" id="button7" type="button">Fikseeri vastus</button>
 	</div>
 	
 	<div id="section8" class="section">
@@ -176,8 +176,10 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	
 	<h5 id="end1"> Sa olid täna väga tubli, jätka samas vaimus!!! </h5>
 	<h5 id="end2"> Sa andsid küll täna oma nõrkusele järele, aga püüa vähemalt homme tublim olla!!! </h5>
-	
-	<button id="send2" type="button" value="<?php echo $_REQUEST['type'] ?>">Saada andmed</button>
+
+	<br><button id="send1" type="button" value="<?php echo $_REQUEST["type"]; ?>">Saada andmed</button>
+
+	<br><button id="send2" type="button" value="<?php echo $_REQUEST['type'] ?>">Saada andmed</button>
 
 	</div>
 

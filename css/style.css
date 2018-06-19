@@ -137,7 +137,9 @@ input[type="radio"] {
 .sections label{
     margin-left: 20px;
 }
-
+.sections button{
+    align: center;
+}
 
 * {
 box-sizing: border-box;
@@ -212,9 +214,11 @@ width: 10vw;
 
 }
 
+
 button:hover {
 opacity: 0.8;
 }
+
 
 .printBtn{
 visibility:hidden; 
@@ -390,6 +394,10 @@ table caption{
     font-size: 40px;
 }
 
+.checkboxQuestion{
+    text-align: left;
+    margin-left: 45%;
+}
 
 
 
