@@ -39,8 +39,8 @@ $mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
 	
 <body>
 
-<h3 id="header"></h3>
 <button id="goBack" type="button">Tagasi</button>
+<h3 id="header"></h3>
 
 <div id="sections" class="sections">
 

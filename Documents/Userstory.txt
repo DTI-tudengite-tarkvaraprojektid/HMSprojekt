@@ -1,5 +1,5 @@
 1. Kasutaja saab registreerida end keskkonda, et hakata seda kasutama.
-Oma sõltuvuse vastu abi otsiv klient registreerib end anonüümselt kesskonda kasutajaks sisestades mingi kasutajanime, emaili aadressi (ei pea olema toimiv, peaasi, et ta seda mäletaks hiljem) ja parooli.
+Oma sõltuvuse vastu abi otsiv klient registreerib end anonüümselt keskkonda kasutajaks sisestades mingi kasutajanime, emaili aadressi (ei pea olema toimiv, peaasi, et ta seda mäletaks hiljem) ja parooli.
 
 2. Kasutaja saab keskkonda sisse logida , et saaks enesejälgimise päevikut täitma hakata.
 Klient saab keskkonda sisse logida sisestades selleks oma registreerimisel sisestatud kasutajanime ja parooli.
