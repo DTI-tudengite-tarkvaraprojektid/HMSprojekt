@@ -2,9 +2,9 @@
 # Hasartmängusõltlastele eneseseire tööriist
 
 Avalik avaleht
-![leht](images/openingPage.png)
-Kasutaja avaleht
 ![leht](images/startingPage.png)
+Kasutaja avaleht
+![leht](images/openingPage.png)
 Päeviku lehe kasutusnäide
 ![leht](images/diaryPage.png)
 Päeviku täitmise küsimustik
