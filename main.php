@@ -75,11 +75,11 @@
             <button id="dayMonth">30 päeva</button>
           </li>
         </ul>
-        <div class="chartContainer1" style="position: absolute; width:60%; height:50%">
+        
+        <div class="chartContainer1" style="position: realtive; width:90%; height:20% ">
           <canvas id="myChart1"></canvas>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <div class="chartContainer3" style="position: absolute; width:50%; height:50%">
+        <div class="chartContainer3" style="position: relative; width:50%; height:40% ">
           <canvas id="myPieChart"></canvas>
         </div>
     </section>
