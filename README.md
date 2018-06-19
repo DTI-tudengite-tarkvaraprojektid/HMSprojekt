@@ -2,7 +2,9 @@
 Hasartmängusõltlastele eneseseire tööriist
 
 PILT
-![leht](images/reallyhappyface.png)
+![leht](images/openingPage.png)
+![leht](images/userPage.png)
+![leht](images/diaryPage.png)
 
 
 Projekti eesmärk on võimaldada hasartmängu- ja arvutisõltlastele keskkond, kus nad saavad igapäevaselt oma edusammudest ja tagasilöökidest päevikut pidada ja vajadusel sissekandeid otse oma nõustajale saata, et nõustamisel oleks hea ülevaade vahepealse perioodi toimumistest.
