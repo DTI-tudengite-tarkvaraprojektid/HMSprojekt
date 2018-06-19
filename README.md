@@ -1,51 +1,45 @@
 # Enesejälgimispäevik
 ## Hasartmängusõltlastele eneseseire tööriist
 
-Avalik avaleht
+### Avalik avaleht
 ![leht](images/startingPage.png)
-Kasutaja avaleht
+### Kasutaja avaleht
 ![leht](images/openingPage.png)
-Päeviku lehe kasutusnäide
+### Päeviku lehe kasutusnäide
 ![leht](images/diaryPage.png)
-Päeviku täitmise küsimustik
+### Päeviku täitmise küsimustik
 ![leht](images/diaryEntryPage.png)
 
 ## Projekti eesmärk 
 on võimaldada hasartmängu- ja arvutisõltlastele keskkond, kus nad saavad igapäevaselt oma edusammudest ja tagasilöökidest päevikut pidada ja vajadusel sissekandeid oma nõustajale saata, et nõustamisel oleks hea ülevaade vahepealse perioodi toimumistest.
 
-Projekt on tehtud 
-## TLU DTI 
-informaatika eriala esimese kursuse tarkvaraarenduse aine raames.
+ Projekt on tehtud **TLU DTI** informaatika eriala esimese kursuse tarkvaraarenduse aine raames.
 
 ## Projektis osalesid:
 
-Julika Maiste
-
-Tanel Kuklane
-
-Mihkel Jäe
+* Julika Maiste
+* Tanel Kuklane
+* Mihkel Jäe
 
 
 ## Kasutatud tehnoloogiad:
-HTML 5.1
-
-CSS3
-
-JavaScript
-
-MySQL 5.5.54
-
-PHP 5.6.29
-
-Chart.js 2.7.2
+* HTML 5.1
+* CSS3
+* JavaScript
+* MySQL 5.5.54
+* PHP 5.6.29
+* Chart.js 2.7.2
 
 ## Kasutusjuhend:
-Lae alla ZIP fail. Ava fail ja tõsta sisu veebikataloogi. Tekita config.php 1 kaust veebikataloogist välja. Tee MYSQL käskudega andmebaasi 2 tabelit. 
+* Lae alla ZIP fail. 
+* Ava fail ja tõsta sisu veebikataloogi. 
+* Tekita config.php *1 kaust veebikataloogist välja*. 
+* Tee MYSQL käskudega andmebaasi 2 tabelit. 
 
 
 ## Config fail
 
-```
+```php
 <?php
 	$serverHost = "xxxxxxxxx";
 	$serverUsername = "xxxx";
@@ -57,7 +51,7 @@ Lae alla ZIP fail. Ava fail ja tõsta sisu veebikataloogi. Tekita config.php 1 k
 
 ## MYSQL andmebaasi tabelite käsud:
 
-```
+```mysql
 CREATE TABLE diary( 
   id INT,
  type INT, 
