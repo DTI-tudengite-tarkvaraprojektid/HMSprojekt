@@ -1,9 +1,9 @@
 # Enesejälgimispäevik
 # Hasartmängusõltlastele eneseseire tööriist
 
-Kasutaja avaleht
-![leht](images/openingPage.png)
 Avalik avaleht
+![leht](images/openingPage.png)
+Kasutaja avaleht
 ![leht](images/startingPage.png)
 Päeviku avaleht
 ![leht](images/diaryPage.png)
