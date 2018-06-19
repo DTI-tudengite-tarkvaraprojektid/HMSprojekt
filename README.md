@@ -2,12 +2,19 @@
 Hasartmängusõltlastele eneseseire tööriist
 
 PILT
+![leht](images/reallyhappyface.png)
+
 
 Projekti eesmärk on võimaldada hasartmängu- ja arvutisõltlastele keskkond, kus nad saavad igapäevaselt oma edusammudest ja tagasilöökidest päevikut pidada ja vajadusel sissekandeid otse oma nõustajale saata, et nõustamisel oleks hea ülevaade vahepealse perioodi toimumistest.
 
 Projekt on tehtud TLU DTI informaatika eriala esimese kursuse tarkvaraarenduse aine raames.
 
 Kasutatud tehnoloogiad:
+HTML 5.1
+CSS3
+JavaScript
+MySQL 5.5.54
+PHP 5.6.29
 
 Projektis osalesid:
 
