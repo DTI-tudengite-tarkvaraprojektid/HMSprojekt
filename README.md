@@ -74,5 +74,5 @@ CREATE TABLE userinfo(
   status INT DEFAULT NULL );
 ```
 
-[MIT litsents](Documents/license.txt)
+[MIT litsents](LICENSE)
 
