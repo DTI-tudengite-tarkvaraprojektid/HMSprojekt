@@ -421,8 +421,13 @@ table caption{
     height:auto;
     display:flex;
 }
-.chartContainer1,.chartContainer3{
-    width:50%;
+.chartContainer1{
+    width:60%;
+    height:100px;
+    margin:10px;
+}
+.chartContainer3{
+    width:40%;
     height:100px;
     margin:10px;
 }
