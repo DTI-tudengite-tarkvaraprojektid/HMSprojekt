@@ -1,16 +1,19 @@
 # Enesejälgimispäevik
-Hasartmängusõltlastele eneseseire tööriist
+# Hasartmängusõltlastele eneseseire tööriist
 
 ![leht](images/openingPage.png)
 ![leht](images/userPage.png)
 ![leht](images/diaryPage.png)
 ![leht](images/diaryEntry.png)
 
-Projekti eesmärk on võimaldada hasartmängu- ja arvutisõltlastele keskkond, kus nad saavad igapäevaselt oma edusammudest ja tagasilöökidest päevikut pidada ja vajadusel sissekandeid oma nõustajale saata, et nõustamisel oleks hea ülevaade vahepealse perioodi toimumistest.
+# Projekti eesmärk 
+on võimaldada hasartmängu- ja arvutisõltlastele keskkond, kus nad saavad igapäevaselt oma edusammudest ja tagasilöökidest päevikut pidada ja vajadusel sissekandeid oma nõustajale saata, et nõustamisel oleks hea ülevaade vahepealse perioodi toimumistest.
 
-Projekt on tehtud TLU DTI informaatika eriala esimese kursuse tarkvaraarenduse aine raames.
+Projekt on tehtud 
+# TLU DTI 
+informaatika eriala esimese kursuse tarkvaraarenduse aine raames.
 
-Projektis osalesid:
+# Projektis osalesid:
 
 Julika Maiste
 
@@ -19,31 +22,36 @@ Tanel Kuklane
 Mihkel Jäe
 
 
-Kasutatud tehnoloogiad:
+# Kasutatud tehnoloogiad:
 HTML 5.1
+
 CSS3
+
 JavaScript
+
 MySQL 5.5.54
+
 PHP 5.6.29
+
 Chart.js 2.7.2
 
-Kasutusjuhend:
+# Kasutusjuhend:
 Lae alla ZIP fail. Ava fail ja tõsta sisu veebikataloogi. Tekita config.php 1 kaust veebikataloogist välja. Tee MYSQL käskudega andmebaasi 2 tabelit. 
 
 
-CONFIG.PHP
+# Config fail
 
 ```
 <?php
 	$serverHost = "xxxxxxxxx";
 	$serverUsername = "xxxx";
 	$serverPassword = "xxxxxxxx";
-  $database = "xxxxxx";
+	$database = "xxxxxx";
 ?>
 
 ```
 
-Keskkond kasutab kahete SQL andmebaasi tabelit, mida saab tekitada allolevate käskudega:
+# MYSQL andmebaasi tabelite käsud:
 
 ```
 CREATE TABLE diary( 
