@@ -244,7 +244,11 @@ let myPieChart = new Chart(ctx, {
     labels: ["jah", "ei"],
   },
   options: {
-    responsive: true
+    responsive: true,
+    title: {
+      display: true,
+      text: 'Kas ma sooritasin oma meelistegevust?'
+    }
   }
 });
 
