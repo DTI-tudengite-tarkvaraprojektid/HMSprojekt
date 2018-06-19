@@ -92,37 +92,16 @@ function deleteAccount($userid){
 	$mysqli->close();
 	return $notice;
 }
-
-function Email($username){
+/*
+function Email($email, $text){
 	// Multiple recipients
-$to = 'julimai@tlu.ee'; // note the comma
+$to = $email; // note the comma
 
 // Subject
 $subject = 'Testmail';
 
 // Message
-$message = '
-<html>
-<head>
-  <title>Katse email arendatavalt lehelt</title>
-</head>
-<body>
-  <p>$username</p>
-  <p>Siin saab kuvada HTMLina igast asju</p>
-  <table>
-    <tr>
-      <th>Isegi</th><th>mingi</th><th>tabeli</th><th>kujul</th>
-    </tr>
-    <tr>
-      <td>tabelisse</td><td>saab</td><td>asju</td><td>panna</td>
-    </tr>
-    <tr>
-      <td>kohe</td><td>mitu</td><td>mitu</td><td>rida</td>
-    </tr>
-  </table>
-</body>
-</html>
-';
+$message = $text;
 
 // To send HTML mail, the Content-type header must be set
 $headers[] = 'MIME-Version: 1.0';
@@ -131,7 +110,7 @@ $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 // Mail it
 mail($to, $subject, $message, implode("\r\n", $headers));
 
-}
+}*/
 
 //read all info funktsioon
 function readInfo($userid, $type){

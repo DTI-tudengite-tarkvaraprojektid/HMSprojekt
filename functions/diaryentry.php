@@ -12,19 +12,19 @@
 	if($t == 1){
 		$t = 'Arvutisõltuvuse päeviku kokkuvõte';
 	}
-	$html = '<table id="diaryTable" class="diaryTable"><caption>'.$t.'</caption>';
+	$html = '<table id="diaryTable" class="diaryTable" style="border: 4px solid #5E6894; border-collapse: collapse; margin-bottom:20px;"><caption style="font-size: 20px;">'.$t.'</caption>';
 
-	$diaryAnswersHeader = '<tr id="diaryTableHeader" class="diaryTableHeader"><td class="diaryQuestion">Küsimus</td>';
-	$diaryAnswersRow1 = '<tr id="diaryTableRow1" class="diaryTableRow1"><td class="diaryQuestion">1. Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?</td>';
-	$diaryAnswersRow2 = '<tr id="diaryTableRow2" class="diaryTableRow2"><td class="diaryQuestion">2. Kui tugevalt hindan meelistegevust sooritada täna?</td>';
-	$diaryAnswersRow3 = '<tr id="diaryTableRow3" class="diaryTableRow3"><td class="diaryQuestion">3. Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista?</td>';
-	$diaryAnswersRow4 = '<tr id="diaryTableRow4" class="diaryTableRow4"><td class="diaryQuestion">4. Kas ma täna sooritasin oma meelistegevust?</td>';
-	$diaryAnswersRow5 = '<tr id="diaryTableRow5" class="diaryTableRow5"><td class="diaryQuestion">5. Kui palju aega (tunde ja minuteid) ma seda tegevust sooritades veetsin?</td>';
-	$diaryAnswersRow6 = '<tr id="diaryTableRow6" class="diaryTableRow6"><td class="diaryQuestion">6-1. Kas mul jäi selle tegevuse tõttu muud tegevused sooritamata või ma ei jõudnud neid õigeaegselt valmis? 
+	$diaryAnswersHeader = '<tr id="diaryTableHeader" class="diaryTableHeader"><td class="diaryQuestion" style="border: 1px solid #4D5394; width: 30%;">Küsimus</td>';
+	$diaryAnswersRow1 = '<tr id="diaryTableRow1" class="diaryTableRow1"><td class="diaryQuestion" style="border: 1px solid #4D5394; width: 30%;">1. Mil määral ma tajun, et mu meelistegevuse sooritamine arvutis on kontrolli all?</td>';
+	$diaryAnswersRow2 = '<tr id="diaryTableRow2" class="diaryTableRow2"><td class="diaryQuestion" style="border: 1px solid #4D5394; width: 30%;">2. Kui tugevalt hindan meelistegevust sooritada täna?</td>';
+	$diaryAnswersRow3 = '<tr id="diaryTableRow3" class="diaryTableRow3"><td class="diaryQuestion" style="border: 1px solid #4D5394; width: 30%;">3. Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista?</td>';
+	$diaryAnswersRow4 = '<tr id="diaryTableRow4" class="diaryTableRow4"><td class="diaryQuestion" style="border: 1px solid #4D5394; width: 30%;">4. Kas ma täna sooritasin oma meelistegevust?</td>';
+	$diaryAnswersRow5 = '<tr id="diaryTableRow5" class="diaryTableRow5"><td class="diaryQuestion" style="border: 1px solid #4D5394; width: 30%;">5. Kui palju aega (tunde ja minuteid) ma seda tegevust sooritades veetsin?</td>';
+	$diaryAnswersRow6 = '<tr id="diaryTableRow6" class="diaryTableRow6"><td class="diaryQuestion" style="border: 1px solid #4D5394; width: 30%;">6-1. Kas mul jäi selle tegevuse tõttu muud tegevused sooritamata või ma ei jõudnud neid õigeaegselt valmis? 
 	Kui jah, siis millised muud tegevused seetõttu kannatasid?</td>';
-	$diaryAnswersRow7 = '<tr id="diaryTableRow7" class="diaryTableRow7"><td class="diaryQuestion">6-2. Kui palju maha mängisid?</td>';
-	$diaryAnswersRow8 = '<tr id="diaryTableRow8" class="diaryTableRow8"><td class="diaryQuestion">7. Kirjelda oma mõtteid ja tundeid ning nende muutumist päeva jooksul.</td>';
-	$diaryAnswersRow9 = '<tr id="diaryTableRow9" class="diaryTableRow9"><td class="diaryQuestion">8. Päeva nägu: </td>';
+	$diaryAnswersRow7 = '<tr id="diaryTableRow7" class="diaryTableRow7"><td class="diaryQuestion" style="border: 1px solid #4D5394; width: 30%;">6-2. Kui palju maha mängisid?</td>';
+	$diaryAnswersRow8 = '<tr id="diaryTableRow8" class="diaryTableRow8"><td class="diaryQuestion" style="border: 1px solid #4D5394; width: 30%;">7. Kirjelda oma mõtteid ja tundeid ning nende muutumist päeva jooksul.</td>';
+	$diaryAnswersRow9 = '<tr id="diaryTableRow9" class="diaryTableRow9"><td class="diaryQuestion" style="border: 1px solid #4D5394; width: 30%;">8. Päeva nägu: </td>';
 
 	//print_r($dates);
 	$stmt = $mysqli->prepare("SELECT id, type, date, answer1, answer2, answer3, answer4, answer5, answer61, answer62 ,answer7, answer8 FROM diary WHERE id=".$id." AND date=?;");
@@ -36,10 +36,10 @@
 		$stmt->bind_param("s", $date);
 		$stmt->bind_result($id, $type, $date, $answer1, $answer2, $answer3, $answer4, $answer5, $answer61, $answer62, $answer7, $answer8);
 		$stmt->execute();
-		$diaryAnswersHeader .= '<td class="diaryDate">'.$date.'</td>'; 
+		$diaryAnswersHeader .= '<td class="diaryDate" style="border: 1px solid #4D5394;">'.$date.'</td>'; 
 		while ($stmt->fetch()){
 
-			$diaryAnswersRow1 .= '<td class="diaryAnswer1">';
+			$diaryAnswersRow1 .= '<td class="diaryAnswer1" style="border: 1px solid #4D5394;">';
 			if($answer1==0){
 				$diaryAnswersRow1 .= "Üldse mitte.";
 			}
@@ -57,7 +57,7 @@
 			} 
 			$diaryAnswersRow1 .= '</td>';
 
-			$diaryAnswersRow2 .= '<td class="diaryAnswer2">';
+			$diaryAnswersRow2 .= '<td class="diaryAnswer2" style="border: 1px solid #4D5394;">';
 			if($answer2==0){
 				$diaryAnswersRow2 .= "Olematu.";
 			}
@@ -74,7 +74,7 @@
 				$diaryAnswersRow2 .= "Väga kõrge.";
 			}
 			$diaryAnswersRow2 .= " </td>";
-			$diaryAnswersRow3 .= '<td class="diaryAnswer3"> ';
+			$diaryAnswersRow3 .= '<td class="diaryAnswer3" style="border: 1px solid #4D5394;"> ';
 			if($answer3==0){
 				$diaryAnswersRow3 .= "Üldse mitte.";
 			}
@@ -91,7 +91,7 @@
 				$diaryAnswersRow3 .= "Täiesti.";
 			}
 			$diaryAnswersRow3 .= " </td>";
-			$diaryAnswersRow4 .= '<td class="diaryAnswer4"> ';
+			$diaryAnswersRow4 .= '<td class="diaryAnswer4" style="border: 1px solid #4D5394;"> ';
 			if($answer4==0){
 				$diaryAnswersRow4 .= "Jah.";
 			}
@@ -100,7 +100,7 @@
 			}
 			$diaryAnswersRow4 .= " </td>";
 			if($answer4==0){
-				$diaryAnswersRow5 .= '<td class="diaryAnswer5"> ';
+				$diaryAnswersRow5 .= '<td class="diaryAnswer5" style="border: 1px solid #4D5394;"> ';
 				if($answer5<60){
 					$diaryAnswersRow5 .= "Sa kulutasid mängimisele ".$answer5." minutit.";
 				}else if($answer5==60){
@@ -111,9 +111,9 @@
 					$diaryAnswersRow5 .= "Sa kulutasid mängimisele ".floor($answer5/60)." tundi ja ".($answer5%60)." minutit.";
 				}
 				$diaryAnswersRow5 .= " </td>";
-				$diaryAnswersRow6 .= '<td class="diaryAnswer61">'.$answer61.'</td>';
-				$diaryAnswersRow7 .= '<td class="diaryAnswer62">'.$answer62.'</td>';
-				$diaryAnswersRow8 .= '<td class="diaryAnswer7">'.$answer7.'</td>';
+				$diaryAnswersRow6 .= '<td class="diaryAnswer61" style="border: 1px solid #4D5394;">'.$answer61.'</td>';
+				$diaryAnswersRow7 .= '<td class="diaryAnswer62" style="border: 1px solid #4D5394;">'.$answer62.'</td>';
+				$diaryAnswersRow8 .= '<td class="diaryAnswer7" style="border: 1px solid #4D5394;">'.$answer7.'</td>';
 				if($answer8==0){
 					$answer8='<img src="images/sadface.png" style="width:70px; height:60px;">';
 				}
@@ -129,12 +129,12 @@
 				if($answer8==4){
 					$answer8='<img src="images/reallyhappyface.png" style="width:70px; height:60px;">';
 				}
-				$diaryAnswersRow9 .= '<td class="diaryAnswer8">'.$answer8.'</td>';
+				$diaryAnswersRow9 .= '<td class="diaryAnswer8" style="border: 1px solid #4D5394;">'.$answer8.'</td>';
 			}else{
-			$diaryAnswersRow5 .= '<td>-</td>';
-			$diaryAnswersRow6 .= '<td>-</td>';
-			$diaryAnswersRow7 .= '<td>-</td>';
-			$diaryAnswersRow8 .= '<td class="diaryAnswer7">'.$answer7.'</td>';
+			$diaryAnswersRow5 .= '<td style="border: 1px solid #4D5394;">-</td>';
+			$diaryAnswersRow6 .= '<td style="border: 1px solid #4D5394;">-</td>';
+			$diaryAnswersRow7 .= '<td style="border: 1px solid #4D5394;">-</td>';
+			$diaryAnswersRow8 .= '<td class="diaryAnswer7" style="border: 1px solid #4D5394;">'.$answer7.'</td>';
 				if($answer8==0){
 					$answer8='<img src="images/sadface.png" style="width:70px; height:60px;">';
 				}
@@ -150,7 +150,7 @@
 				if($answer8==4){
 					$answer8='<img src="images/reallyhappyface.png" style="width:70px; height:60px;">';
 				}
-				$diaryAnswersRow9 .= '<td class="diaryAnswer8">'.$answer8.'</td>';
+				$diaryAnswersRow9 .= '<td class="diaryAnswer8" style="border: 1px solid #4D5394;">'.$answer8.'</td>';
 			}
 		}
 		

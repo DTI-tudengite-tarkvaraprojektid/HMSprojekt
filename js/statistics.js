@@ -59,15 +59,22 @@ function diaryEntry(n) {
 
  
 function printDiv(eleid){
-    var PW = window.open('', '_blank', 'Print content');
- 
-    PW.document.write('<link rel="stylesheet" type="text/css" href="css/style.css"/>');
- 
-    PW.document.write(document.getElementById(eleid).innerHTML);
-    PW.document.close();
-    PW.focus();
-    PW.print();
-    PW.close();
+	var mywindow = window.open('', 'PRINT', 'height=900,width=1600', 'layout=landscape');
+
+    mywindow.document.write('<html><head><title>Nõustajale näitamiseks</title>');
+    mywindow.document.write('</head><body>');
+    mywindow.document.write('<h1>Enesejälgimise päevik</h1>');
+    mywindow.document.write(document.getElementById(eleid).innerHTML);
+    mywindow.document.write('</body></html>');
+
+    mywindow.document.close(); // necessary for IE >= 10
+    mywindow.focus(); // necessary for IE >= 10*/
+
+    mywindow.print();
+    mywindow.close();
+
+    return true;
+    
 }
 
 
