@@ -232,7 +232,7 @@ let chart1 = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 4,
+          max: 5,
           stepSize: 1,
           callback: function(label, index, labels){
             switch (label) {
@@ -246,6 +246,8 @@ let chart1 = new Chart(ctx, {
                 return 'Palju';
               case 4:
                 return 'Täiesti';
+              case 5:
+                return '';
             }
           }
         }

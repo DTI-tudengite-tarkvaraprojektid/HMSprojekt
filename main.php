@@ -82,7 +82,7 @@
             <button id="arrayHere3">Kui tõenäoliselt ma suudan soovile meelistegevust (liigselt) sooritada vastu seista?</button>
           </li>
         </ul>-->
-        <div class="chartContainer1" style="position: absolute; width:60%; height:50%">
+        <div class="chartContainer1" style="position: absolute; width:90%; height:40%">
           <canvas id="myChart1"></canvas>
         </div>
         <!--<div class="chartContainer3" style="position: absolute; width:60%; height:50%">
@@ -116,8 +116,10 @@
           <div id="diaryAnswers1" class="diaryAnswers"></div>
           <div id="diaryAnswers2" class="diaryAnswers"></div>
         </div>
+        
+        
         <div class="options-grid"><button id="printBtn" class="printBtn" onclick="printDiv('printPDF');" > Koosta PDF </button></div>
-
+        
       </div>
     </section>
 
