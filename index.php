@@ -208,8 +208,11 @@
 
 
 <div id="page" class="main-grid">
-	<h2>Mängusõltuvuse eneseseire keskkond</h2>
-
+	<div class=" heading">
+		<h2>Tere tulemast eneseseire keskkonda</h2>
+		<h3>Siin on teil võimalus jälgida oma igapäevast sõltuvuskäitumist täites selleks igapäevaselt päevikut.</h3>
+		<h3>Registreeri, logi sisse ja alusta päeviku pidamisega</h3>
+	</div>
     <div id="item1" class="grid-item item1">
 		<h2>Hasartmängusõltuvus</h2>
       <p>Lühike info <b>hasartmängusõltuvuse</b> kohta
