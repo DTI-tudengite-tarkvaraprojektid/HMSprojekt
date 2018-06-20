@@ -29,7 +29,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
   <script src="js/main.js" defer></script>
-  <script src="js/statistics.js" defer></script>
   
 
 <body>
